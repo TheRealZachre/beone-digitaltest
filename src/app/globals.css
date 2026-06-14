@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --brand-ink: #181820;
+  --brand-paper: #faf7f1;
+  --brand-stage: #141319;
+  --brand-off-white: #f4f2ec;
+  --brand-indigo: #7c78ff;
+  --brand-indigo-bright: #8a6cff;
+  --brand-muted: #6f6e7a;
+  --brand-border: #2b2a31;
+  --background: var(--brand-paper);
+  --foreground: var(--brand-ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-paper: var(--brand-paper);
+  --color-brand-stage: var(--brand-stage);
+  --color-brand-off-white: var(--brand-off-white);
+  --color-brand-indigo: var(--brand-indigo);
+  --color-brand-indigo-bright: var(--brand-indigo-bright);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-border: var(--brand-border);
+  --font-sans: var(--font-brand-sans), var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-brand-mono), var(--font-geist-mono), ui-monospace, monospace;
+  --font-serif: var(--font-dm-serif), ui-serif, Georgia, serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.brand-surface {
+  background: var(--brand-paper);
+  color: var(--brand-ink);
+}
+
+.brand-card {
+  border-color: rgb(24 24 32 / 0.08);
+  background: #fffefb;
+}
+
+.brand-accent-gradient {
+  background: linear-gradient(
+    90deg,
+    #ff6b47 0%,
+    #8a6cff 42%,
+    #6c8bff 72%,
+    #27d3e0 100%
+  );
+}
+
+@media print {
+  aside {
+    display: none !important;
+  }
+
+  main {
+    overflow: visible !important;
+  }
+}

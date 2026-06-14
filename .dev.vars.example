@@ -1,0 +1,32 @@
+# Copy to .dev.vars for local OpenNext/Wrangler preview (do not commit .dev.vars)
+NEXTJS_ENV=development
+
+# =============================================================================
+# Fastest fix (one command, after wrangler login):
+#   npx wrangler login
+#   npm run setup:cloudflare
+# =============================================================================
+
+# =============================================================================
+# Cloudflare Workers Builds — recommended dashboard settings
+# =============================================================================
+# Option A (simplest): set runtime secret once, keep default deploy command
+#   1. Dashboard → digitaltest → Settings → Variables and Secrets
+#   2. Add → Secret → AUTH_SECRET = output of: openssl rand -base64 32
+#   3. Build command:  npm run build:cloudflare
+#   4. Deploy command: npx wrangler deploy
+#
+# Option B (secret in CI build env):
+#   1. Dashboard → digitaltest → Settings → Builds → Build variables and secrets
+#   2. Add → Secret → AUTH_SECRET
+#   3. Build command:  npm run ci:cloudflare
+#   4. Deploy command: echo "deployed in build step"
+#
+# Do NOT use the manual node_modules stubbing bash build command.
+
+# AUTH_SECRET=
+# AUTH_URL=https://your-worker.workers.dev
+
+# Optional API keys
+# OPENAI_API_KEY=
+# TRANSCRIPTION_PROVIDER=openai
