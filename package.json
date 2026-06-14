@@ -8,7 +8,7 @@
     "dev:analytics": "echo \"Analytics moved to https://github.com/TheRealZachre/beone-analytics — run npm run dev there.\"",
     "dev:all": "npm run dev",
     "build": "bash scripts/build.sh",
-    "build:cloudflare": "OPENNEXT_CLOUDFLARE=1 opennextjs-cloudflare build",
+    "build:cloudflare": "bash scripts/build.sh",
     "build:cloudflare:ci": "bash scripts/cloudflare-build.sh",
     "ci:cloudflare": "bash scripts/cloudflare-ci.sh",
     "deploy:cloudflare": "bash scripts/cloudflare-deploy.sh",
@@ -18,12 +18,7 @@
     "build:analytics": "echo \"See https://github.com/TheRealZachre/beone-analytics\"",
     "deploy:analytics": "echo \"Deploy from https://github.com/TheRealZachre/beone-analytics\"",
     "start": "next start",
-    "lint": "eslint",
-    "sync:linkedin": "tsx scripts/sync-linkedin.ts",
-    "sync:linkedin:seed": "tsx scripts/sync-linkedin.ts seed",
-    "sync:social": "tsx scripts/sync-social.ts",
-    "import:channels": "tsx scripts/import-channels.ts",
-    "refresh:facebook-images": "tsx scripts/refresh-facebook-images.ts"
+    "lint": "eslint"
   },
   "dependencies": {
     "@xenova/transformers": "^2.17.2",

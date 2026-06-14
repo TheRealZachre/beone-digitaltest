@@ -21,6 +21,11 @@ load_secret() {
 
 load_secret
 
+env_file=".open-next/cloudflare/next-env.mjs"
+if [ -f "$env_file" ]; then
+  awk '!seen[$0]++' "$env_file" > "${env_file}.tmp" && mv "${env_file}.tmp" "$env_file"
+fi
+
 deploy_args=()
 
 if [ -n "${AUTH_SECRET:-}" ]; then
@@ -55,4 +60,10 @@ else
   echo "WARNING: AUTH_SECRET not set — deploying without auth secret (login will fail)."
 fi
 
-exec npx wrangler deploy "${deploy_args[@]}"
+exec npx opennextjs-cloudflare upload "${deploy_args[@]}"
+
+version_id="$(npx wrangler versions list 2>/dev/null | awk '/Version ID:/{id=$3} END{print id}')"
+if [ -n "${version_id:-}" ]; then
+  echo "Promoting version ${version_id} to 100% traffic..."
+  npx wrangler versions deploy "${version_id}" --yes
+fi

@@ -10,4 +10,10 @@ if [ "${OPENNEXT_INNER_BUILD:-}" = "1" ]; then
 fi
 
 export OPENNEXT_INNER_BUILD=1
-exec env OPENNEXT_CLOUDFLARE=1 npx opennextjs-cloudflare build
+env OPENNEXT_CLOUDFLARE=1 npx opennextjs-cloudflare build
+
+# OpenNext can append env exports twice; wrangler then fails on duplicate symbols.
+env_file=".open-next/cloudflare/next-env.mjs"
+if [ -f "$env_file" ]; then
+  awk '!seen[$0]++' "$env_file" > "${env_file}.tmp" && mv "${env_file}.tmp" "$env_file"
+fi

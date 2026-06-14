@@ -1,3 +1,6 @@
+const DEFAULT_ANALYTICS_APP_URL =
+  "https://analytics-demo-beone.zach-a56.workers.dev";
+
 /** Base URL for the analytics-only app (separate deployment). */
 export function getAnalyticsAppUrl(): string {
   const raw =
@@ -7,11 +10,12 @@ export function getAnalyticsAppUrl(): string {
 
   if (raw) return raw.replace(/\/$/, "");
 
-  if (process.env.NODE_ENV === "development") {
-    return "http://localhost:3001";
-  }
+  return DEFAULT_ANALYTICS_APP_URL;
+}
 
-  return "https://analytics-demo-beone.zach-a56.workers.dev";
+/** Same-origin paths middleware redirects to the analytics app. */
+export function isAnalyticsShellPath(pathname: string): boolean {
+  return pathname === "/methodology" || pathname.startsWith("/reports");
 }
 
 export function analyticsHref(path: string, baseUrl?: string): string {

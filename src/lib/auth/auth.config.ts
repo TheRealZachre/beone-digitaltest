@@ -1,5 +1,4 @@
 import type { NextAuthConfig } from "next-auth";
-import { getAnalyticsAppUrl } from "@/lib/analytics-app-url";
 import { getAuthSecret } from "@/lib/env";
 
 export const authConfig = {
@@ -13,19 +12,12 @@ export const authConfig = {
   trustHost: true,
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
-      const analyticsAppUrl = getAnalyticsAppUrl();
-      const { pathname, search } = nextUrl;
-
-      if (
-        pathname === "/methodology" ||
-        pathname.startsWith("/reports")
-      ) {
-        return Response.redirect(
-          new URL(`${pathname}${search}`, analyticsAppUrl)
-        );
-      }
-
       const isLoggedIn = !!auth?.user;
+      const { pathname } = nextUrl;
+
+      if (pathname === "/" && isLoggedIn) {
+        return Response.redirect(new URL("/reports/channels", nextUrl));
+      }
 
       const isAuthRoute =
         pathname.startsWith("/login") ||

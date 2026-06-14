@@ -37,7 +37,15 @@ export function ExportButtons({
       });
 
       if (!response.ok) {
-        throw new Error("Export request failed");
+        const errorBody = await response.json().catch(() => null);
+        const message =
+          errorBody &&
+          typeof errorBody === "object" &&
+          "error" in errorBody &&
+          typeof errorBody.error === "string"
+            ? errorBody.error
+            : `Export request failed (${response.status})`;
+        throw new Error(message);
       }
 
       setPptxStatus("Downloading…");

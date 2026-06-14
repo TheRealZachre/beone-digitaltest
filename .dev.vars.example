@@ -27,6 +27,10 @@ NEXTJS_ENV=development
 # AUTH_SECRET=
 # AUTH_URL=https://your-worker.workers.dev
 
+# Analytics app (separate deployment) — required for sidebar links locally
+# NEXT_PUBLIC_ANALYTICS_URL=https://analytics-demo-beone.zach-a56.workers.dev
+# ANALYTICS_APP_URL=https://analytics-demo-beone.zach-a56.workers.dev
+
 # Optional API keys
 # OPENAI_API_KEY=
 # TRANSCRIPTION_PROVIDER=openai
