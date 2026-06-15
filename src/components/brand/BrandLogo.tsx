@@ -18,6 +18,32 @@ function BrandAsset({
   return <img src={src} alt={alt} className={className} />;
 }
 
+function BeOneLogoMark({
+  variant,
+}: {
+  variant: BrandLogoProps["variant"];
+}) {
+  return (
+    <div
+      className={
+        variant === "full"
+          ? "mx-auto inline-flex rounded-lg bg-white px-3 py-2"
+          : "inline-flex rounded-lg bg-white px-3 py-2"
+      }
+    >
+      <BrandAsset
+        src={BRAND_ASSETS.beoneMedicines}
+        alt="BeOne Medicines"
+        className={
+          variant === "full"
+            ? "h-9 w-auto max-w-[10.5rem]"
+            : "h-8 w-auto max-w-[9.5rem]"
+        }
+      />
+    </div>
+  );
+}
+
 export function BrandLogo({
   variant = "sidebar",
   showTagline = true,
@@ -47,11 +73,7 @@ export function BrandLogo({
   if (variant === "full") {
     return (
       <div className="text-center">
-        <BrandAsset
-          src={BRAND_ASSETS.beoneLogoWhite}
-          alt="BeOne"
-          className="mx-auto h-auto w-full max-w-[12rem]"
-        />
+        <BeOneLogoMark variant="full" />
         {showTagline && (
           <p className="mt-2 text-xs font-medium uppercase tracking-[0.2em] text-brand-muted">
             {PLATFORM_TAGLINE}
@@ -64,11 +86,7 @@ export function BrandLogo({
 
   return (
     <div className="min-w-0">
-      <BrandAsset
-        src={BRAND_ASSETS.beoneLogoWhite}
-        alt="BeOne"
-        className="h-8 w-auto max-w-[11.5rem]"
-      />
+      <BeOneLogoMark variant="sidebar" />
       {showTagline && (
         <p className="mt-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-brand-muted">
           {PLATFORM_TAGLINE}
