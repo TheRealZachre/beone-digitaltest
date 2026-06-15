@@ -2,9 +2,12 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { signIn } from "next-auth/react";
-import { FormEvent, useState } from "react";
+import { useActionState } from "react";
 import { GoogleSignInButton } from "@/components/auth/GoogleSignInButton";
+import {
+  signInWithCredentials,
+  type CredentialsSignInState,
+} from "@/lib/auth/credentials-sign-in";
 
 const inputClassName =
   "mt-1.5 w-full rounded-lg border border-brand-ink/10 bg-white px-4 py-2.5 text-sm text-brand-ink outline-none focus:border-brand-indigo focus:ring-2 focus:ring-brand-indigo/20";
@@ -13,33 +16,10 @@ export function LoginForm({ googleEnabled }: { googleEnabled: boolean }) {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") ?? "/";
   const reset = searchParams.get("reset") === "1";
-
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setError(null);
-    setLoading(true);
-
-    const result = await signIn("credentials", {
-      login,
-      password,
-      redirect: false,
-      callbackUrl,
-    });
-
-    setLoading(false);
-
-    if (result?.error) {
-      setError("Invalid username, email, or password.");
-      return;
-    }
-
-    window.location.assign(callbackUrl);
-  }
+  const [state, formAction, pending] = useActionState<
+    CredentialsSignInState | null,
+    FormData
+  >(signInWithCredentials, null);
 
   return (
     <div className="space-y-6">
@@ -51,7 +31,7 @@ export function LoginForm({ googleEnabled }: { googleEnabled: boolean }) {
 
       {googleEnabled && (
         <>
-          <GoogleSignInButton callbackUrl={callbackUrl} disabled={loading} />
+          <GoogleSignInButton callbackUrl={callbackUrl} disabled={pending} />
           <div className="relative">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-brand-ink/10" />
@@ -63,14 +43,15 @@ export function LoginForm({ googleEnabled }: { googleEnabled: boolean }) {
         </>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form action={formAction} className="space-y-4">
+        <input type="hidden" name="callbackUrl" value={callbackUrl} />
+
         <label className="block text-sm font-medium text-brand-ink">
           Email or username
           <input
+            name="login"
             type="text"
             autoComplete="username"
-            value={login}
-            onChange={(event) => setLogin(event.target.value)}
             className={inputClassName}
             required
           />
@@ -79,10 +60,9 @@ export function LoginForm({ googleEnabled }: { googleEnabled: boolean }) {
         <label className="block text-sm font-medium text-brand-ink">
           Password
           <input
+            name="password"
             type="password"
             autoComplete="current-password"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
             className={inputClassName}
             required
           />
@@ -97,17 +77,16 @@ export function LoginForm({ googleEnabled }: { googleEnabled: boolean }) {
           </Link>
         </div>
 
-        {error && <p className="text-sm text-rose-600">{error}</p>}
+        {state?.error && <p className="text-sm text-rose-600">{state.error}</p>}
 
         <button
           type="submit"
-          disabled={loading}
+          disabled={pending}
           className="w-full rounded-lg bg-brand-indigo px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-indigo-bright disabled:opacity-60"
         >
-          {loading ? "Signing in…" : "Sign in"}
+          {pending ? "Signing in…" : "Sign in"}
         </button>
       </form>
-
     </div>
   );
 }

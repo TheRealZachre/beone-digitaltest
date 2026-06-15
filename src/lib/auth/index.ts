@@ -50,23 +50,34 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   callbacks: {
     ...authConfig.callbacks,
     async session(params) {
-      const session = authConfig.callbacks.session(params);
+      const baseSession = authConfig.callbacks.session(params);
 
-      if (session.user?.id) {
-        const stored = await findUserById(session.user.id);
-        session.user.role = stored?.role ?? "user";
+      if (baseSession.user && params.token.sub) {
+        const stored = await findUserById(params.token.sub);
+        if (stored) {
+          baseSession.user.id = stored.id;
+          baseSession.user.role = stored.role ?? "user";
+          baseSession.user.name = stored.name;
+          baseSession.user.email = stored.email;
+        }
       }
 
-      return session;
+      return baseSession;
     },
     async jwt({ token, user, trigger, session }) {
       if (user?.id) {
-        token.sub = user.id;
-        token.name = user.name ?? undefined;
-        token.email = user.email ?? undefined;
-        token.role = user.role ?? "user";
-        token.picture = user.image ?? undefined;
-      } else if (token.sub) {
+        const stored = await findUserById(user.id);
+
+        return {
+          sub: user.id,
+          name: stored?.name ?? user.name ?? undefined,
+          email: stored?.email ?? user.email ?? undefined,
+          role: stored?.role ?? user.role ?? "user",
+          picture: user.image ?? undefined,
+        };
+      }
+
+      if (token.sub) {
         const stored = await findUserById(token.sub);
         if (stored) {
           token.role = stored.role ?? "user";

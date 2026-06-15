@@ -47,21 +47,20 @@ export const authConfig = {
     },
     jwt({ token, user, trigger, session }) {
       if (user?.id) {
-        token.sub = user.id;
+        return {
+          sub: user.id,
+          name: user.name ?? undefined,
+          email: user.email ?? undefined,
+          role: user.role ?? "user",
+          picture: user.image ?? undefined,
+        };
       }
-      if (user?.role) {
-        token.role = user.role;
-      }
-      if (user?.name) {
-        token.name = user.name;
-      }
-      if (user?.email) {
-        token.email = user.email;
-      }
+
       if (trigger === "update" && session) {
         if (typeof session.name === "string") token.name = session.name;
         if (typeof session.email === "string") token.email = session.email;
       }
+
       return token;
     },
     session({ session, token }) {
