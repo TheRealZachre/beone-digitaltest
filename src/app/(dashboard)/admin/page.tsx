@@ -1,14 +1,14 @@
 import { redirect } from "next/navigation";
 import { AdminUserConsole } from "@/components/admin/AdminUserConsole";
 import { auth } from "@/lib/auth";
-import { listUsers } from "@/lib/auth/users";
+import { isUserAdminById, listUsers } from "@/lib/auth/users";
 
 export const dynamic = "force-dynamic";
 
 export default async function PlatformAdminPage() {
   const session = await auth();
 
-  if (session?.user?.role !== "admin") {
+  if (!session?.user?.id || !(await isUserAdminById(session.user.id))) {
     redirect("/");
   }
 

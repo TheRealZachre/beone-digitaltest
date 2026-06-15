@@ -4,12 +4,13 @@ import { Sidebar } from "./Sidebar";
 
 interface AppShellProps {
   children: ReactNode;
+  isAdmin?: boolean;
 }
 
-export function AppShell({ children }: AppShellProps) {
+export function AppShell({ children, isAdmin = false }: AppShellProps) {
   return (
     <div className="flex min-h-screen bg-brand-paper">
-      <Sidebar />
+      <Sidebar isAdmin={isAdmin} />
       <main className="flex flex-1 flex-col overflow-auto">
         <UserWelcomeBar />
         {children}

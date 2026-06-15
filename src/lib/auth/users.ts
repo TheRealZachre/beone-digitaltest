@@ -135,6 +135,11 @@ export async function deleteUser(
   await removePasswordResetTokensForUser(userId);
 }
 
+export async function isUserAdminById(userId: string): Promise<boolean> {
+  const user = await findUserById(userId);
+  return user?.role === "admin";
+}
+
 export interface CreateUserInput {
   name: string;
   email: string;

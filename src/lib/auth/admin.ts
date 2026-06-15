@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdminUser } from "@/lib/auth/users";
+import { isAdminUser, isUserAdminById } from "@/lib/auth/users";
 
 export async function requireAdmin() {
   const session = await auth();
@@ -12,7 +12,7 @@ export async function requireAdmin() {
     };
   }
 
-  if (session.user.role !== "admin") {
+  if (!(await isUserAdminById(session.user.id))) {
     return {
       session: null,
       response: NextResponse.json({ error: "Forbidden." }, { status: 403 }),

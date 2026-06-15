@@ -49,14 +49,22 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   ],
   callbacks: {
     ...authConfig.callbacks,
+    async session(params) {
+      const session = authConfig.callbacks.session(params);
+
+      if (session.user?.id) {
+        const stored = await findUserById(session.user.id);
+        session.user.role = stored?.role ?? "user";
+      }
+
+      return session;
+    },
     async jwt(params) {
       const token = authConfig.callbacks.jwt(params);
 
       if (token.sub) {
         const stored = await findUserById(token.sub);
-        if (stored) {
-          token.role = stored.role;
-        }
+        token.role = stored?.role ?? "user";
       }
 
       return token;

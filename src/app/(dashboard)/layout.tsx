@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { AppShell } from "@/components/layout/AppShell";
 import { auth } from "@/lib/auth";
+import { isUserAdminById } from "@/lib/auth/users";
 
 export const dynamic = "force-dynamic";
 
@@ -11,9 +12,11 @@ export default async function DashboardLayout({
 }) {
   const session = await auth();
 
-  if (!session?.user) {
+  if (!session?.user?.id) {
     redirect("/login");
   }
 
-  return <AppShell>{children}</AppShell>;
+  const isAdmin = await isUserAdminById(session.user.id);
+
+  return <AppShell isAdmin={isAdmin}>{children}</AppShell>;
 }

@@ -1,5 +1,6 @@
 import type { NextAuthConfig } from "next-auth";
 import { getAuthSecret } from "@/lib/env";
+import { findUserById } from "./users";
 
 export const authConfig = {
   secret: getAuthSecret(),
@@ -11,7 +12,7 @@ export const authConfig = {
   },
   trustHost: true,
   callbacks: {
-    authorized({ auth, request: { nextUrl } }) {
+    async authorized({ auth, request: { nextUrl } }) {
       const isLoggedIn = !!auth?.user;
       const { pathname } = nextUrl;
 
@@ -40,8 +41,9 @@ export const authConfig = {
       }
 
       if (isAdminRoute) {
-        if (!isLoggedIn) return false;
-        if (auth?.user?.role !== "admin") {
+        if (!isLoggedIn || !auth?.user?.id) return false;
+        const stored = await findUserById(auth.user.id);
+        if (stored?.role !== "admin") {
           return Response.redirect(new URL("/", nextUrl));
         }
         return true;
