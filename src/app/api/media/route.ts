@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { requireSession } from "@/lib/auth/session";
 import { shouldProxyImageUrl } from "@/lib/social/image-url";
 
 export const runtime = "nodejs";
@@ -27,6 +28,9 @@ function refererForUrl(url: URL): string {
 }
 
 export async function GET(request: Request) {
+  const { response } = await requireSession();
+  if (response) return response;
+
   const { searchParams } = new URL(request.url);
   const target = searchParams.get("url");
 

@@ -1,9 +1,13 @@
 import { NextResponse } from "next/server";
+import { requireSession } from "@/lib/auth/session";
 import { syncLinkedInPosts } from "@/lib/linkedin/sync";
 import type { LinkedInDataProvider } from "@/lib/linkedin/types";
 import { mergeChannelIntoSocialCache } from "@/lib/social/sync";
 
 export async function POST(request: Request) {
+  const { response } = await requireSession();
+  if (response) return response;
+
   try {
     const body = (await request.json().catch(() => ({}))) as {
       provider?: LinkedInDataProvider;
@@ -32,6 +36,9 @@ export async function POST(request: Request) {
 }
 
 export async function GET() {
+  const { response } = await requireSession();
+  if (response) return response;
+
   const { readPostCache } = await import("@/lib/data/cache");
   const cache = await readPostCache();
 

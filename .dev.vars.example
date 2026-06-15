@@ -30,7 +30,7 @@ NEXTJS_ENV=development
 # Email (Resend) — required for welcome and password-reset emails
 # Replace re_xxxxxxxxx with your real API key from https://resend.com/api-keys
 # RESEND_API_KEY=re_xxxxxxxxx
-# AUTH_EMAIL_FROM=BeOne Digital <noreply@yourdomain.com>
+# AUTH_EMAIL_FROM="BeOne Digital <noreply@yourdomain.com>"
 
 # Analytics app (separate deployment) — required for sidebar links locally
 # NEXT_PUBLIC_ANALYTICS_URL=https://analytics-demo-beone.zach-a56.workers.dev

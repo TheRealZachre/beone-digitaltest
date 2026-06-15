@@ -22,6 +22,7 @@ import {
 import clsx from "clsx";
 import { BrandLogo } from "@/components/brand/BrandLogo";
 import { UserMenu } from "@/components/auth/UserMenu";
+import { useSafeSession } from "@/components/auth/useSafeSession";
 import { PLATFORM_NAME } from "@/lib/company";
 
 interface NavLink {
@@ -65,7 +66,9 @@ const analyticsSection: NavSection = {
   ],
 };
 
-export function Sidebar({ showAdminNav = false }: { showAdminNav?: boolean }) {
+export function Sidebar() {
+  const session = useSafeSession();
+  const isAdmin = session?.user?.role === "admin";
   const pathname = usePathname();
   const [analyticsOpen, setAnalyticsOpen] = useState(true);
   const adminActive = pathname.startsWith("/admin");
@@ -83,7 +86,7 @@ export function Sidebar({ showAdminNav = false }: { showAdminNav?: boolean }) {
       </div>
 
       <nav className="flex flex-1 flex-col gap-1 overflow-y-auto p-4">
-        {showAdminNav && (
+        {isAdmin && (
           <Link
             href="/admin"
             className={clsx(

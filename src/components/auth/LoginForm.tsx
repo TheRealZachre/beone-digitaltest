@@ -13,7 +13,6 @@ export function LoginForm({ googleEnabled }: { googleEnabled: boolean }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") ?? "/";
-  const registered = searchParams.get("registered") === "1";
   const reset = searchParams.get("reset") === "1";
 
   const [login, setLogin] = useState("");
@@ -46,12 +45,6 @@ export function LoginForm({ googleEnabled }: { googleEnabled: boolean }) {
 
   return (
     <div className="space-y-6">
-      {registered && (
-        <p className="rounded-lg bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
-          Account created. Sign in with your email and password.
-        </p>
-      )}
-
       {reset && (
         <p className="rounded-lg bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
           Password updated. Sign in with your new password.
@@ -117,15 +110,6 @@ export function LoginForm({ googleEnabled }: { googleEnabled: boolean }) {
         </button>
       </form>
 
-      <p className="text-center text-sm text-brand-muted">
-        Don&apos;t have an account?{" "}
-        <Link
-          href="/register"
-          className="font-medium text-brand-indigo hover:text-brand-indigo-bright"
-        >
-          Create one
-        </Link>
-      </p>
     </div>
   );
 }

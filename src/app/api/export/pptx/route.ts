@@ -1,4 +1,5 @@
 import { generatePowerPointBuffer } from "@/lib/export-pptx";
+import { requireSession } from "@/lib/auth/session";
 import type { ReportPptxPayload } from "@/lib/export-pptx-types";
 
 export const runtime = "nodejs";
@@ -9,6 +10,9 @@ interface ExportPptxRequest {
 }
 
 export async function POST(request: Request) {
+  const { response } = await requireSession();
+  if (response) return response;
+
   try {
     const body = (await request.json()) as ExportPptxRequest;
     const { payload, filename = "report.pptx" } = body;

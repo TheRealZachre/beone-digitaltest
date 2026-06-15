@@ -21,7 +21,7 @@ export const authConfig = {
 
       const isAuthRoute =
         pathname.startsWith("/login") ||
-        pathname.startsWith("/register") ||
+        pathname.startsWith("/signout") ||
         pathname.startsWith("/forgot-password") ||
         pathname.startsWith("/reset-password");
       const isAuthApi = pathname.startsWith("/api/auth");
@@ -36,9 +36,6 @@ export const authConfig = {
       if (isPublicApi || isStaticAsset) return true;
 
       if (isAuthRoute) {
-        if (isLoggedIn) {
-          return Response.redirect(new URL("/", nextUrl));
-        }
         return true;
       }
 
