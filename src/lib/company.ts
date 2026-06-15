@@ -1,2 +1,2 @@
 export const PLATFORM_NAME = "BeoneDigitalTest";
-export const PLATFORM_TAGLINE = "Digital Dashboard";
+export const PLATFORM_TAGLINE = "Demo";

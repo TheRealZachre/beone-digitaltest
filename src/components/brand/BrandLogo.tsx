@@ -26,29 +26,36 @@ export function BrandLogo({
 
   if (variant === "full") {
     return (
-      <Image
-        src={BRAND_ASSETS.logoPrimarySpectrumPng}
-        alt={PLATFORM_NAME}
-        width={640}
-        height={160}
-        className="h-auto w-full max-w-xl"
-        priority
-      />
+      <div className="text-center">
+        <Image
+          src={BRAND_ASSETS.beoneLogoWhite}
+          alt="BeOne"
+          width={180}
+          height={40}
+          className="mx-auto h-auto w-full max-w-[12rem]"
+          priority
+        />
+        {showTagline && (
+          <p className="mt-2 text-xs font-medium uppercase tracking-[0.2em] text-brand-muted">
+            {PLATFORM_TAGLINE}
+          </p>
+        )}
+      </div>
     );
   }
 
   return (
     <div className="min-w-0">
       <Image
-        src={BRAND_ASSETS.wordmarkWhite}
-        alt={PLATFORM_NAME}
-        width={220}
-        height={36}
-        className="h-7 w-auto max-w-[11.5rem]"
+        src={BRAND_ASSETS.beoneLogoWhite}
+        alt="BeOne"
+        width={180}
+        height={40}
+        className="h-8 w-auto max-w-[11.5rem]"
         priority
       />
       {showTagline && (
-        <p className="mt-1.5 text-[11px] font-medium tracking-wide text-brand-muted">
+        <p className="mt-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-brand-muted">
           {PLATFORM_TAGLINE}
         </p>
       )}

@@ -12,6 +12,7 @@ import {
   ChevronDown,
   FileBarChart,
   Image,
+  Info,
   Layers,
   Play,
   Share2,
@@ -69,6 +70,7 @@ export function Sidebar({ isAdmin = false }: { isAdmin?: boolean }) {
   const pathname = usePathname();
   const [analyticsOpen, setAnalyticsOpen] = useState(true);
   const adminActive = pathname.startsWith("/admin");
+  const introActive = pathname === "/";
 
   useEffect(() => {
     if (adminActive) {
@@ -97,6 +99,19 @@ export function Sidebar({ isAdmin = false }: { isAdmin?: boolean }) {
             Platform Admin
           </Link>
         )}
+
+        <Link
+          href="/"
+          className={clsx(
+            "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
+            introActive
+              ? "bg-brand-indigo/15 text-brand-indigo-bright"
+              : "text-brand-muted hover:bg-white/5 hover:text-brand-off-white"
+          )}
+        >
+          <Info className="h-4 w-4 shrink-0" />
+          Introduction
+        </Link>
 
         <div className="mt-2">
           <button

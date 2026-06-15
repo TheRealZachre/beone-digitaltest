@@ -26,5 +26,6 @@ export const BRAND_ASSETS = {
   logoLightIndigo: "/brand/logo-light-indigo.svg",
   logoPrimarySpectrumPng: "/brand/logo-primary-spectrum@2x.png",
   favicon: "/brand/icon-512.png",
+  beoneLogoWhite: "/brand/beone-logo-white.svg",
   beoneMedicines: "/brand/beone-medicines-logo.png",
 } as const;

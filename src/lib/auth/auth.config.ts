@@ -15,10 +15,6 @@ export const authConfig = {
       const isLoggedIn = !!auth?.user;
       const { pathname } = nextUrl;
 
-      if (pathname === "/" && isLoggedIn) {
-        return Response.redirect(new URL("/reports/channels", nextUrl));
-      }
-
       const isAuthRoute =
         pathname.startsWith("/login") ||
         pathname.startsWith("/signout") ||

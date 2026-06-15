@@ -15,7 +15,7 @@ export function AuthShell({
     <div className="flex min-h-screen items-center justify-center bg-brand-stage px-4 py-12">
       <div className="w-full max-w-md">
         <div className="mb-8 flex justify-center">
-          <BrandLogo variant="full" showTagline={false} />
+          <BrandLogo variant="full" showTagline />
         </div>
 
         <div className="rounded-2xl border border-brand-border bg-brand-paper p-8 shadow-xl">
