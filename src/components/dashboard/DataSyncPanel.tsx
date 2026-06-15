@@ -97,17 +97,10 @@ export function DataSyncPanel({
       }
       setSources(nextSources);
 
-      if (data.errors) {
-        const partial = Object.entries(data.errors as Record<string, string>)
-          .map(([channel, message]) => `${channel}: ${message}`)
-          .join("; ");
-        setError(`Partial sync — some channels failed: ${partial}`);
-      }
-
       window.location.reload();
+      return;
     } catch (err) {
       setError(err instanceof Error ? err.message : "Sync failed");
-    } finally {
       setLoading(false);
     }
   }

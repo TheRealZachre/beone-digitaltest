@@ -21,7 +21,8 @@ export default function IntroductionPage() {
               <p className="mt-2 text-sm leading-relaxed text-brand-ink">
                 This is a demo website for BeOne Medicines. It is intended to
                 showcase how digital analytics reporting could be presented, not
-                to support day-to-day business operations.
+                to support day-to-day business operations without a
+                proper license.
               </p>
             </div>
           </div>
