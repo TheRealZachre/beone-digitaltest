@@ -28,7 +28,11 @@ export default async function PlatformAdminPage() {
         </p>
       </div>
 
-      <AdminUserConsole initialUsers={users} scope="platform" />
+      <AdminUserConsole
+        initialUsers={users}
+        currentUserId={session.user.id}
+        scope="platform"
+      />
     </div>
   );
 }

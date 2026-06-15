@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useCallback, useEffect, useState } from "react";
-import { Shield, UserPlus, Users } from "lucide-react";
+import { Shield, Trash2, UserPlus, Users } from "lucide-react";
 import type { PublicUser, UserRole } from "@/lib/auth/types";
 
 const inputClassName =
@@ -9,9 +9,11 @@ const inputClassName =
 
 export function AdminUserConsole({
   initialUsers,
+  currentUserId,
   scope = "platform",
 }: {
   initialUsers: PublicUser[];
+  currentUserId?: string;
   scope?: "platform" | "analytics";
 }) {
   const [users, setUsers] = useState(initialUsers);
@@ -23,6 +25,7 @@ export function AdminUserConsole({
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [deletingUserId, setDeletingUserId] = useState<string | null>(null);
 
   const createTitle =
     scope === "analytics"
@@ -66,6 +69,7 @@ export function AdminUserConsole({
       const data = (await response.json()) as {
         error?: string;
         username?: string;
+        emailed?: boolean;
       };
 
       if (!response.ok) {
@@ -74,7 +78,12 @@ export function AdminUserConsole({
         return;
       }
 
-      setSuccess(`Created account for @${data.username ?? username}.`);
+      const emailNote = data.emailed
+        ? "Welcome email sent."
+        : "Welcome email was not sent — configure RESEND_API_KEY and AUTH_EMAIL_FROM.";
+      setSuccess(
+        `Created account for @${data.username ?? username}. ${emailNote}`
+      );
       setName("");
       setEmail("");
       setUsername("");
@@ -85,6 +94,37 @@ export function AdminUserConsole({
       setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function handleDelete(user: PublicUser) {
+    const label = user.username ? `@${user.username}` : user.email;
+    const confirmed = window.confirm(
+      `Delete ${user.name} (${label})? This cannot be undone.`
+    );
+    if (!confirmed) return;
+
+    setError(null);
+    setSuccess(null);
+    setDeletingUserId(user.id);
+
+    try {
+      const response = await fetch(`/api/admin/users/${user.id}`, {
+        method: "DELETE",
+      });
+      const data = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        setError(data.error ?? "Could not delete user.");
+        return;
+      }
+
+      setSuccess(`Deleted account for ${label}.`);
+      await refreshUsers();
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setDeletingUserId(null);
     }
   }
 
@@ -204,6 +244,7 @@ export function AdminUserConsole({
                 <th className="px-3 py-2 font-medium">Email</th>
                 <th className="px-3 py-2 font-medium">Role</th>
                 <th className="px-3 py-2 font-medium">Sign-in</th>
+                <th className="px-3 py-2 font-medium">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -230,6 +271,25 @@ export function AdminUserConsole({
                   </td>
                   <td className="px-3 py-3 text-slate-600">
                     {user.hasPassword ? "Password" : "Google only"}
+                  </td>
+                  <td className="px-3 py-3">
+                    <button
+                      type="button"
+                      onClick={() => void handleDelete(user)}
+                      disabled={
+                        deletingUserId === user.id ||
+                        user.id === currentUserId
+                      }
+                      title={
+                        user.id === currentUserId
+                          ? "You cannot delete your own account"
+                          : "Delete user"
+                      }
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-rose-200 px-3 py-1.5 text-xs font-medium text-rose-700 transition-colors hover:bg-rose-50 disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                      <Trash2 className="h-3.5 w-3.5" />
+                      {deletingUserId === user.id ? "Deleting…" : "Delete"}
+                    </button>
                   </td>
                 </tr>
               ))}

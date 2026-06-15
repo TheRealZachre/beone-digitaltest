@@ -17,8 +17,16 @@
   "observability": {
     "enabled": true
   },
+  "kv_namespaces": [
+    {
+      "binding": "APP_DATA_KV",
+      "id": "9e09ac91d5b84250847cf5d40fa07b65",
+      "preview_id": "e1a063526aa64bd6909af51a3a5638cb"
+    }
+  ],
   "vars": {
     "CLOUDFLARE_WORKERS": "1",
-    "AUTH_ADMIN_EMAILS": "zach@zachre.com,zach@everythingandanythingpodcast.com"
+    "AUTH_ADMIN_EMAILS": "zach@zachre.com,zach@everythingandanythingpodcast.com",
+    "AUTH_URL": "https://beone-digitaltest.zach-a56.workers.dev"
   }
 }

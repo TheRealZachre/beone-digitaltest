@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/auth/admin";
+import { sendWelcomeEmail } from "@/lib/auth/welcome-email";
 import { createUserWithPassword, listUsers } from "@/lib/auth/users";
+import { getAuthUrl } from "@/lib/env";
 import type { UserRole } from "@/lib/auth/types";
 
 function isValidEmail(email: string): boolean {
@@ -67,6 +69,17 @@ export async function POST(request: Request) {
       role,
     });
 
+    const loginUrl =
+      (await getAuthUrl()) ??
+      new URL(request.url).origin;
+    const emailed = await sendWelcomeEmail({
+      email: user.email,
+      name: user.name,
+      username: user.username ?? username,
+      password,
+      loginUrl,
+    });
+
     return NextResponse.json(
       {
         id: user.id,
@@ -76,6 +89,7 @@ export async function POST(request: Request) {
         role: user.role,
         createdAt: user.createdAt,
         hasPassword: true,
+        emailed,
       },
       { status: 201 }
     );

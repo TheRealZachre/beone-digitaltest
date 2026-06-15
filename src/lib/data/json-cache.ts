@@ -4,6 +4,12 @@ import path from "path";
 import { isCloudflareWorkersRuntime } from "@/lib/cloudflare-build";
 
 const TMP_DATA_DIR = path.join("/tmp", "digital-dashboard-data");
+const KV_KEY_PREFIX = "json-cache:";
+
+type AppDataKv = {
+  get(key: string): Promise<string | null>;
+  put(key: string, value: string): Promise<void>;
+};
 
 const bundledJsonLoaders: Record<string, () => Promise<unknown>> = {
   "beone-digitaltest-users.json": () =>
@@ -59,6 +65,22 @@ function getWritableDataDir(): string {
   return getBundledDataDir();
 }
 
+function getKvKey(filename: string): string {
+  return `${KV_KEY_PREFIX}${filename}`;
+}
+
+async function getAppDataKv(): Promise<AppDataKv | null> {
+  if (!isCloudflareWorkersRuntime()) return null;
+
+  try {
+    const { getCloudflareContext } = await import("@opennextjs/cloudflare");
+    const { env } = await getCloudflareContext({ async: true });
+    return env.APP_DATA_KV ?? null;
+  } catch {
+    return null;
+  }
+}
+
 export function getBundledDataPath(filename: string): string {
   return path.join(getBundledDataDir(), filename);
 }
@@ -78,9 +100,40 @@ async function readBundledJson<T>(filename: string): Promise<T | null> {
   }
 }
 
+async function readJsonFromKv<T>(filename: string): Promise<T | null> {
+  const kv = await getAppDataKv();
+  if (!kv) return null;
+
+  const raw = await kv.get(getKvKey(filename));
+  if (!raw) return null;
+
+  try {
+    return JSON.parse(raw) as T;
+  } catch {
+    return null;
+  }
+}
+
+async function writeJsonToKv<T>(filename: string, data: T): Promise<boolean> {
+  const kv = await getAppDataKv();
+  if (!kv) return false;
+
+  await kv.put(getKvKey(filename), JSON.stringify(data));
+  return true;
+}
+
 export async function readJsonCache<T>(filename: string): Promise<T | null> {
+  const kvData = await readJsonFromKv<T>(filename);
+  if (kvData) return kvData;
+
   if (isCloudflareWorkersRuntime()) {
-    return readBundledJson<T>(filename);
+    const bundled = await readBundledJson<T>(filename);
+    if (bundled) {
+      await writeJsonToKv(filename, bundled);
+      return bundled;
+    }
+
+    return null;
   }
 
   const readPaths = usesEphemeralCache()
@@ -114,6 +167,10 @@ export async function writeJsonCache<T>(
   filename: string,
   data: T
 ): Promise<void> {
+  if (await writeJsonToKv(filename, data)) {
+    return;
+  }
+
   if (!hasWritableFilesystem()) {
     return;
   }

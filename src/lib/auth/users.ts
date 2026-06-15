@@ -111,6 +111,30 @@ export async function findUserById(
   return db.users.find((user) => user.id === id);
 }
 
+export async function deleteUser(
+  userId: string,
+  options?: { actingUserId?: string }
+): Promise<void> {
+  const db = await readUsersDb();
+  const user = db.users.find((entry) => entry.id === userId);
+  if (!user) throw new Error("User not found.");
+
+  if (options?.actingUserId && options.actingUserId === userId) {
+    throw new Error("You cannot delete your own account.");
+  }
+
+  const adminCount = db.users.filter((entry) => entry.role === "admin").length;
+  if (user.role === "admin" && adminCount <= 1) {
+    throw new Error("Cannot delete the only admin account.");
+  }
+
+  db.users = db.users.filter((entry) => entry.id !== userId);
+  await writeUsersDb(db);
+
+  const { removePasswordResetTokensForUser } = await import("./password-reset");
+  await removePasswordResetTokensForUser(userId);
+}
+
 export interface CreateUserInput {
   name: string;
   email: string;

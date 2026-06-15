@@ -13,6 +13,7 @@
     "ci:cloudflare": "bash scripts/cloudflare-ci.sh",
     "deploy:cloudflare": "bash scripts/cloudflare-deploy.sh",
     "setup:cloudflare": "bash scripts/setup-cloudflare-auth.sh",
+    "seed:kv": "bash scripts/seed-kv.sh",
     "preview": "OPENNEXT_CLOUDFLARE=1 opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "npm run build:cloudflare && npm run deploy:cloudflare",
     "build:analytics": "echo \"See https://github.com/TheRealZachre/beone-analytics\"",
@@ -21,6 +22,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.19.11",
     "@xenova/transformers": "^2.17.2",
     "bcryptjs": "^3.0.3",
     "clsx": "^2.1.1",
@@ -37,10 +39,10 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "recharts": "^3.8.1",
+    "resend": "^6.12.4",
     "wavefile": "^11.0.0",
-    "xlsx": "^0.18.5",
-    "@opennextjs/cloudflare": "^1.19.11",
-    "wrangler": "^4.100.0"
+    "wrangler": "^4.100.0",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

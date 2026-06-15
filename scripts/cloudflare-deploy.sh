@@ -21,19 +21,28 @@ load_secret() {
 
 load_secret
 
-env_file=".open-next/cloudflare/next-env.mjs"
-if [ -f "$env_file" ]; then
-  awk '!seen[$0]++' "$env_file" > "${env_file}.tmp" && mv "${env_file}.tmp" "$env_file"
+secrets_file=""
+if [ -n "${AUTH_SECRET:-}" ] || [ -n "${RESEND_API_KEY:-}" ] || [ -n "${AUTH_EMAIL_FROM:-}" ]; then
+  secrets_file="$(mktemp)"
+  trap 'rm -f "$secrets_file"' EXIT
+  : > "$secrets_file"
+  if [ -n "${AUTH_SECRET:-}" ]; then
+    printf 'AUTH_SECRET=%s\n' "$AUTH_SECRET" >> "$secrets_file"
+    echo "Uploading AUTH_SECRET with wrangler deploy..."
+  fi
+  if [ -n "${RESEND_API_KEY:-}" ]; then
+    printf 'RESEND_API_KEY=%s\n' "$RESEND_API_KEY" >> "$secrets_file"
+    echo "Uploading RESEND_API_KEY with wrangler deploy..."
+  fi
+  if [ -n "${AUTH_EMAIL_FROM:-}" ]; then
+    printf 'AUTH_EMAIL_FROM=%s\n' "$AUTH_EMAIL_FROM" >> "$secrets_file"
+    echo "Uploading AUTH_EMAIL_FROM with wrangler deploy..."
+  fi
 fi
 
 deploy_args=()
-
-if [ -n "${AUTH_SECRET:-}" ]; then
-  secrets_file="$(mktemp)"
-  trap 'rm -f "$secrets_file"' EXIT
-  printf 'AUTH_SECRET=%s\n' "$AUTH_SECRET" > "$secrets_file"
+if [ -n "${secrets_file:-}" ]; then
   deploy_args+=(--secrets-file "$secrets_file")
-  echo "Uploading AUTH_SECRET with wrangler deploy..."
 elif [ "${WORKERS_CI:-}" = "1" ]; then
   cat >&2 <<'EOF'
 
@@ -60,7 +69,12 @@ else
   echo "WARNING: AUTH_SECRET not set — deploying without auth secret (login will fail)."
 fi
 
-exec npx opennextjs-cloudflare upload "${deploy_args[@]}"
+env_file=".open-next/cloudflare/next-env.mjs"
+if [ -f "$env_file" ]; then
+  awk '!seen[$0]++' "$env_file" > "${env_file}.tmp" && mv "${env_file}.tmp" "$env_file"
+fi
+
+npx opennextjs-cloudflare upload "${deploy_args[@]}"
 
 version_id="$(npx wrangler versions list 2>/dev/null | awk '/Version ID:/{id=$3} END{print id}')"
 if [ -n "${version_id:-}" ]; then

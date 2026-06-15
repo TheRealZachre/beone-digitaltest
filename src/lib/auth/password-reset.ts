@@ -67,6 +67,14 @@ export async function markPasswordResetTokenUsed(token: string): Promise<void> {
   await writeResetDb(db);
 }
 
+export async function removePasswordResetTokensForUser(
+  userId: string
+): Promise<void> {
+  const db = await readResetDb();
+  db.tokens = db.tokens.filter((record) => record.userId !== userId);
+  await writeResetDb(db);
+}
+
 export function buildPasswordResetUrl(
   origin: string,
   token: string
@@ -78,24 +86,11 @@ export async function sendPasswordResetEmail(
   email: string,
   resetUrl: string
 ): Promise<boolean> {
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.AUTH_EMAIL_FROM;
+  const { sendResendEmail } = await import("@/lib/email/resend");
 
-  if (!apiKey || !from) return false;
-
-  const response = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      from,
-      to: email,
-      subject: "Reset your password",
-      html: `<p>You requested a password reset.</p><p><a href="${resetUrl}">Reset your password</a></p><p>This link expires in 1 hour. If you did not request this, you can ignore this email.</p>`,
-    }),
+  return sendResendEmail({
+    to: email,
+    subject: "Reset your password",
+    html: `<p>You requested a password reset.</p><p><a href="${resetUrl}">Reset your password</a></p><p>This link expires in 1 hour. If you did not request this, you can ignore this email.</p>`,
   });
-
-  return response.ok;
 }
