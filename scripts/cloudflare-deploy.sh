@@ -43,7 +43,7 @@ fi
 deploy_args=()
 if [ -n "${secrets_file:-}" ]; then
   deploy_args+=(--secrets-file "$secrets_file")
-elif [ "${WORKERS_CI:-}" = "1" ]; then
+elif [ "${WORKERS_CI:-}" = "1" ] && [ "${GITHUB_ACTIONS:-}" != "true" ]; then
   cat >&2 <<'EOF'
 
 ERROR: AUTH_SECRET is not available during deploy.
