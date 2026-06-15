@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { signIn } from "next-auth/react";
 import { FormEvent, useState } from "react";
 import { GoogleSignInButton } from "@/components/auth/GoogleSignInButton";
@@ -10,7 +10,6 @@ const inputClassName =
   "mt-1.5 w-full rounded-lg border border-brand-ink/10 bg-white px-4 py-2.5 text-sm text-brand-ink outline-none focus:border-brand-indigo focus:ring-2 focus:ring-brand-indigo/20";
 
 export function LoginForm({ googleEnabled }: { googleEnabled: boolean }) {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl") ?? "/";
   const reset = searchParams.get("reset") === "1";
@@ -39,8 +38,7 @@ export function LoginForm({ googleEnabled }: { googleEnabled: boolean }) {
       return;
     }
 
-    router.push(callbackUrl);
-    router.refresh();
+    window.location.assign(callbackUrl);
   }
 
   return (

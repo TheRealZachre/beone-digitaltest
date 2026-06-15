@@ -59,12 +59,25 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
       return session;
     },
-    async jwt(params) {
-      const token = authConfig.callbacks.jwt(params);
-
-      if (token.sub) {
+    async jwt({ token, user, trigger, session }) {
+      if (user?.id) {
+        token.sub = user.id;
+        token.name = user.name ?? undefined;
+        token.email = user.email ?? undefined;
+        token.role = user.role ?? "user";
+        token.picture = user.image ?? undefined;
+      } else if (token.sub) {
         const stored = await findUserById(token.sub);
-        token.role = stored?.role ?? "user";
+        if (stored) {
+          token.role = stored.role ?? "user";
+          token.name = stored.name;
+          token.email = stored.email;
+        }
+      }
+
+      if (trigger === "update" && session) {
+        if (typeof session.name === "string") token.name = session.name;
+        if (typeof session.email === "string") token.email = session.email;
       }
 
       return token;

@@ -11,6 +11,21 @@ export function BrandLogo({
   variant = "sidebar",
   showTagline = true,
 }: BrandLogoProps) {
+  const vibeCodeFlowWordmark = (
+    <Image
+      src={BRAND_ASSETS.wordmarkWhite}
+      alt="Vibe. Code. Flow."
+      width={220}
+      height={36}
+      className={
+        variant === "full"
+          ? "mx-auto mt-3 h-6 w-auto max-w-[11.5rem]"
+          : "mt-2 h-6 w-auto max-w-[11.5rem]"
+      }
+      priority
+    />
+  );
+
   if (variant === "compact") {
     return (
       <Image
@@ -40,6 +55,7 @@ export function BrandLogo({
             {PLATFORM_TAGLINE}
           </p>
         )}
+        {vibeCodeFlowWordmark}
       </div>
     );
   }
@@ -59,6 +75,7 @@ export function BrandLogo({
           {PLATFORM_TAGLINE}
         </p>
       )}
+      {vibeCodeFlowWordmark}
     </div>
   );
 }
