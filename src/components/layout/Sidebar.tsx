@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import NextImage from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
@@ -155,11 +154,9 @@ export function Sidebar({ isAdmin = false }: { isAdmin?: boolean }) {
         <UserMenu />
         <div>
           <p className="text-xs text-brand-muted">Powered by</p>
-          <NextImage
+          <img
             src={BRAND_ASSETS.wordmarkWhite}
             alt={POWERED_BY_NAME}
-            width={180}
-            height={30}
             className="mt-1.5 h-5 w-auto max-w-[9.5rem]"
           />
         </div>

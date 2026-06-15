@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { BRAND_ASSETS } from "@/lib/brand";
 import { PLATFORM_NAME, PLATFORM_TAGLINE } from "@/lib/company";
 
@@ -7,34 +6,40 @@ interface BrandLogoProps {
   showTagline?: boolean;
 }
 
+function BrandAsset({
+  src,
+  alt,
+  className,
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+}) {
+  return <img src={src} alt={alt} className={className} />;
+}
+
 export function BrandLogo({
   variant = "sidebar",
   showTagline = true,
 }: BrandLogoProps) {
   const vibeCodeFlowWordmark = (
-    <Image
+    <BrandAsset
       src={BRAND_ASSETS.wordmarkWhite}
       alt="Vibe. Code. Flow."
-      width={220}
-      height={36}
       className={
         variant === "full"
-          ? "mx-auto mt-3 h-6 w-auto max-w-[11.5rem]"
-          : "mt-2 h-6 w-auto max-w-[11.5rem]"
+          ? "mx-auto mt-3 h-7 w-auto max-w-[12rem]"
+          : "mt-2.5 h-7 w-auto max-w-[12rem]"
       }
-      priority
     />
   );
 
   if (variant === "compact") {
     return (
-      <Image
+      <BrandAsset
         src={BRAND_ASSETS.iconDark}
         alt={PLATFORM_NAME}
-        width={36}
-        height={36}
         className="h-9 w-9 shrink-0"
-        priority
       />
     );
   }
@@ -42,13 +47,10 @@ export function BrandLogo({
   if (variant === "full") {
     return (
       <div className="text-center">
-        <Image
+        <BrandAsset
           src={BRAND_ASSETS.beoneLogoWhite}
           alt="BeOne"
-          width={180}
-          height={40}
           className="mx-auto h-auto w-full max-w-[12rem]"
-          priority
         />
         {showTagline && (
           <p className="mt-2 text-xs font-medium uppercase tracking-[0.2em] text-brand-muted">
@@ -62,13 +64,10 @@ export function BrandLogo({
 
   return (
     <div className="min-w-0">
-      <Image
+      <BrandAsset
         src={BRAND_ASSETS.beoneLogoWhite}
         alt="BeOne"
-        width={180}
-        height={40}
         className="h-8 w-auto max-w-[11.5rem]"
-        priority
       />
       {showTagline && (
         <p className="mt-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-brand-muted">
