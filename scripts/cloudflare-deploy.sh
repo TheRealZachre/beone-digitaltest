@@ -19,7 +19,31 @@ load_secret() {
   fi
 }
 
+require_cloudflare_credentials() {
+  if [ "${GITHUB_ACTIONS:-}" != "true" ]; then
+    return 0
+  fi
+
+  if [ -n "${CLOUDFLARE_API_TOKEN:-}" ] && [ -n "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
+    return 0
+  fi
+
+  cat >&2 <<'EOF'
+ERROR: Cloudflare credentials are not available.
+
+GitHub Actions: add these repository secrets:
+  CLOUDFLARE_API_TOKEN
+  CLOUDFLARE_ACCOUNT_ID
+
+Create an API token at:
+  https://dash.cloudflare.com/profile/api-tokens
+Use template: "Edit Cloudflare Workers" with account and zone permissions.
+EOF
+  exit 1
+}
+
 load_secret
+require_cloudflare_credentials
 
 secrets_file=""
 if [ -n "${AUTH_SECRET:-}" ] || [ -n "${RESEND_API_KEY:-}" ] || [ -n "${AUTH_EMAIL_FROM:-}" ]; then
@@ -66,7 +90,8 @@ Fix (choose one):
 EOF
   exit 1
 else
-  echo "WARNING: AUTH_SECRET not set — deploying without auth secret (login will fail)."
+  echo "Note: optional worker secrets not provided in this environment."
+  echo "Deploying without uploading AUTH_SECRET, RESEND_API_KEY, or AUTH_EMAIL_FROM."
 fi
 
 env_file=".open-next/cloudflare/next-env.mjs"
@@ -74,10 +99,32 @@ if [ -f "$env_file" ]; then
   awk '!seen[$0]++' "$env_file" > "${env_file}.tmp" && mv "${env_file}.tmp" "$env_file"
 fi
 
-npx opennextjs-cloudflare upload "${deploy_args[@]}"
+upload_log="$(mktemp)"
+trap 'rm -f "$upload_log" ${secrets_file:+"$secrets_file"}' EXIT
 
-version_id="$(npx wrangler versions list 2>/dev/null | awk '/Version ID:/{id=$3} END{print id}')"
+set +e
+npx opennextjs-cloudflare upload "${deploy_args[@]}" 2>&1 | tee "$upload_log"
+upload_status=${PIPESTATUS[0]}
+set -e
+
+if [ "$upload_status" -ne 0 ]; then
+  echo "ERROR: opennextjs-cloudflare upload failed with exit code ${upload_status}." >&2
+  exit "$upload_status"
+fi
+
+version_id="$(
+  awk -F': ' '/Worker Version ID:/{print $2}' "$upload_log" | tail -1 | tr -d '[:space:]'
+)"
+
+if [ -z "${version_id:-}" ]; then
+  version_id="$(
+    npx wrangler versions list 2>/dev/null | awk -F': ' '/Version ID:/{print $2}' | head -1 | tr -d '[:space:]'
+  )"
+fi
+
 if [ -n "${version_id:-}" ]; then
   echo "Promoting version ${version_id} to 100% traffic..."
   npx wrangler versions deploy "${version_id}" --yes
+else
+  echo "WARNING: Could not determine uploaded Worker version ID; skipping traffic promotion." >&2
 fi
