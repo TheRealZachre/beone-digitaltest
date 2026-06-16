@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --brand-ink: #181820;
-  --brand-paper: #faf7f1;
-  --brand-stage: #141319;
-  --brand-off-white: #f4f2ec;
-  --brand-indigo: #7c78ff;
-  --brand-indigo-bright: #8a6cff;
-  --brand-muted: #6f6e7a;
-  --brand-border: #2b2a31;
+  --brand-ink: #0F2344;          /* Blue Zodiac — primary text */
+  --brand-paper: #ffffff;        /* White — page background */
+  --brand-stage: #0F2344;        /* Blue Zodiac — sidebar */
+  --brand-off-white: #f0f4fa;    /* Light navy-tinted surface */
+  --brand-indigo: #D32E27;       /* Punch red — primary accent */
+  --brand-indigo-bright: #e8433c; /* Lighter Punch — hover */
+  --brand-muted: #5a6a82;        /* Muted navy — secondary text */
+  --brand-border: #1e3a5c;       /* Dark navy — sidebar borders */
   --background: var(--brand-paper);
   --foreground: var(--brand-ink);
 }
@@ -40,17 +40,17 @@ body {
 }
 
 .brand-card {
-  border-color: rgb(24 24 32 / 0.08);
-  background: #fffefb;
+  border-color: rgb(15 35 68 / 0.08);
+  background: #ffffff;
 }
 
 .brand-accent-gradient {
   background: linear-gradient(
     90deg,
-    #ff6b47 0%,
-    #8a6cff 42%,
-    #6c8bff 72%,
-    #27d3e0 100%
+    #D32E27 0%,
+    #8b1a16 40%,
+    #0F2344 75%,
+    #1a3a5c 100%
   );
 }
 

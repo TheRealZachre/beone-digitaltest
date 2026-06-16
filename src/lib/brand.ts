@@ -1,19 +1,19 @@
 export const BRAND_COLORS = {
-  ink: "#181820",
-  paper: "#FAF7F1",
-  stage: "#141319",
-  offWhite: "#F4F2EC",
-  indigo: "#7C78FF",
-  indigoBright: "#8A6CFF",
-  muted: "#6F6E7A",
-  border: "#2B2A31",
+  ink: "#0F2344",        // Blue Zodiac
+  paper: "#FFFFFF",      // White
+  stage: "#0F2344",      // Blue Zodiac (sidebar)
+  offWhite: "#F0F4FA",   // Light navy-tinted surface
+  indigo: "#D32E27",     // Punch red (primary accent)
+  indigoBright: "#E8433C", // Lighter Punch (hover)
+  muted: "#5A6A82",      // Muted navy
+  border: "#1E3A5C",     // Dark navy (sidebar borders)
 } as const;
 
 export const BRAND_GRADIENT = {
-  start: "#FF6B47",
-  mid: "#8A6CFF",
-  midBlue: "#6C8BFF",
-  end: "#27D3E0",
+  start: "#D32E27",    // Punch red
+  mid: "#8B1A16",      // Deep red
+  midBlue: "#0F2344",  // Blue Zodiac
+  end: "#1A3A5C",      // Dark navy
 } as const;
 
 export const BRAND_ASSETS = {

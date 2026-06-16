@@ -78,17 +78,14 @@ const TIER_MEANING: Record<string, string> = {
   featured: "Featured — exceptional",
 };
 
-// BeOne brand colors
-const BEONE_NAVY = "#0F2344";
-const BEONE_RED = "#D32E27";
-
+// Uses CSS variables from globals.css (brand-ink = Blue Zodiac, brand-indigo = Punch red)
 const GRADE_COLOR: Record<string, string> = {
-  "A+": "border-[#0F2344] text-[#0F2344]",
-  A:   "border-[#0F2344] text-[#0F2344]",
-  B:   "border-[#0F2344] text-[#0F2344]",
-  C:   "border-[#D32E27] text-[#D32E27]",
-  D:   "border-[#D32E27] text-[#D32E27]",
-  F:   "border-[#D32E27] text-[#D32E27]",
+  "A+": "border-brand-ink text-brand-ink",
+  A:   "border-brand-ink text-brand-ink",
+  B:   "border-brand-ink text-brand-ink",
+  C:   "border-brand-indigo text-brand-indigo",
+  D:   "border-brand-indigo text-brand-indigo",
+  F:   "border-brand-indigo text-brand-indigo",
 };
 
 const FLAG_ICONS: Record<string, string> = {
@@ -110,16 +107,16 @@ const SEV_TITLE: Record<string, string> = {
 };
 
 const REVIEW_SEV_BAR: Record<string, string> = {
-  high: "border-l-[#D32E27]",
+  high: "border-l-brand-indigo",
   medium: "border-l-amber-500",
-  low: "border-l-[#0F2344]",
+  low: "border-l-brand-ink",
 };
 
 const REVIEW_SEV_BADGE: Record<string, string> = {
-  high: "bg-[#D32E27]",
+  high: "bg-brand-indigo",
   medium: "bg-amber-500",
-  low: "bg-[#0F2344]",
-  info: "bg-[#0F2344]",
+  low: "bg-brand-ink",
+  info: "bg-brand-ink",
 };
 
 // ── Helpers ───────────────────────────────────────────────────────
@@ -230,7 +227,7 @@ export function WikipediaAudit({ articleUrl }: { articleUrl: string }) {
               value={pendingStart}
               max={pendingEnd}
               onChange={(e) => setPendingStart(e.target.value)}
-              className="rounded-lg border border-brand-ink/10 bg-white px-3 py-2 text-sm text-brand-ink shadow-sm focus:outline-none focus:ring-2 focus:ring-[#0F2344]"
+              className="rounded-lg border border-brand-ink/10 bg-white px-3 py-2 text-sm text-brand-ink shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-ink"
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -243,13 +240,13 @@ export function WikipediaAudit({ articleUrl }: { articleUrl: string }) {
               min={pendingStart}
               max={isoToday()}
               onChange={(e) => setPendingEnd(e.target.value)}
-              className="rounded-lg border border-brand-ink/10 bg-white px-3 py-2 text-sm text-brand-ink shadow-sm focus:outline-none focus:ring-2 focus:ring-[#0F2344]"
+              className="rounded-lg border border-brand-ink/10 bg-white px-3 py-2 text-sm text-brand-ink shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-ink"
             />
           </div>
           <button
             onClick={handleApply}
             disabled={loadingAnalytics}
-            className="rounded-lg px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90 disabled:opacity-50 bg-[#0F2344]"
+            className="rounded-lg px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90 disabled:opacity-50 bg-brand-indigo"
           >
             {loadingAnalytics ? "Loading…" : "Apply"}
           </button>
@@ -285,7 +282,7 @@ export function WikipediaAudit({ articleUrl }: { articleUrl: string }) {
       {/* ── Loading skeleton ──────────────────────────────────── */}
       {loadingAnalytics && (
         <div className="flex items-center gap-3 text-sm text-brand-muted">
-          <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-brand-ink/10 border-t-[#0F2344]" />
+          <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-brand-ink/10 border-t-brand-ink" />
           Pulling traffic and article content…
         </div>
       )}
@@ -298,7 +295,7 @@ export function WikipediaAudit({ articleUrl }: { articleUrl: string }) {
               href={analytics.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-[#0F2344] hover:underline font-medium"
+              className="text-sm text-brand-indigo hover:underline font-medium"
             >
               View on {analytics.project} ↗
             </a>
@@ -387,8 +384,8 @@ export function WikipediaAudit({ articleUrl }: { articleUrl: string }) {
               <AreaChart data={analytics.pageviews}>
                 <defs>
                   <linearGradient id="wikiGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor={BEONE_NAVY} stopOpacity={0.2} />
-                    <stop offset="95%" stopColor={BEONE_NAVY} stopOpacity={0} />
+                    <stop offset="5%" stopColor="#0F2344" stopOpacity={0.2} />
+                    <stop offset="95%" stopColor="#0F2344" stopOpacity={0} />
                   </linearGradient>
                 </defs>
                 <XAxis
@@ -417,7 +414,7 @@ export function WikipediaAudit({ articleUrl }: { articleUrl: string }) {
                 <Area
                   type="monotone"
                   dataKey="views"
-                  stroke={BEONE_NAVY}
+                  stroke="#0F2344"
                   strokeWidth={2}
                   fill="url(#wikiGrad)"
                   dot={false}
@@ -434,7 +431,7 @@ export function WikipediaAudit({ articleUrl }: { articleUrl: string }) {
 
             {loadingReview && (
               <div className="flex items-center gap-3 text-sm text-brand-muted">
-                <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-brand-ink/10 border-t-[#0F2344]" />
+                <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-brand-ink/10 border-t-brand-ink" />
                 Claude is reviewing the article…
               </div>
             )}
@@ -448,7 +445,7 @@ export function WikipediaAudit({ articleUrl }: { articleUrl: string }) {
             {review && !review.error && (
               <div className="flex flex-col gap-3">
                 {review.assessment && (
-                  <p className="rounded-r-lg border-l-4 border-l-[#0F2344] bg-[#0F2344]/5 px-4 py-3 text-sm text-brand-ink leading-relaxed">
+                  <p className="rounded-r-lg border-l-4 border-l-brand-ink bg-brand-ink/5 px-4 py-3 text-sm text-brand-ink leading-relaxed">
                     {review.assessment}
                   </p>
                 )}
@@ -488,7 +485,7 @@ export function WikipediaAudit({ articleUrl }: { articleUrl: string }) {
                       )}
                       {i.suggested_action && (
                         <p className="text-xs text-brand-muted border-t border-brand-ink/8 pt-2">
-                          <span className="font-semibold text-[#0F2344]">Next: </span>
+                          <span className="font-semibold text-brand-ink">Next: </span>
                           {i.suggested_action}
                         </p>
                       )}
