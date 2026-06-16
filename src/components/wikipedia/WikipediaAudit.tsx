@@ -408,7 +408,7 @@ export function WikipediaAudit({ articleUrl }: { articleUrl: string }) {
                     borderRadius: 8,
                     fontSize: 12,
                   }}
-                  formatter={(v: number) => [v.toLocaleString(), "Views"]}
+                  formatter={(v) => [(v as number).toLocaleString(), "Views"]}
                 />
                 <Area
                   type="monotone"
