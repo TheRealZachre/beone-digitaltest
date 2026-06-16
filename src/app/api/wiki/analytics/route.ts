@@ -1,20 +1,57 @@
 import { type NextRequest, NextResponse } from "next/server";
+import { fetchArticle, fetchPageviews, summarise } from "@/lib/wikipedia/fetch";
 
-const WIKI_BACKEND = process.env.WIKI_BACKEND_URL ?? "http://127.0.0.1:8000";
+export const runtime = "nodejs";
+
+function isoToday() {
+  return new Date().toISOString().split("T")[0];
+}
+function isoDaysAgo(n: number) {
+  const d = new Date();
+  d.setDate(d.getDate() - n);
+  return d.toISOString().split("T")[0];
+}
 
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
-  const upstream = new URL(`${WIKI_BACKEND}/api/analytics`);
-  searchParams.forEach((v, k) => upstream.searchParams.set(k, v));
+  const q = searchParams.get("q");
+  if (!q) {
+    return NextResponse.json({ error: "Missing ?q= parameter." }, { status: 400 });
+  }
+
+  const startDate = searchParams.get("start_date") ?? isoDaysAgo(89);
+  const endDate = searchParams.get("end_date") ?? isoToday();
 
   try {
-    const res = await fetch(upstream.toString(), { cache: "no-store" });
-    const data = await res.json();
-    return NextResponse.json(data, { status: res.status });
-  } catch {
+    const article = await fetchArticle(q);
+    if (!article) {
+      return NextResponse.json(
+        { error: `No article found for "${q}".` },
+        { status: 404 }
+      );
+    }
+
+    const pageviews = await fetchPageviews(
+      article.title,
+      article.project,
+      startDate,
+      endDate
+    );
+    const metrics = summarise(article, pageviews);
+
+    return NextResponse.json({
+      title: article.title,
+      project: article.project,
+      url: article.url,
+      metrics,
+      pageviews,
+      maintenance_flags: article.maintenanceFlags,
+      _extract: article.extract,
+    });
+  } catch (e: unknown) {
     return NextResponse.json(
-      { error: "Could not reach the Wikipedia analytics backend. Make sure it is running on port 8000." },
-      { status: 502 }
+      { error: String(e) },
+      { status: 500 }
     );
   }
 }
