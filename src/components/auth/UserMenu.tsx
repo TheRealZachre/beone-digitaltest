@@ -2,11 +2,12 @@
 
 import { SignOutButton } from "./SignOutButton";
 import { useSafeSession } from "./useSafeSession";
+import type { SessionUserDisplay } from "@/lib/auth/session-user";
 
-export function UserMenu() {
+export function UserMenu({ user }: { user?: SessionUserDisplay | null }) {
   const session = useSafeSession();
-  const email = session?.user?.email;
-  const name = session?.user?.name;
+  const email = user?.email ?? session?.user?.email;
+  const name = user?.name ?? session?.user?.name;
 
   if (!email) return null;
 

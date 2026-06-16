@@ -6,16 +6,18 @@ export function AuthShell({
   title,
   subtitle,
   children,
+  vcfHref = "/login",
 }: {
   title: string;
   subtitle: string;
   children: ReactNode;
+  vcfHref?: string;
 }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-brand-stage px-4 py-12">
       <div className="w-full max-w-md">
         <div className="mb-8 flex justify-center">
-          <BrandLogo variant="full" showTagline />
+          <BrandLogo variant="full" showTagline vcfHref={vcfHref} />
         </div>
 
         <div className="rounded-2xl border border-brand-border bg-brand-paper p-8 shadow-xl">

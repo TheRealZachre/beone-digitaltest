@@ -1,0 +1,1354 @@
+{
+  "meta": {
+    "syncedAt": "2026-06-16T01:44:48.810Z",
+    "companySlug": "john-v-oyler",
+    "channels": {
+      "linkedin": {
+        "postCount": 50,
+        "followers": 21368,
+        "provider": "apify",
+        "dataSource": "live",
+        "syncedAt": "2026-06-16T01:44:26.162Z"
+      },
+      "x": {
+        "postCount": 20,
+        "followers": 829,
+        "provider": "apify",
+        "dataSource": "live",
+        "syncedAt": "2026-06-16T01:44:26.162Z"
+      }
+    }
+  },
+  "posts": [
+    {
+      "id": "linkedin-7467607746591277056",
+      "platform": "linkedin",
+      "category": "product",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2026-06-02T16:07:08.230Z",
+      "caption": "Innovation in CLL is moving faster than the broader system built to deliver it. Today’s breakthroughs are fundamentally changing what’s possible for patients and raising expectations for long-term disease control.\n \nWe now have the tools that significantly alter the trajectory of this disease, yet too many patients still can’t access the right therapy when it matters most. That gap isn’t scientific. It’s structural. That’s why this issue matters to me personally, and why BeOne is taking a stand.\n \nTogether with Charles River Associates and partners across the community, we’re releasing When Innovation Outpaces Access: Closing the Gap in CLL Care - starting with the first in a series of insights examining where progress is breaking down across the patient journey, from testing to treatment access.\n \nClosing this gap will require accountability from all of us. BeOne Medicines is committed to helping lead that change with the cancer community.\n\nExplore the report overview here: https://lnkd.in/eab9HMxa",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7467607746591277056/600/600",
+      "metrics": {
+        "impressions": 3104,
+        "reach": 3104,
+        "likes": 244,
+        "comments": 2,
+        "shares": 4,
+        "saves": 0,
+        "clicks": 56
+      }
+    },
+    {
+      "id": "linkedin-7462879714970472448",
+      "platform": "linkedin",
+      "category": "behind-the-scenes",
+      "storyBeat": "Brand Vision",
+      "type": "organic",
+      "publishedAt": "2026-05-20T14:59:37.649Z",
+      "caption": "A couple of weeks ago, I said that a great goalkeeper isn’t defined by reflexes alone. It’s grit and determination. And that same determination is what it takes to make progress against cancer – showing up every day, pushing forward, and refusing to quit. \n\nFor more than 15 years, BeOne Medicines, has worked to help advance cancer care for more than 2 million patients globally – and none of that progress happens alone. It’s powered by passionate teams, bold thinking, and the belief that every action can make a difference.  \n\nThat idea is the heart of One Save Changes Everything, our new initiative with Tim Howard highlighting the resilience, teamwork, and preparation it takes to create meaningful progress for patients. \n\nLearn more: BeOneSave.com #TeamBeOne",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7462879714970472448/600/600",
+      "metrics": {
+        "impressions": 2272,
+        "reach": 2272,
+        "likes": 154,
+        "comments": 3,
+        "shares": 10,
+        "saves": 0,
+        "clicks": 41
+      }
+    },
+    {
+      "id": "linkedin-7458164291536400386",
+      "platform": "linkedin",
+      "category": "promotional",
+      "storyBeat": "Brand Vision",
+      "type": "organic",
+      "publishedAt": "2026-05-07T14:42:13.094Z",
+      "caption": "A great goalkeeper isn’t defined by reflexes alone. It’s grit. It’s staying locked in and fighting until the final whistle—regardless of the score. \n\nThat mindset shapes how I lead, make decisions, and stay focused when the work is hard, and the stakes are high. \n\nThat same determination is what it takes to make progress against cancer—showing up every day, pushing forward, and refusing to quit. \n\nWe’ve been working on something at BeOne Medicines. More to come soon.",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E1FAQE9Ox0swsaCMg/feedshare-document-cover-images_1920/B4EZ4C4bybGYBQ-/0/1778164821490?e=1782180000&v=beta&t=jQfInSqoev3UdTH75X0m1TkkdOJuNNaG3ihrQm_FU9k",
+      "metrics": {
+        "impressions": 6636,
+        "reach": 6636,
+        "likes": 433,
+        "comments": 10,
+        "shares": 34,
+        "saves": 0,
+        "clicks": 119
+      }
+    },
+    {
+      "id": "x-2052024210596217312",
+      "platform": "x",
+      "category": "promotional",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2026-05-06T13:54:00.000Z",
+      "caption": "#Newsfor#Investorsand#Media:\n\nProud to share BeOne’s Q1 FY2026 results. It was another solid quarter of execution that would not be possible without the hard work of our 12,000 purpose-driven colleagues around the globe.",
+      "imageUrl": "https://pbs.twimg.com/media/HHo59nAXMAEJtTA.jpg?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 202,
+        "reach": 168,
+        "likes": 4,
+        "comments": 0,
+        "shares": 3,
+        "saves": 0,
+        "clicks": 2
+      }
+    },
+    {
+      "id": "linkedin-7457784430309310464",
+      "platform": "linkedin",
+      "category": "promotional",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2026-05-06T13:32:47.120Z",
+      "caption": "Proud to share BeOne’s Q1 FY2026 results. It was another solid quarter of execution and a strong start to the year. \n\n> We delivered total global revenue of $1.5 billion, representing 35% year-over-year growth. \n> Net income totaled $227 million with GAAP diluted earnings per ADS of $1.96. \n> Gross margin improved to 89% from approximately 85% in the prior year. \n \nThese results would not be possible without the dedication of our 12,000 purpose-driven colleagues around the globe.  \n \nTogether, we are how the world stops cancer.  \n\n#News for #Investors and #Media",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7457784430309310464/600/600",
+      "metrics": {
+        "impressions": 5796,
+        "reach": 5796,
+        "likes": 387,
+        "comments": 4,
+        "shares": 28,
+        "saves": 0,
+        "clicks": 104
+      }
+    },
+    {
+      "id": "linkedin-7450233992219471872",
+      "platform": "linkedin",
+      "category": "promotional",
+      "storyBeat": "Corporate Citizenship",
+      "type": "organic",
+      "publishedAt": "2026-04-15T17:30:02.399Z",
+      "caption": "Yesterday we celebrated a milestone - the publication of BeOne’s 2025 Responsible Business & Sustainability Report. \n \nThis report reflects the rigor, integrity, and purpose that define BeOne. It captures not only what we’ve accomplished, but how we operate - focused on patients, grounded in our values, and committed to doing our work responsibly. \n\nI invite you to read the full report to learn more. \n\n#BeOneInnovator #PatientsFirst",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7450233992219471872/600/600",
+      "metrics": {
+        "impressions": 2868,
+        "reach": 2868,
+        "likes": 211,
+        "comments": 2,
+        "shares": 8,
+        "saves": 0,
+        "clicks": 52
+      }
+    },
+    {
+      "id": "linkedin-7432796151994658816",
+      "platform": "linkedin",
+      "category": "promotional",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2026-02-26T14:38:17.310Z",
+      "caption": "#News for #Investors and #Media:  \nProud to share BeOne’s Q4 and full-year 2025 results. It was another solid quarter of execution and a strong finish to the year.  \n \nWe delivered total global revenue of $1.5 billion and $5.3 billion for the fourth quarter and full year. \n \nEarnings per American Depository Share (ADS): GAAP $0.58 and $2.53 for the fourth quarter and full year; non-GAAP $1.95 and $8.09 for the fourth quarter and full year. \n \nOur performance reflects what truly differentiates BeOne: a commitment to scientific excellence, exceptional speed, and relentless focus on delivering the best long-term outcomes for patients.   \n \nThis would not be possible without the hard work and dedication of our 12,000 colleagues around the globe.  \n \nAs we enter 2026, we are more confident than ever in the opportunity ahead. Together, we are how the world stops cancer.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7432796151994658816/600/600",
+      "metrics": {
+        "impressions": 3284,
+        "reach": 3284,
+        "likes": 231,
+        "comments": 4,
+        "shares": 12,
+        "saves": 0,
+        "clicks": 59
+      }
+    },
+    {
+      "id": "x-2027030157995766083",
+      "platform": "x",
+      "category": "promotional",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2026-02-26T14:37:00.000Z",
+      "caption": "#Newsfor#Investorsand#Media:\n\nProud to share BeOne’s Q4 and full-year 2025 results. It was another solid quarter of execution and a strong finish to the year. This would not be possible without the hard work and dedication of our 12,000 colleagues around the globe.",
+      "imageUrl": "https://picsum.photos/seed/2027030157995766083/600/600",
+      "metrics": {
+        "impressions": 106,
+        "reach": 88,
+        "likes": 4,
+        "comments": 0,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7425249523360526338",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2026-02-05T18:50:40.834Z",
+      "caption": "BeOne Medicines is proud to contribute to the first clinical trial in Sub-Saharan Africa exploring the use of immunotherapy. We are providing our PD-1 inhibitor, for investigational use, to support and enable this important study, as part of a global effort with Obafemi Awolowo University, Lagos University Teaching Hospital, Medserve, and Memorial Sloan Kettering Cancer Center.\n \nThis is a clear example of our commitment to access in action - working with world-class partners to deliver a first-of-its-kind clinical trial that can make a real difference for patients.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7425249523360526338/600/600",
+      "metrics": {
+        "impressions": 2904,
+        "reach": 2904,
+        "likes": 200,
+        "comments": 8,
+        "shares": 11,
+        "saves": 0,
+        "clicks": 52
+      }
+    },
+    {
+      "id": "linkedin-7424820072994631680",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2026-02-04T14:24:11.888Z",
+      "caption": "As we observe #WorldCancerDay, I'm reflecting on what drives BeOne Medicines forward in our mission to defeat cancer globally. If I had to choose one word, it would be RESILIENCE.  \n \nResilience is what I see in patients who face setbacks but continue fighting. It's what I see in healthcare professionals who adapt to new challenges and never stop advocating for better care. It's what I see in our team at BeOne, working tirelessly to bring innovation to patients globally. \n \nOver the last 15 years, BeOne has supported nearly 2 million patients globally, running clinical trials across six continents and delivering our medicines to more than 75 countires. This year alone, we’re pursuing over 10 new potential medicines – and each scientific breakthrough we pursue, draws inspiration from the resilience of those we serve and work alongside every day.  \n \nThis World Cancer Day's theme is \"\"United by Unique.\"\" Every cancer journey is unique, and every individual’s resilience looks different. But we're united by the determination to keep fighting, keep innovating, and keep believing that progress is possible. \n \n#UnitedByUnique",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D5622AQHh9VFohoDPvg/feedshare-shrink_1280/B56ZwpCgxqJQAc-/0/1770215050559?e=1782950400&v=beta&t=aZBaOm9u2xMW-9qib8hqEB8dPrDL8g_Btt5pDpcOsXU",
+      "metrics": {
+        "impressions": 8296,
+        "reach": 8296,
+        "likes": 580,
+        "comments": 2,
+        "shares": 33,
+        "saves": 0,
+        "clicks": 149
+      }
+    },
+    {
+      "id": "x-2010771307961409566",
+      "platform": "x",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2026-01-12T17:50:00.000Z",
+      "caption": "I’m looking forward to connecting with investors, partners, and stakeholders from across the global healthcare community at the J.P. Morgan Healthcare Conference this week.\n\nOn Tuesday, January 13, I’ll highlight@BeOneMedicines'   transformative goal leadership and progress in treating B-cell malignancies - and share how our long-term strategy is grounded in innovation, discipline, and a deep commitment to patients.\n\nI’ve been coming to JPM for the last 25 years – it’s always an important moment to exchange ideas, discuss the future of oncology, and engage in meaningful conversations about where healthcare is headed.\n\nI truly believe that, together, we are how the world stops cancer.#JPM2026",
+      "imageUrl": "https://pbs.twimg.com/media/G-exwu3WkAAZQap.jpg?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 115,
+        "reach": 96,
+        "likes": 4,
+        "comments": 1,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7416536704154710016",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2026-01-12T17:49:02.859Z",
+      "caption": "I’m looking forward to connecting with investors, partners, and stakeholders from across the global healthcare community at the J.P. Morgan Healthcare Conference this week.\n \nOn Tuesday, January 13, I’ll highlight BeOne Medicines' transformative global leadership and progress in treating B-cell malignancies - and share how our long-term strategy is grounded in innovation, discipline, and a deep commitment to patients.\n \nI’ve been coming to JPM for the last 25 years – it’s always an important moment to exchange ideas, discuss the future of oncology, and engage in meaningful conversations about where healthcare is headed. \n\nI truly believe that, together, we are how the world stops cancer. #JPM2026",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4D22AQHJ7WOyygtEEw/feedshare-image-high-res/B4DZuzU1URJwAU-/0/1768240141905?e=1782950400&v=beta&t=VnLswE3F_sLfIzoZxTxSPakvpyNGJD6aLgOoaajVxGo",
+      "metrics": {
+        "impressions": 5864,
+        "reach": 5864,
+        "likes": 450,
+        "comments": 3,
+        "shares": 11,
+        "saves": 0,
+        "clicks": 106
+      }
+    },
+    {
+      "id": "x-2002094612048196046",
+      "platform": "x",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-12-19T19:12:00.000Z",
+      "caption": "At@BeOneMedicines, we believe Cancer Has No Borders, and Neither Do We. That's why we brought nearly 100 patient advocates together at#ASH2025for our AI Innovation Lab, to explore how AI can transform the blood cancer patient journey.\n\nWhile there, we learned:\n\n1) Patients are already turning to AI - we need to meet them there.\n\nA story was shared about a blood cancer patient who uploaded scan results into AI before speaking to a doctor. The information received was inaccurate and almost a decade old. So, while the tools still need to improve, we can’t wait for that happen: patients are already using AI, and the broader cancer community must help them navigate it safely with trustworthy information.\n\n2) We're witnessing a fundamental shift: patients are becoming CEOs of their own health.\n\nData Deloitte shared shows 51% of patients are willing to tell their doctors they disagree, up from single digits just years ago. This shift does not undermine clinical expertise - it reflects patients’ growing desire to participate actively in decisions about their care. For all of us, this means ensuring patients have clearer information and tools that help them make confident decisions with their clinicians.\n\n3) AI + human judgment is where the real power lies.\n\nThe cancer journey is deeply human - and AI can’t change that. It’s not here to replace human judgment or compassion, but when developed responsibly and grounded in trusted data, AI can amplify human expertise, enhance decision-making, and help care teams deliver more informed, compassionate, and connected care.\n\nWhat's next?\n\nThis was the first conversation of many. We're going to continue this work with patients, advocates, clinicians, and partners across the cancer community to shape AI-enabled tools that:\n\n-- accelerate blood cancer education\n\n-- improve data integrity and access to trusted information\n\n-- make care more personal and human",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/2002094459761123329/img/VMFg_NLG03bg8Qec.jpg?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 62,
+        "reach": 52,
+        "likes": 1,
+        "comments": 0,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7407806671575756800",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-12-19T15:39:00.896Z",
+      "caption": "At BeOne Medicines, we believe Cancer Has No Borders, and Neither Do We. That's why we brought nearly 100 patient advocates together at #ASH2025 for our AI Innovation Lab, to explore how AI can transform the blood cancer patient journey. \n \nWhile there, we learned: \n \n1) 𝐏𝐚𝐭𝐢𝐞𝐧𝐭𝐬 𝐚𝐫𝐞 𝐚𝐥𝐫𝐞𝐚𝐝𝐲 𝐭𝐮𝐫𝐧𝐢𝐧𝐠 𝐭𝐨 𝐀𝐈 - 𝐰𝐞 𝐧𝐞𝐞𝐝 𝐭𝐨 𝐦𝐞𝐞𝐭 𝐭𝐡𝐞𝐦 𝐭𝐡𝐞𝐫𝐞. \nA story was shared about a blood cancer patient who uploaded scan results into AI before speaking to a doctor. The information received was inaccurate and almost a decade old. So, while the tools still need to improve, we can’t wait for that happen: patients are already using AI, and the broader cancer community must help them navigate it safely with trustworthy information. \n \n2) 𝐖𝐞'𝐫𝐞 𝐰𝐢𝐭𝐧𝐞𝐬𝐬𝐢𝐧𝐠 𝐚 𝐟𝐮𝐧𝐝𝐚𝐦𝐞𝐧𝐭𝐚𝐥 𝐬𝐡𝐢𝐟𝐭: 𝐩𝐚𝐭𝐢𝐞𝐧𝐭𝐬 𝐚𝐫𝐞 𝐛𝐞𝐜𝐨𝐦𝐢𝐧𝐠 𝐂𝐄𝐎𝐬 𝐨𝐟 𝐭𝐡𝐞𝐢𝐫 𝐨𝐰𝐧 𝐡𝐞𝐚𝐥𝐭𝐡.  \nData Deloitte shared shows 51% of patients are willing to tell their doctors they disagree, up from single digits just years ago. This shift does not undermine clinical expertise - it reflects patients’ growing desire to participate actively in decisions about their care. For all of us, this means ensuring patients have clearer information and tools that help them make confident decisions with their clinicians.  \n  \n3) 𝐀𝐈 + 𝐡𝐮𝐦𝐚𝐧 𝐣𝐮𝐝𝐠𝐦𝐞𝐧𝐭 𝐢𝐬 𝐰𝐡𝐞𝐫𝐞 𝐭𝐡𝐞 𝐫𝐞𝐚𝐥 𝐩𝐨𝐰𝐞𝐫 𝐥𝐢𝐞𝐬. \nThe cancer journey is deeply human - and AI can’t change that. It’s not here to replace human judgment or compassion, but when developed responsibly and grounded in trusted data, AI can amplify human expertise, enhance decision-making, and help care teams deliver more informed, compassionate, and connected care. \n \n𝐖𝐡𝐚𝐭'𝐬 𝐧𝐞𝐱𝐭? \n \nThis was the first conversation of many. We're going to continue this work with patients, advocates, clinicians, and partners across the cancer community to shape AI-enabled tools that:  \n \n-- accelerate blood cancer education \n-- improve data integrity and access to trusted information \n-- make care more personal and human \n \nThank you to our event speakers Michele Nadeem-Baker, Meghan Gutierrez, Neal Batra and Thomas Yang, PhD, our own Eleanor K. Duff, PhD, Matthew Shaulis, Josh Schwartz, MD, MBA, Michael Schoen, Anand Reddi, Mark Riedl, Jennifer Branstetter, and every advocate who challenged us to think differently. \n \nTogether, we are how the world stops cancer.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7407806671575756800/600/600",
+      "metrics": {
+        "impressions": 7656,
+        "reach": 7656,
+        "likes": 576,
+        "comments": 18,
+        "shares": 15,
+        "saves": 0,
+        "clicks": 138
+      }
+    },
+    {
+      "id": "linkedin-7401673352723304448",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Patient-Centered",
+      "type": "organic",
+      "publishedAt": "2025-12-02T17:27:23.730Z",
+      "caption": "BeOne Medicines is honored to partner with Blood Cancer United in support of patients, families, survivors, caregivers, and the entire blood cancer community. Their commitment to funding promising research, advancing life-saving treatments, and providing steadfast support is making a profound and lasting impact on many lives.. #LightTheNight",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7401673352723304448/600/600",
+      "metrics": {
+        "impressions": 1396,
+        "reach": 1396,
+        "likes": 93,
+        "comments": 0,
+        "shares": 7,
+        "saves": 0,
+        "clicks": 25
+      }
+    },
+    {
+      "id": "x-1991877253970456729",
+      "platform": "x",
+      "category": "behind-the-scenes",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-11-21T14:31:00.000Z",
+      "caption": "I’m very humbled to be named the 2025 National Health winner for the Entrepreneur Of The Year® program by EY. An entrepreneur is only as strong as their team. All success – and recognition like this - comes from their ability to help bring a vision to life. Thank you to@BeOneMedicinesalmost 12,000 employees and the many patients and families who have accompanied us on our journey.#EOYUS#EYSGF",
+      "imageUrl": "https://pbs.twimg.com/media/G6SRWoyXMAE-R_C.jpg?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 307,
+        "reach": 256,
+        "likes": 10,
+        "comments": 2,
+        "shares": 3,
+        "saves": 0,
+        "clicks": 3
+      }
+    },
+    {
+      "id": "linkedin-7397642126597111808",
+      "platform": "linkedin",
+      "category": "behind-the-scenes",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-11-21T14:28:44.525Z",
+      "caption": "I’m very humbled to be named the 2025 National Health winner for the Entrepreneur Of The Year® program by @ernstandyoung. An entrepreneur is only as strong as their team. All success – and recognition like this - comes from their ability to help bring a vision to life. Thank you to BeOne Medicines’s almost 12,000 employees and the many patients and families who have accompanied us on our journey. #EOYUS #EYSGF",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D5622AQHYwQW5SiRGEQ/feedshare-shrink_800/B56Zqm0UJQJQAg-/0/1763735323670?e=1782950400&v=beta&t=cWk_Oe-gP793ndxlQZq3edDrxl2r-9GOGZES6TfrWDo",
+      "metrics": {
+        "impressions": 13492,
+        "reach": 13492,
+        "likes": 1001,
+        "comments": 110,
+        "shares": 15,
+        "saves": 0,
+        "clicks": 243
+      }
+    },
+    {
+      "id": "linkedin-7396565421337866240",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-11-18T15:10:17.987Z",
+      "caption": "It was a pleasure talking with BiotechTV today and catching up at the Jefferies Global Healthcare Conference in London. We had a great conversation about our recent successes here at BeOne Medicines, including yesterday's exciting data announcement. Interview below.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7396565421337866240/600/600",
+      "metrics": {
+        "impressions": 2432,
+        "reach": 2432,
+        "likes": 182,
+        "comments": 1,
+        "shares": 6,
+        "saves": 0,
+        "clicks": 44
+      }
+    },
+    {
+      "id": "x-1986471762167542264",
+      "platform": "x",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-11-06T16:32:00.000Z",
+      "caption": "#Newsfor#Investorsand#Media:\nProud to share BeOne’s Q3 2025 results — another milestone on our path to becoming the world’s leading oncology company.\n\n- This quarter, we delivered 41% revenue growth to $1.4B and achieved strong momentum across our portfolio\n\n- BRUKINSA reached $1.0B in global revenue, now the global leader in the BTK inhibitor class.\n\n- Earnings per ADS: GAAP $1.09 | Non-GAAP $2.65\n\n- Continued progress with sonrotoclax and our degrader, BGB-16673, reinforcing our leadership in B-cell malignancies.\nNearly 50 BeOne abstracts were accepted for presentation at the upcoming ASH 2025 Annual Meeting, reflecting our deep scientific strength and commitment to delivering the best long-term outcomes for patients.\n\nThank you to our patients, their families, clinicians, and our 12,000 colleagues across six continents.\n\nTogether, we are how the world stops cancer – and we’re just getting started.",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/1986456332002639872/img/in2bZyIUPeQrWE9Z.jpg?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 154,
+        "reach": 128,
+        "likes": 4,
+        "comments": 0,
+        "shares": 2,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7392237136537882624",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-11-06T16:31:14.475Z",
+      "caption": "#News for #Investors and #Media: \nProud to share BeOne’s Q3 2025 results — another milestone on our path to becoming the world’s leading oncology company. \n \n- This quarter, we delivered 41% revenue growth to $1.4B and achieved strong momentum across our portfolio \n- BRUKINSA reached $1.0B in global revenue, now the global leader in the BTK inhibitor class. \n- Earnings per ADS: GAAP $1.09 | Non-GAAP $2.65 \n- Continued progress with sonrotoclax and our degrader, BGB-16673, reinforcing our leadership in B-cell malignancies. \n \nNearly 50 BeOne abstracts were accepted for presentation at the upcoming ASH 2025 Annual Meeting, reflecting our deep scientific strength and commitment to delivering the best long-term outcomes for patients. \n \nThank you to our patients, their families, clinicians, and our 12,000 colleagues across six continents.  \n \nTogether, we are how the world stops cancer – and we’re just getting started.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7392237136537882624/600/600",
+      "metrics": {
+        "impressions": 2140,
+        "reach": 2140,
+        "likes": 151,
+        "comments": 6,
+        "shares": 7,
+        "saves": 0,
+        "clicks": 39
+      }
+    },
+    {
+      "id": "linkedin-7388938224607559680",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-10-28T14:02:32.580Z",
+      "caption": "Fifteen years ago, we set out to transform cancer care through innovation and access.\n\nToday, that vision has become a global reality — with nearly 12,000 employees, a presence in 75+ countries, and more than one million patients treated worldwide.\n\nFrom pioneering research and global listings across three major exchanges to our Hopewell R&D campus and redomiciliation to Basel, Switzerland, every milestone reflects one shared purpose: to stop cancer and bring breakthrough medicines to patients everywhere.\n\nCancer Has No Borders and Neither Do We.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7388938224607559680/600/600",
+      "metrics": {
+        "impressions": 20972,
+        "reach": 20972,
+        "likes": 1435,
+        "comments": 79,
+        "shares": 78,
+        "saves": 0,
+        "clicks": 377
+      }
+    },
+    {
+      "id": "linkedin-7386406826357059584",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-10-21T14:23:40.206Z",
+      "caption": "#ESMO25 in Berlin has been an inspiring week for #TeamBeOne — filled with learning, collaboration, and momentum in solid tumor research.\nI’m proud of our colleagues who represented BeOne Medicines with passion and purpose, and grateful to everyone who took the time to engage in meaningful discussions that will shape the future of oncology care.\n #Oncology #Research #Innovation",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7386406826357059584/600/600",
+      "metrics": {
+        "impressions": 2340,
+        "reach": 2340,
+        "likes": 181,
+        "comments": 1,
+        "shares": 4,
+        "saves": 0,
+        "clicks": 42
+      }
+    },
+    {
+      "id": "x-1980624820611043432",
+      "platform": "x",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-10-21T13:18:00.000Z",
+      "caption": "#Newsfor#Investorsand#Media: \nAt#ESMO25, we are sharing the first clinical data of an investigational HKP1 inhibitor in combination with our PD-1 inhibitor. We’re proud to be advancing solid tumor research in some of the world’s deadliest cancers.#BeOneAgainstCancer#CancerResearch",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/1980270692240072704/img/yCE2BhW8PxHdEw-R.jpg?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 62,
+        "reach": 52,
+        "likes": 1,
+        "comments": 0,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7386041134017466368",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-10-20T14:10:32.358Z",
+      "caption": "#News for #Investors and #Media: At #ESMO25, we shared the first clinical data of an investigational HKP1 inhibitor in combination with our PD-1 inhibitor. We’re proud to be advancing solid tumor research in some of the world’s deadliest cancers. #BeOneAgainstCancer #CancerResearch",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7386041134017466368/600/600",
+      "metrics": {
+        "impressions": 896,
+        "reach": 896,
+        "likes": 68,
+        "comments": 0,
+        "shares": 2,
+        "saves": 0,
+        "clicks": 16
+      }
+    },
+    {
+      "id": "linkedin-7384724881122189312",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-10-16T23:00:13.213Z",
+      "caption": "#News for #Investors and #Media: As #ESMO25 unfolds in Berlin, the oncology community comes together with one purpose: to push the boundaries of science and bring hope to more patients around the world.\n \nAt BeOne Medicines, we’re proud to share new data from our expanding solid tumor portfolio — including 6 abstracts across lung and gastric cancer — demonstrating how our science continues to move forward with focus, rigor, and heart.\n \nFifteen years in, our mission remains the same: to make breakthrough medicines accessible to every patient, everywhere. Cancer has no borders. Neither do we.®",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7384724881122189312/600/600",
+      "metrics": {
+        "impressions": 2668,
+        "reach": 2668,
+        "likes": 191,
+        "comments": 2,
+        "shares": 9,
+        "saves": 0,
+        "clicks": 48
+      }
+    },
+    {
+      "id": "x-1975974832748613757",
+      "platform": "x",
+      "category": "promotional",
+      "storyBeat": "Corporate Citizenship",
+      "type": "organic",
+      "publishedAt": "2025-10-08T17:21:00.000Z",
+      "caption": "The latest episode of The Cancer Has No Borders podcast, hosted by Zachary Randles-Friedman, features@PatGarciaGonzal, CEO and co-founder of@themaxfndn.  Her organization has helped deliver lifesaving cancer therapies to more than 100,000 patients across 80+ countries.  The conversation explores how partnerships like ours can expand global access to innovative medicines, strengthen healthcare infrastructure, and bring dignity and hope to patients and families in low-resource settings.  \n\nListen to the full episode:\nApple:podcasts.apple.com/us/podcas…Spotify:open.spotify.com/episode/5ls…YouTube:piped.video/watch?v=zv4_6H1H…Learn more about The Max Foundation:themaxfoundation.org",
+      "imageUrl": "https://pbs.twimg.com/media/G2wSoq-XIAAOT9X.png?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 101,
+        "reach": 84,
+        "likes": 3,
+        "comments": 1,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7381702067985203200",
+      "platform": "linkedin",
+      "category": "promotional",
+      "storyBeat": "Corporate Citizenship",
+      "type": "organic",
+      "publishedAt": "2025-10-08T14:48:38.400Z",
+      "caption": "The latest episode of The Cancer Has No Borders podcast, hosted by Zachary Randles-Friedman, features Pat Garcia-Gonzalez, CEO and co-founder of The Max Foundation. Her organization has helped deliver lifesaving cancer therapies to more than 100,000 patients across 80+ countries.\n\nThe conversation explores how partnerships like ours can expand global access to innovative medicines, strengthen healthcare infrastructure, and bring dignity and hope to patients and families in low-resource settings.\n\n🎧 Listen to the full episode: \nApple: https://lnkd.in/dM5rPgJ6\nSpotify: https://lnkd.in/dYiFk_Js\nYouTube: https://lnkd.in/gJcshiT3\n\n🔗 Learn more about The Max Foundation: https://lnkd.in/dAf7shjz",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4D22AQHr5ASv-Pw0Yw/feedshare-image-high-res/B4DZnES6b7JcAo-/0/1759934917008?e=1782950400&v=beta&t=TH5JdFDf_IdG2wTUn014JxAlzaKeL-ASieZ8lm8OgaM",
+      "metrics": {
+        "impressions": 2536,
+        "reach": 2536,
+        "likes": 176,
+        "comments": 3,
+        "shares": 10,
+        "saves": 0,
+        "clicks": 46
+      }
+    },
+    {
+      "id": "x-1970629902295859631",
+      "platform": "x",
+      "category": "behind-the-scenes",
+      "storyBeat": "People & Culture",
+      "type": "organic",
+      "publishedAt": "2025-09-23T23:22:00.000Z",
+      "caption": "This week, we’re honored to welcome executive leaders from across the globe to our San Carlos office. Together, at@BeOneMedicines, we are unlocking the transformative potential of AI, aligning our vision for 2026 and beyond, and deepening the culture that fuels our people.\n\nWhen we gather as One Team, the momentum is undeniable. United by our mission, we're scaling faster, innovating boldly, and shaping a future where patients and communities worldwide feel the impact. Together, we are how the world stops cancer.",
+      "imageUrl": "https://pbs.twimg.com/media/G1kU8LZa8AAcy4W.jpg?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 115,
+        "reach": 96,
+        "likes": 4,
+        "comments": 1,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7376386183322324992",
+      "platform": "linkedin",
+      "category": "behind-the-scenes",
+      "storyBeat": "People & Culture",
+      "type": "organic",
+      "publishedAt": "2025-09-23T22:45:12.732Z",
+      "caption": "This week, we’re honored to welcome executive leaders from across the globe to our San Carlos office. Together, at BeOne Medicines, we are unlocking the transformative potential of AI, aligning our vision for 2026 and beyond, and deepening the culture that fuels our people.\n\nWhen we gather as One Team, the momentum is undeniable. United by our mission, we're scaling faster, innovating boldly, and shaping a future where patients and communities worldwide feel the impact. Together, we are how the world stops cancer.",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D5622AQGXXfD4hxLVyg/feedshare-image-high-res/B56Zl4wI.2I8Ao-/0/1758667510617?e=1782950400&v=beta&t=4hRx94sbAqtChkC2duaaD7j-p2seV1LlE0n7LVfPm5Q",
+      "metrics": {
+        "impressions": 5984,
+        "reach": 5984,
+        "likes": 480,
+        "comments": 8,
+        "shares": 4,
+        "saves": 0,
+        "clicks": 108
+      }
+    },
+    {
+      "id": "linkedin-7373342069982941184",
+      "platform": "linkedin",
+      "category": "promotional",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-09-15T13:08:59.555Z",
+      "caption": "As we observe #WorldLymphomaDay and Blood Cancer Awareness Month, it’s a moment to not only acknowledge the significant strides we’ve seen in blood cancer treatment but also to reaffirm our commitment to making medicines accessible to patients globally.\n \nFor over a decade, BeOne Medicines has been dedicated to advancing science with purpose, drawing inspiration from the strength and resilience of the patients and families we serve. We are working across geographies and healthcare systems to ensure patients everywhere can benefit from the breakthroughs we pursue. #CancerHasNoBorders— and neither do we.\n \nTo keep the conversation going, Giancarlo Benelli, SVP and Head of Europe, will share our approach in expanding access and advancing care across the globe.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7373342069982941184/600/600",
+      "metrics": {
+        "impressions": 6228,
+        "reach": 6228,
+        "likes": 463,
+        "comments": 4,
+        "shares": 16,
+        "saves": 0,
+        "clicks": 112
+      }
+    },
+    {
+      "id": "x-1966141873963331897",
+      "platform": "x",
+      "category": "educational",
+      "storyBeat": "Corporate Citizenship",
+      "type": "organic",
+      "publishedAt": "2025-09-11T14:08:00.000Z",
+      "caption": "Our team was honored to spotlight our partners at@BloodCancerUtd—an organization building on 76 years of impact with a bold new vision for the future.\n\nIn our latest Cancer Has No Borders podcast, Zachary Randles-Friedman had the privilege of sitting down with@LynnGodfrey3, SVP and Chief Experience Officer, to talk about:\n\n- The rebrand from The Leukemia & Lymphoma Society to Blood Cancer United\n- How research and innovation are driving progress for patients\n-Their bold ambition to extend one million years of life for people with blood cancer\n\nThis conversation highlights the power of vision, partnership, and relentless focus on patient outcomes. I encourage you to listen, reflect, and join us in supporting their mission.\n\nLink to episode:\n\nApple:podcasts.apple.com/us/podcas…Spotify:open.spotify.com/episode/2LS…YouTube:piped.video/watch?v=Pn9eiRMN…",
+      "imageUrl": "https://pbs.twimg.com/media/G0kjlqLWAAACCtF.png?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 125,
+        "reach": 104,
+        "likes": 4,
+        "comments": 2,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7371906579870384128",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Patient-Centered",
+      "type": "organic",
+      "publishedAt": "2025-09-11T14:04:52.042Z",
+      "caption": "Our team was honored to spotlight our partners at Blood Cancer United—an organization building on 76 years of impact with a bold new vision for the future.\n\nIn our latest Cancer Has No Borders podcast, Zachary Randles-Friedman had the privilege of sitting down with Lynn Richardson - Godfrey, SVP and Chief Experience Officer, to talk about:\n- The rebrand from The Leukemia & Lymphoma Society to Blood Cancer United\n- How research and innovation are driving progress for patients\n-Their bold ambition to extend one million years of life for people with blood cancer\n\nThis conversation highlights the power of vision, partnership, and relentless focus on patient outcomes. I encourage you to listen, reflect, and join us in supporting their mission.\n\nLink to episode: \n\nApple: https://lnkd.in/gUXPSsrn\n\nSpotify: https://lnkd.in/gPPMDi8V\n\nYouTube: https://lnkd.in/g4TXX3va",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D5622AQEI7meiSEooUQ/feedshare-image-high-res/B56Zk5F.C8G4As-/0/1757599490820?e=1782950400&v=beta&t=nmKRmL7t-YJLm1dNEmS7tRwOica6rQx62m0oBLUfohI",
+      "metrics": {
+        "impressions": 2712,
+        "reach": 2712,
+        "likes": 192,
+        "comments": 1,
+        "shares": 10,
+        "saves": 0,
+        "clicks": 49
+      }
+    },
+    {
+      "id": "x-1961443319424180299",
+      "platform": "x",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-08-29T14:58:00.000Z",
+      "caption": "At BeOne Medicines, we are committed to advancing science for patients facing some of the most difficult cancers. Today we announced positive topline results from our Phase 2 study of our next-generation BCL2 inhibitor in relapsed/refractory mantle cell lymphoma.\n\nThis milestone reflects the determination of the patients and families who participated, the investigators who led the research, and the BeOne team that continues to drive innovation. While much work remains, we are encouraged by this progress and remain focused on addressing the urgent needs in blood cancers.",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/1961431656767660032/img/hmPLXwn2iWa7Kc9W.jpg?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 115,
+        "reach": 96,
+        "likes": 4,
+        "comments": 1,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7367208729563361285",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-08-29T14:57:17.247Z",
+      "caption": "At BeOne Medicines, we are committed to advancing science for patients facing some of the most difficult cancers. Today we announced positive topline results from our Phase 2 study of our next-generation BCL2 inhibitor in relapsed/refractory mantle cell lymphoma. \n \nThis milestone reflects the determination of the patients and families who participated, the investigators who led the research, and the BeOne team that continues to drive innovation. While much work remains, we are encouraged by this progress and remain focused on addressing the urgent needs in blood cancers.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7367208729563361285/600/600",
+      "metrics": {
+        "impressions": 2852,
+        "reach": 2852,
+        "likes": 193,
+        "comments": 2,
+        "shares": 13,
+        "saves": 0,
+        "clicks": 51
+      }
+    },
+    {
+      "id": "x-1955688527443755265",
+      "platform": "x",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-08-13T17:50:00.000Z",
+      "caption": "New Epidsode: Cancer Has No Borders Podcast: Why is cancer mortality nearly 50% higher in parts of Eastern Europe than in Western Europe?\n\nIn our latest podcast episode, we tackle this urgent and deeply personal question—with real talk, real data, and real solutions.\n\n- What’s behind this disparity?\n- What can be done to change it?\n\nJoin Zachary Randles-Friedman, Senior Director of Digital Communications at@BeOneMedicines,  in conversation with:\n\n- Caroline Berchet, Health Economist at OECD \n\n- Sebastian Bojkow, Head of Market Access for Sub-region Europe at BeOne Medicines\n\nTogether, they explore the systemic barriers to equitable cancer care—and the bold actions needed to break them down.\n\nThis is a conversation about equity, urgency, and hope.\n\nBecause cancer has no borders—and neither do we. At BeOne Medicines, we're building a future where access to care isn’t dictated by geography. \n \nListen now: \nApple:podcasts.apple.com/us/podcas…Spotify:open.spotify.com/episode/3ja…YouTube:piped.video/watch?v=GtM4qT92…hashtag#CancerCare hashtag#BeOneAgainstCancer hashtag#Collaboration hashtag#HealthEquity hashtag#PolicyMatters hashtag#InnovationInHealth",
+      "imageUrl": "https://pbs.twimg.com/media/GyP7lvgWEAM7VcQ.png?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 144,
+        "reach": 120,
+        "likes": 6,
+        "comments": 1,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7361448122033623041",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-08-13T17:26:41.385Z",
+      "caption": "New Epidsode: Cancer Has No Borders Podcast: Why is cancer mortality nearly 50% higher in parts of Eastern Europe than in Western Europe?\n\nIn our latest podcast episode, we tackle this urgent and deeply personal question—with real talk, real data, and real solutions.\n\n- What’s behind this disparity?\n- What can be done to change it?\n\nJoin Zachary Randles-Friedman, Senior Director of Digital Communications at BeOne, in conversation with:\n\n- Caroline Berchet, Health Economist at [OECD - OCDE]\n\n- Sebastian Bojkow, Head of Market Access for Sub-region Europe at BeOne Medicines\n\nTogether, they explore the systemic barriers to equitable cancer care—and the bold actions needed to break them down.\n\nThis is a conversation about equity, urgency, and hope.\n\nBecause cancer has no borders—and neither do we. At BeOne Medicines, we're building a future where access to care isn’t dictated by geography.     \n              \nListen now: \nApple: https://lnkd.in/gBsQJw2B\n\nSpotify: https://lnkd.in/gv58w4Y3\n\nYouTube: https://lnkd.in/gSz_FsCJ\n\n#CancerCare #BeOneAgainstCancer #Collaboration #HealthEquity #PolicyMatters #InnovationInHealth",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D5622AQG0BEz2WnT_kg/feedshare-image-high-res/B56ZikeDjeHMA4-/0/1755105999924?e=1782950400&v=beta&t=zuUjsjccZthcemvVqfKqq3HwrKiHqAXlvTj77ztVOJ8",
+      "metrics": {
+        "impressions": 2972,
+        "reach": 2972,
+        "likes": 203,
+        "comments": 2,
+        "shares": 13,
+        "saves": 0,
+        "clicks": 53
+      }
+    },
+    {
+      "id": "linkedin-7358857903241416704",
+      "platform": "linkedin",
+      "category": "promotional",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-08-06T13:54:05.101Z",
+      "caption": "Today, we announced our Q2 2025 earnings, continuing to build on the momentum from earlier this year.\n\nThis quarter marked another strong performance for the company, driven by the dedication and innovation of our BeOne Medicines team.\n\nI’m proud of the consistent progress we’re making as we deliver value for our customers and shareholders. Read the press release here: https://lnkd.in/gGGsiP8F",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D5622AQF0NtFozc603Q/feedshare-image-high-res/B56Zh_qRF9HQAw-/0/1754488443854?e=1782950400&v=beta&t=ZkYeH9mXAAADUf2QAqlbwnTmkKxJKuOEeyn4GcJjW_c",
+      "metrics": {
+        "impressions": 6360,
+        "reach": 6360,
+        "likes": 424,
+        "comments": 14,
+        "shares": 29,
+        "saves": 0,
+        "clicks": 114
+      }
+    },
+    {
+      "id": "x-1953091926653382815",
+      "platform": "x",
+      "category": "promotional",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-08-06T13:52:00.000Z",
+      "caption": "Today, we announced our Q2 2025 earnings, continuing to build on the momentum from earlier this year.\n\nThis quarter marked another strong performance for the company, driven by the dedication and innovation of our@BeOneMedicinesteam.\n\nI’m proud of the consistent progress we’re making as we deliver value for our customers and shareholders. Read the press release here:ir.beonemedicines.com/news/b…",
+      "imageUrl": "https://pbs.twimg.com/media/GxrGmceW4AAEjPj.jpg?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 211,
+        "reach": 176,
+        "likes": 8,
+        "comments": 0,
+        "shares": 2,
+        "saves": 0,
+        "clicks": 2
+      }
+    },
+    {
+      "id": "x-1948762354662973595",
+      "platform": "x",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-07-25T15:08:00.000Z",
+      "caption": "At@BeOneMedicines, we’re building a future where innovation in oncology is accessible to every patient, everywhere.\n\nCancer impacts millions globally, yet the most advanced treatments often remain out of reach for far too many. We’re here to change that.\n\nFrom conducting clinical trials across 45+ countries to engaging patients directly in our R&D process, BeOne is rethinking every step of drug development. Our globally inclusive model isn’t just faster and more efficient—it’s more equitable.\n\nWith over 1.7 million patients reached, we’re proving that bold science and meaningful access can go hand in hand.\n\nRead full article in Life Sciences Review to learn more about BeOne:lifesciencesreview.com/beone",
+      "imageUrl": "https://pbs.twimg.com/media/Gwtkow1WUAALWJg.jpg?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 77,
+        "reach": 64,
+        "likes": 2,
+        "comments": 0,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7354527492264652803",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-07-25T15:06:34.669Z",
+      "caption": "At BeOne Medicines, we’re building a future where innovation in oncology is accessible to every patient, everywhere.\n\nCancer impacts millions globally, yet the most advanced treatments often remain out of reach for far too many. We’re here to change that.\n\nFrom conducting clinical trials across 45+ countries to engaging patients directly in our R&D process, BeOne is rethinking every step of drug development. Our globally inclusive model isn’t just faster and more efficient—it’s more equitable.\n\nWith over 1.7 million patients reached, we’re proving that bold science and meaningful access can go hand in hand.\n\nRead full article in Life Sciences Review to learn more about BeOne: https://lnkd.in/g7DKQkHS",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D5622AQH_d5qq6y8RCQ/feedshare-image-high-res/B56ZhCHyAjH0As-/0/1753455993645?e=1782950400&v=beta&t=ve4RhTDzXzfNb5su-n_3xEj5nPCBwFD8c9rtTzyENg4",
+      "metrics": {
+        "impressions": 5524,
+        "reach": 5524,
+        "likes": 393,
+        "comments": 6,
+        "shares": 19,
+        "saves": 0,
+        "clicks": 99
+      }
+    },
+    {
+      "id": "x-1948752950769115617",
+      "platform": "x",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-07-25T14:31:00.000Z",
+      "caption": "Each year in the U.S., nearly 2 million people are diagnosed with cancer. Globally, it’s the second leading cause of death—and by 2040, cases are projected to surge to 30 million, with more than 15 million deaths. At BeOne, we’re confronting this staggering challenge head-on.\n\nOne year ago, we opened our flagship U.S. biologics manufacturing and clinical R&D facility in Hopewell, NJ—a major milestone in our mission to deliver innovative cancer medicines to more patients, faster.@Johnvoyler, Co-Founder, Chairman and CEO, and Matt Shaulis, GM, North America, reflect on the impact Hopewell is having, and how it’s advancing our bold mission to eradicate cancer through innovation, speed, and access.\n\n📖 Read their op-ed in@ROINJNews:roi-nj.com/2025/07/24/sponso…#PatientsFirst#BeOneInnovator:roi-nj.com/2025/07/24/sponso…#PatientsFirst#BeOneInnovator",
+      "imageUrl": "https://picsum.photos/seed/1948752950769115617/600/600",
+      "metrics": {
+        "impressions": 355,
+        "reach": 296,
+        "likes": 8,
+        "comments": 0,
+        "shares": 5,
+        "saves": 0,
+        "clicks": 4
+      }
+    },
+    {
+      "id": "x-1942591274692841865",
+      "platform": "x",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-07-08T14:27:00.000Z",
+      "caption": "In the latest episode of Cancer Has No Borders, we’re joined by Matthew Shaulis, General Manager for North America at BeOne Medicines.\n\nMatt brings a deeply personal connection to our mission -- one that shapes how he leads and why he’s so passionate about changing the cancer care landscape. In this candid conversation, he shares how personal experience drives purpose—and how that purpose powers BeOne’s bold approach.\n\nWe also dive into BeOne’s strategic vision, from expanding global clinical trials, building impactful partnerships, and reimagining what’s possible in cancer care.\n\nI invite you to listen on your favorite podcast platform or watch the full interview on YouTube.#CancerHasNoBorders#OncologyInnovation#Podcast",
+      "imageUrl": "https://pbs.twimg.com/amplify_video_thumb/1942290348178333696/img/w5u_wJSQxyJVUvuh.jpg?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 77,
+        "reach": 64,
+        "likes": 2,
+        "comments": 0,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7348356321227751426",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-07-08T14:24:32.839Z",
+      "caption": "In the latest episode of Cancer Has No Borders, we’re joined by Matthew Shaulis, General Manager for North America at BeOne Medicines.\n\nMatt brings a deeply personal connection to our mission -- one that shapes how he leads and why he’s so passionate about changing the cancer care landscape. In this candid conversation, he shares how personal experience drives purpose—and how that purpose powers BeOne’s bold approach.\n\nWe also dive into BeOne’s strategic vision, from expanding global clinical trials, building impactful partnerships, and reimagining what’s possible in cancer care.\n\nI invite you to listen on your favorite podcast platform or watch the full interview on YouTube.\n#CancerHasNoBorders #OncologyInnovation #Podcast",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7348356321227751426/600/600",
+      "metrics": {
+        "impressions": 1524,
+        "reach": 1524,
+        "likes": 113,
+        "comments": 1,
+        "shares": 4,
+        "saves": 0,
+        "clicks": 27
+      }
+    },
+    {
+      "id": "linkedin-7344092178937192449",
+      "platform": "linkedin",
+      "category": "promotional",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-06-26T20:00:22.093Z",
+      "caption": "We had the pleasure of hosting our R&D Investor Day this week in New York City! It was a great opportunity to showcase our integrated, end-to-end R&D model and highlight the innovation driving our pipeline forward. Our purpose is clear: to transform cancer care and transcend borders to enable access to more patients around the world.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7344092178937192449/600/600",
+      "metrics": {
+        "impressions": 4496,
+        "reach": 4496,
+        "likes": 322,
+        "comments": 4,
+        "shares": 15,
+        "saves": 0,
+        "clicks": 81
+      }
+    },
+    {
+      "id": "x-1933686987120062972",
+      "platform": "x",
+      "category": "promotional",
+      "storyBeat": "People & Culture",
+      "type": "organic",
+      "publishedAt": "2025-06-14T00:44:00.000Z",
+      "caption": "I enjoyed my conversation with Yaron last week, where we explored how our unique culture—grounded in ownership and urgency—truly sets us apart. Full interview below.",
+      "imageUrl": "https://picsum.photos/seed/1933686987120062972/600/600",
+      "metrics": {
+        "impressions": 197,
+        "reach": 164,
+        "likes": 7,
+        "comments": 0,
+        "shares": 2,
+        "saves": 0,
+        "clicks": 2
+      }
+    },
+    {
+      "id": "linkedin-7339297183290007552",
+      "platform": "linkedin",
+      "category": "promotional",
+      "storyBeat": "People & Culture",
+      "type": "organic",
+      "publishedAt": "2025-06-13T14:26:46.044Z",
+      "caption": "I really enjoyed my conversation with Yaron last week, where we explored how our unique culture—grounded in ownership and urgency—truly sets us apart. Full interview below.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7339297183290007552/600/600",
+      "metrics": {
+        "impressions": 1144,
+        "reach": 1144,
+        "likes": 92,
+        "comments": 0,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 21
+      }
+    },
+    {
+      "id": "x-1933242166857326994",
+      "platform": "x",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-06-12T19:17:00.000Z",
+      "caption": "Thank you, Ernst & Young for this incredible honor.\n\nAs I reflect on the past 15 years and my journey as an entrepreneur, I’m humbled by the remarkable milestones and achievements made by our team. As we take the next step in our new chapter towards becoming a diversified biotech company globally focused on oncology, our original value of#PatientsFirstis stronger than ever.",
+      "imageUrl": "https://pbs.twimg.com/media/GtQ_nXBXAAAdPi_.jpg?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 115,
+        "reach": 96,
+        "likes": 4,
+        "comments": 1,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7339007348209852416",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-06-12T19:15:03.976Z",
+      "caption": "Thank you, Ernst & Young for this incredible honor.\n\nAs I reflect on the past 15 years and my journey as an entrepreneur, I’m humbled by the remarkable milestones and achievements made by our team. As we take the next step in our new chapter towards becoming a diversified biotech company globally focused on oncology, our original value of #PatientsFirst is stronger than ever.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7339007348209852416/600/600",
+      "metrics": {
+        "impressions": 10272,
+        "reach": 10272,
+        "likes": 722,
+        "comments": 136,
+        "shares": 13,
+        "saves": 0,
+        "clicks": 185
+      }
+    },
+    {
+      "id": "x-1933161865758056605",
+      "platform": "x",
+      "category": "ugc",
+      "storyBeat": "Corporate Citizenship",
+      "type": "organic",
+      "publishedAt": "2025-06-12T13:57:00.000Z",
+      "caption": "Following BeOne’s recent redomiciliation to Switzerland, it was an honor to meet with State Secretary for Economic Affairs Helene Budliger Artieda, alongside our Board Member Anthony Hooper, Head of Government Affairs Michael Schoen, and members of our Swiss Affiliate team.\n\nThis milestone marks more than a geographical shift—it reflects our deep commitment to forging meaningful partnerships in Switzerland and reinforcing our role within the global healthcare ecosystem.\n\nOur discussions underscored the vital importance of collaboration to address today’s most urgent healthcare challenges and to accelerate the development and delivery of life-saving cancer therapies.\n\nWe are energized by the shared vision and support from Swiss leadership and are proud to begin this next chapter.\n\nHere’s to driving progress, strengthening alliances, and advancing our mission to transform the lives of cancer patients around the world.#BeOneAgainstCancer#GlobalCollaboration#CancerCare#NewBeginnings#Switzerland",
+      "imageUrl": "https://pbs.twimg.com/media/GtP1M5SWMAAMWqM.jpg?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 77,
+        "reach": 64,
+        "likes": 2,
+        "comments": 0,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7338925455279869954",
+      "platform": "linkedin",
+      "category": "ugc",
+      "storyBeat": "Corporate Citizenship",
+      "type": "organic",
+      "publishedAt": "2025-06-12T13:49:39.180Z",
+      "caption": "Following BeOne’s recent redomiciliation to Switzerland, it was an honor to meet with State Secretary for Economic Affairs Helene Budliger Artieda, alongside our Board Member Anthony Hooper, Head of Government Affairs Michael Schoen, and members of our Swiss Affiliate team.\n\nThis milestone marks more than a geographical shift—it reflects our deep commitment to forging meaningful partnerships in Switzerland and reinforcing our role within the global healthcare ecosystem. Our discussions underscored the vital importance of collaboration to address today’s most urgent healthcare challenges and to accelerate the development and delivery of life-saving cancer therapies.\n\nWe are energized by the shared vision and support from Swiss leadership and are proud to begin this next chapter.\n\nHere’s to driving progress, strengthening alliances, and advancing our mission to transform the lives of cancer patients around the world.\n\n#BeOneAgainstCancer #GlobalCollaboration #CancerCare #NewBeginnings #Switzerland",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7338925455279869954/600/600",
+      "metrics": {
+        "impressions": 2564,
+        "reach": 2564,
+        "likes": 195,
+        "comments": 3,
+        "shares": 5,
+        "saves": 0,
+        "clicks": 46
+      }
+    },
+    {
+      "id": "x-1933156997584585201",
+      "platform": "x",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-06-12T13:38:00.000Z",
+      "caption": "This year, we’re showcasing more data than ever before, with 31 abstracts across seven disease areas – all highlighting the progress of our hematology clinical development program and our commitment to targeted therapies that raise the standard of care.\n\nI look forward to connecting with colleagues, peers and industry partners as we come together to help shape the future of oncology through next-generation science and patient-focused innovation.#BeOneAgainstCancer#EHA2025#TeamBeOne",
+      "imageUrl": "https://pbs.twimg.com/media/GtP0CZIXwAAQS3K.jpg?format=jpg&name=medium",
+      "metrics": {
+        "impressions": 62,
+        "reach": 52,
+        "likes": 1,
+        "comments": 0,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 1
+      }
+    },
+    {
+      "id": "linkedin-7338920233799192579",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-06-12T13:28:54.282Z",
+      "caption": "This year, we’re showcasing more data than ever before, with 31 abstracts across seven disease areas – all highlighting the progress of our hematology clinical development program and our commitment to targeted therapies that raise the standard of care.\n \nI look forward to connecting with colleagues, peers and industry partners as we come together to help shape the future of oncology through next-generation science and patient-focused innovation.\n \n#BeOneAgainstCancer #EHA2025 #TeamBeOne",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D5622AQF22rgyncE1Bg/feedshare-image-high-res/B56ZdkVDrPHUAw-/0/1749734932871?e=1782950400&v=beta&t=3cOypXLb5r03gnyR4ErP7aULsC-GalBjPA3WDyJOjp0",
+      "metrics": {
+        "impressions": 3244,
+        "reach": 3244,
+        "likes": 229,
+        "comments": 2,
+        "shares": 12,
+        "saves": 0,
+        "clicks": 58
+      }
+    },
+    {
+      "id": "linkedin-7338282408078659587",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Corporate Citizenship",
+      "type": "organic",
+      "publishedAt": "2025-06-10T19:14:24.780Z",
+      "caption": "We are happy to announce the publication of our 2024 Responsible Business & Sustainability Report, which details the important progress we made, on behalf of  patients, towards the long-term operational resilience of our organization. We are energized by what we’ve accomplished in such a short time, and we will continue to be relentless in the pursuit of our mission.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7338282408078659587/600/600",
+      "metrics": {
+        "impressions": 2672,
+        "reach": 2672,
+        "likes": 184,
+        "comments": 3,
+        "shares": 11,
+        "saves": 0,
+        "clicks": 48
+      }
+    },
+    {
+      "id": "linkedin-7335759549548683265",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-06-03T20:09:28.434Z",
+      "caption": "As #ASCO2025 comes to a close, I’m incredibly proud of what Team BeOne accomplished on the ground in Chicago.\n\nWe were honored to unveil new clinical data that reflects the strength and depth of our growing pipeline—both in breast cancer and hematologic malignancies.\n\nOn the solid tumor front, we shared promising preliminary results for two of our investigational breast cancer therapies: a B7-H4-targeting ADC and a selective CDK2 inhibitor. These early findings underscore encouraging anti-tumor activity and favorable safety profiles—adding momentum to BeOne’s transformation into a global oncology innovator.\n\nIn hematologic cancers, we presented new data from the SEQUOIA study. One arm of the study evaluated a combination of our BTK inhibitor and a BCL-2 inhibitor in frontline chronic lymphocytic leukemia (CLL), showing high response rates and a favorable safety profile, including in patients with high-risk del(17p) status. In another arm, five-year follow-up of our BTK inhibitor monotherapy demonstrated durable progression-free survival benefits in this hard-to-treat population.\n\nBeyond the data, the true highlight of ASCO was the energy, connection, and shared purpose. Engaging with patients, caregivers, thought leaders, and colleagues from around the world reminds us why we do this work—and why innovation must never slow down.\n\nThank you to our team, collaborators, and the ASCO organizers for making this impactful week possible. We leave inspired—and even more committed to delivering the next wave of life-changing cancer therapies.\n\n#BeOneTeam #ASCO25 #BreastCancer #CLL #OncologyInnovation #ClinicalTrials #TargetedTherapies #CancerResearch",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E22AQGrnqeDtkxWCQ/feedshare-image-high-res/B4EZc3aZOyHQAw-/0/1748981367015?e=1782950400&v=beta&t=gCvj85we12RTia-YnKimGGBQ2BUXu613qrJDv7jISpA",
+      "metrics": {
+        "impressions": 5276,
+        "reach": 5276,
+        "likes": 425,
+        "comments": 2,
+        "shares": 4,
+        "saves": 0,
+        "clicks": 95
+      }
+    },
+    {
+      "id": "linkedin-7333120997253926912",
+      "platform": "linkedin",
+      "category": "promotional",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-05-27T13:24:48.545Z",
+      "caption": "Today marks a defining moment in our company’s journey. We are proud to announce our new name—BeOne Medicines—and the completion of our redomiciliation to Switzerland. Read the press release for full details.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7333120997253926912/600/600",
+      "metrics": {
+        "impressions": 2120,
+        "reach": 2120,
+        "likes": 158,
+        "comments": 13,
+        "shares": 3,
+        "saves": 0,
+        "clicks": 38
+      }
+    },
+    {
+      "id": "linkedin-7333120413050249232",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-05-27T13:22:29.260Z",
+      "caption": "We’re proud to announce our evolution into BeOne Medicines and our redomiciliation to Switzerland. With a renewed mission, a powerful oncology portfolio, and a united global team, we’re redefining what’s possible in cancer care. Read my latest article on this major milestone for our company.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7333120413050249232/600/600",
+      "metrics": {
+        "impressions": 8324,
+        "reach": 8324,
+        "likes": 585,
+        "comments": 18,
+        "shares": 29,
+        "saves": 0,
+        "clicks": 150
+      }
+    },
+    {
+      "id": "linkedin-7328089067986866178",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-05-13T16:09:43.119Z",
+      "caption": "In the latest episode of Cancer Has No Borders Podcast, we had the pleasure of speaking with Meghan Gutierrez, CEO of the Lymphoma Research Foundation. In her interview she covered the foundation’s vital work in addressing unmet needs in lymphoma care, advancing clinical trials, and supporting patients and families across the country.\n\nMeghan’s leadership and insights shed light on the progress being made—and the challenges that remain—in confronting lymphoma and CLL. I’m grateful our team had the opportunity to highlight this important mission.\n\nListen to the full conversation and learn more about the foundation at https://lymphoma.org.\n\n#CancerResearch #LymphomaAwareness #Podcast",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7328089067986866178/600/600",
+      "metrics": {
+        "impressions": 1432,
+        "reach": 1432,
+        "likes": 98,
+        "comments": 2,
+        "shares": 6,
+        "saves": 0,
+        "clicks": 26
+      }
+    },
+    {
+      "id": "linkedin-7325827483516174336",
+      "platform": "linkedin",
+      "category": "promotional",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-05-07T10:22:59.363Z",
+      "caption": "Today, we announced our Q1 2025 earnings, marking a significant milestone for the company – our first quarter of GAAP profitability. I'm incredibly proud of our team's hard work and dedication to reaching this achievement. For more insights, check out my latest LinkedIn article.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7325827483516174336/600/600",
+      "metrics": {
+        "impressions": 7948,
+        "reach": 7948,
+        "likes": 517,
+        "comments": 13,
+        "shares": 41,
+        "saves": 0,
+        "clicks": 143
+      }
+    },
+    {
+      "id": "linkedin-7325552068180484097",
+      "platform": "linkedin",
+      "category": "behind-the-scenes",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-05-06T16:08:35.230Z",
+      "caption": "Welcome Eleanor K. Duff, PhD to the team! I’m looking forward to working together to shape and share our story as we enter an exciting new chapter for the company.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7325552068180484097/600/600",
+      "metrics": {
+        "impressions": 2136,
+        "reach": 2136,
+        "likes": 154,
+        "comments": 21,
+        "shares": 3,
+        "saves": 0,
+        "clicks": 38
+      }
+    },
+    {
+      "id": "linkedin-7325189339271831554",
+      "platform": "linkedin",
+      "category": "behind-the-scenes",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-05-05T16:07:13.919Z",
+      "caption": "Welcome Marcello Damiani! Marcello's expertise and vision will be a key part of our journey as we drive digital innovation to new heights. We look forward to the impact he will make as part of our growing team.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7325189339271831554/600/600",
+      "metrics": {
+        "impressions": 3328,
+        "reach": 3328,
+        "likes": 240,
+        "comments": 21,
+        "shares": 7,
+        "saves": 0,
+        "clicks": 60
+      }
+    },
+    {
+      "id": "linkedin-7323049479366922241",
+      "platform": "linkedin",
+      "category": "behind-the-scenes",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-04-29T18:24:11.561Z",
+      "caption": "I’m honored to be named to The Medicine Maker 2025 Power list in the Biopharmaceutical category.\n\nThis recognition is a reflection of the incredible journey our team has been on. Fifteen years ago, I imagined a future where our work would make a meaningful difference—and today, more than 11,000 colleagues operating in 45 countries and regions have brought our innovative medicines to over 1.6 million patients around the world.\n\nWe remain deeply committed to expanding that impact and transforming even more lives in the years to come.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7323049479366922241/600/600",
+      "metrics": {
+        "impressions": 4780,
+        "reach": 4780,
+        "likes": 351,
+        "comments": 56,
+        "shares": 3,
+        "saves": 0,
+        "clicks": 86
+      }
+    },
+    {
+      "id": "linkedin-7320892134192992257",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-04-23T19:31:40.390Z",
+      "caption": "Thrilled to welcome Kristian Stubbs as the new leader of our team in Canada! With his extensive experience in oncology, Kris will be instrumental in driving our mission forward—bringing innovative cancer treatments to those who need them most. #Oncology #Innovation #Leadership #Canada",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7320892134192992257/600/600",
+      "metrics": {
+        "impressions": 1064,
+        "reach": 1064,
+        "likes": 88,
+        "comments": 1,
+        "shares": 0,
+        "saves": 0,
+        "clicks": 19
+      }
+    },
+    {
+      "id": "linkedin-7318658378128375809",
+      "platform": "linkedin",
+      "category": "promotional",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-04-17T15:35:31.443Z",
+      "caption": "#News for #Investors and #Media: We're proud to share that our therapy has been officially reimbursed by the Belgian National Institute for Health and Disability Insurance for the treatment of second-line oesophageal squamous cell carcinoma (ESCC).\n\nThis significant milestone strengthens our mission to expand access to cutting-edge cancer therapies—bringing hope to more patients in Belgium and beyond.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7318658378128375809/600/600",
+      "metrics": {
+        "impressions": 1100,
+        "reach": 1100,
+        "likes": 87,
+        "comments": 2,
+        "shares": 1,
+        "saves": 0,
+        "clicks": 20
+      }
+    },
+    {
+      "id": "linkedin-7318275604921962496",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-04-16T14:14:31.199Z",
+      "caption": "Our company is growing, and every team member is united by one purpose: making a difference for patients every day.\n\nSameer is a shining example of how our people bring that mission to life through their work.\n\nDiscover more about our culture—and explore open roles where you can make an impact too: https://lnkd.in/gSZHDtGK\n\n#Oncology #PatientsFirst #JoinUs #CareersWithPurpose",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7318275604921962496/600/600",
+      "metrics": {
+        "impressions": 1252,
+        "reach": 1252,
+        "likes": 87,
+        "comments": 1,
+        "shares": 5,
+        "saves": 0,
+        "clicks": 23
+      }
+    },
+    {
+      "id": "linkedin-7315741170163240960",
+      "platform": "linkedin",
+      "category": "promotional",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-04-09T14:23:34.865Z",
+      "caption": "We were honored to take part in our very first panel at SXSW! Mark Lanasa, Pat Garcia-Gonzalez, and Jeff Allen shared powerful insights on how global collaboration can transform access to cancer care. \n\nCheck out this clip for a glimpse into this important and inspiring conversation. #SXSW #CancerCare #GlobalHealth #CollaborationMatters",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7315741170163240960/600/600",
+      "metrics": {
+        "impressions": 1288,
+        "reach": 1288,
+        "likes": 94,
+        "comments": 0,
+        "shares": 4,
+        "saves": 0,
+        "clicks": 23
+      }
+    },
+    {
+      "id": "linkedin-7315416969434779648",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-04-08T16:55:19.388Z",
+      "caption": "Melika Davis, Senior VP and Global Head of Clinical Operations, joined our Cancer Has No Borders podcast to share insights on our innovative approach to managing clinical trials. Listen to the podcast below.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7315416969434779648/600/600",
+      "metrics": {
+        "impressions": 1832,
+        "reach": 1832,
+        "likes": 144,
+        "comments": 3,
+        "shares": 2,
+        "saves": 0,
+        "clicks": 33
+      }
+    },
+    {
+      "id": "linkedin-7313293776184033280",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-04-02T20:18:30.670Z",
+      "caption": "At BeiGene we possess the scientific talent and expertise to lead the oncology field with the greatest impact. This latest publication highlights our continued dedication to advancing treatment in CLL.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7313293776184033280/600/600",
+      "metrics": {
+        "impressions": 1448,
+        "reach": 1448,
+        "likes": 114,
+        "comments": 0,
+        "shares": 2,
+        "saves": 0,
+        "clicks": 26
+      }
+    },
+    {
+      "id": "linkedin-7312535432188047360",
+      "platform": "linkedin",
+      "category": "product",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-03-31T18:05:07.372Z",
+      "caption": "I’m incredibly proud that BeiGene received a positive recommendation from the European Medicines Agency’s CHMP today! This marks a huge step toward approval of our immunotherapy as a first-line treatment for extensive-stage small cell lung cancer. Patients are at the heart of everything we do, and this milestone brings us closer to making a real impact. #Immunotherapy #LungCancer #HealthcareInnovation",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7312535432188047360/600/600",
+      "metrics": {
+        "impressions": 2432,
+        "reach": 2432,
+        "likes": 174,
+        "comments": 3,
+        "shares": 8,
+        "saves": 0,
+        "clicks": 44
+      }
+    },
+    {
+      "id": "linkedin-7310314228639309824",
+      "platform": "linkedin",
+      "category": "educational",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-03-25T14:58:51.178Z",
+      "caption": "At our Hopewell, NJ facility, we are proud to have an exceptional team dedicated to advancing U.S. manufacturing and clinical R&D. Their extraordinary commitment and hard work truly set us apart.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7310314228639309824/600/600",
+      "metrics": {
+        "impressions": 2444,
+        "reach": 2444,
+        "likes": 175,
+        "comments": 3,
+        "shares": 8,
+        "saves": 0,
+        "clicks": 44
+      }
+    },
+    {
+      "id": "linkedin-7308193853281316864",
+      "platform": "linkedin",
+      "category": "product",
+      "storyBeat": "Scientific Innovation",
+      "type": "organic",
+      "publishedAt": "2025-03-19T18:33:14.298Z",
+      "caption": "BeiGene announced this week that its U.S. subsidiary has been renamed BeOne Medicines USA, Inc. This change comes ahead of our anticipated global rebranding to BeOne Medicines Ltd. and redomiciliation to Switzerland, pending shareholder approval. The new name reflects our unwavering commitment to developing innovative treatments and collaborating with the global community to reach and support as many cancer patients as possible.",
+      "imageUrl": "https://picsum.photos/seed/linkedin-7308193853281316864/600/600",
+      "metrics": {
+        "impressions": 14748,
+        "reach": 14748,
+        "likes": 1015,
+        "comments": 26,
+        "shares": 59,
+        "saves": 0,
+        "clicks": 265
+      }
+    }
+  ]
+}

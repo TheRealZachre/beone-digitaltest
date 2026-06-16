@@ -33,6 +33,9 @@ interface DataSyncPanelProps {
   initialMeta?: SyncMeta | null;
   channelSources?: Partial<Record<Platform, "live" | "seed">>;
   showChannelSelector?: boolean;
+  syncUrl?: string;
+  availableChannels?: Platform[];
+  note?: string;
 }
 
 function readSelectedChannels(): Platform[] {
@@ -45,20 +48,27 @@ export function DataSyncPanel({
   initialMeta,
   channelSources,
   showChannelSelector = true,
+  syncUrl = "/api/sync/social",
+  availableChannels,
+  note,
 }: DataSyncPanelProps) {
+  const channelList = availableChannels ?? ANALYTICS_CHANNEL_PLATFORMS;
   const [meta, setMeta] = useState(initialMeta);
   const [sources, setSources] = useState(channelSources);
   const [selectedChannels, setSelectedChannels] = useState<Platform[]>(() => [
-    ...ANALYTICS_CHANNEL_PLATFORMS,
+    ...(availableChannels ?? ANALYTICS_CHANNEL_PLATFORMS),
   ]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    setSelectedChannels(readSelectedChannels());
-  }, []);
+    // Only read from localStorage when no explicit channel list is provided
+    if (!availableChannels) {
+      setSelectedChannels(readSelectedChannels());
+    }
+  }, [availableChannels]);
 
-  const liveCount = ANALYTICS_CHANNEL_PLATFORMS.filter(
+  const liveCount = channelList.filter(
     (platform) => sources?.[platform] === "live"
   ).length;
 
@@ -67,7 +77,7 @@ export function DataSyncPanel({
     setError(null);
 
     try {
-      const res = await fetch("/api/sync/social", {
+      const res = await fetch(syncUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ channels: selectedChannels }),
@@ -106,7 +116,7 @@ export function DataSyncPanel({
   }
 
   const syncLabel =
-    selectedChannels.length === ANALYTICS_CHANNEL_PLATFORMS.length
+    selectedChannels.length === channelList.length
       ? "Pull Latest Data"
       : `Pull ${selectedChannels.length} Channel${selectedChannels.length === 1 ? "" : "s"}`;
 
@@ -128,7 +138,7 @@ export function DataSyncPanel({
                 {liveCount > 0 && (
                   <span className="text-emerald-700">
                     {" "}
-                    · {liveCount} of {ANALYTICS_CHANNEL_PLATFORMS.length}{" "}
+                    · {liveCount} of {channelList.length}{" "}
                     channels live
                   </span>
                 )}
@@ -139,7 +149,7 @@ export function DataSyncPanel({
           </p>
           {meta?.channels && (
             <ul className="mt-3 flex flex-wrap gap-2">
-              {ANALYTICS_CHANNEL_PLATFORMS.map((platform) => {
+              {channelList.map((platform) => {
                 const channel = meta.channels?.[platform];
                 const isLive =
                   channel?.dataSource === "live" ||
@@ -174,6 +184,9 @@ export function DataSyncPanel({
                 );
               })}
             </ul>
+          )}
+          {note && (
+            <p className="mt-2 text-xs text-slate-400">{note}</p>
           )}
           {error && (
             <p className="mt-2 text-sm text-rose-600">

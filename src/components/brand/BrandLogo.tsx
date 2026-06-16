@@ -1,9 +1,11 @@
+import Link from "next/link";
 import { BRAND_ASSETS } from "@/lib/brand";
 import { PLATFORM_NAME, PLATFORM_TAGLINE } from "@/lib/company";
 
 interface BrandLogoProps {
   variant?: "sidebar" | "compact" | "full";
   showTagline?: boolean;
+  vcfHref?: string;
 }
 
 function BrandAsset({
@@ -47,6 +49,7 @@ function BeOneLogoMark({
 export function BrandLogo({
   variant = "sidebar",
   showTagline = true,
+  vcfHref,
 }: BrandLogoProps) {
   const vibeCodeFlowWordmark = (
     <BrandAsset
@@ -58,6 +61,18 @@ export function BrandLogo({
           : "mt-2.5 h-7 w-auto max-w-[12rem]"
       }
     />
+  );
+
+  const vibeCodeFlowMark = vcfHref ? (
+    <Link
+      href={vcfHref}
+      className="inline-block rounded-sm transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-indigo-bright"
+      aria-label="Vibe. Code. Flow."
+    >
+      {vibeCodeFlowWordmark}
+    </Link>
+  ) : (
+    vibeCodeFlowWordmark
   );
 
   if (variant === "compact") {
@@ -79,7 +94,7 @@ export function BrandLogo({
             {PLATFORM_TAGLINE}
           </p>
         )}
-        {vibeCodeFlowWordmark}
+        {vibeCodeFlowMark}
       </div>
     );
   }
@@ -92,7 +107,7 @@ export function BrandLogo({
           {PLATFORM_TAGLINE}
         </p>
       )}
-      {vibeCodeFlowWordmark}
+      {vibeCodeFlowMark}
     </div>
   );
 }

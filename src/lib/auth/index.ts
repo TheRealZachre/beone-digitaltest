@@ -74,6 +74,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           email: stored?.email ?? user.email ?? undefined,
           role: stored?.role ?? user.role ?? "user",
           picture: user.image ?? undefined,
+          iat: Math.floor(Date.now() / 1000),
         };
       }
 

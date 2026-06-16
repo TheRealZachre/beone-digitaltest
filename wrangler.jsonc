@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "beone-digitaltest",
+  "workers_dev": true,
   "main": ".open-next/worker.js",
   "compatibility_date": "2025-06-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
@@ -24,9 +25,15 @@
       "preview_id": "e1a063526aa64bd6909af51a3a5638cb"
     }
   ],
+  "routes": [
+    {
+      "pattern": "beone.vibecodeflow.com",
+      "custom_domain": true
+    }
+  ],
   "vars": {
     "CLOUDFLARE_WORKERS": "1",
     "AUTH_ADMIN_EMAILS": "zach@zachre.com,zach@everythingandanythingpodcast.com",
-    "AUTH_URL": "https://beone-digitaltest.zach-a56.workers.dev"
+    "AUTH_URL": "https://beone.vibecodeflow.com"
   }
 }

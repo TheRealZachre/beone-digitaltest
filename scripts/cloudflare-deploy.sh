@@ -128,3 +128,8 @@ if [ -n "${version_id:-}" ]; then
 else
   echo "WARNING: Could not determine uploaded Worker version ID; skipping traffic promotion." >&2
 fi
+
+# Run wrangler deploy to keep custom domains and routes in sync.
+# (versions deploy skips route/domain registration; wrangler deploy handles it.)
+echo "Syncing routes and custom domains..."
+npx wrangler deploy 2>&1 | grep -E "domain|route|Deployed|Uploaded|https://" || true

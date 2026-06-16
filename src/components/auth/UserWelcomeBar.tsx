@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useSafeSession } from "@/components/auth/useSafeSession";
+import type { SessionUserDisplay } from "@/lib/auth/session-user";
 
 function displayName(name: string | null | undefined, email: string | null | undefined) {
   if (name?.trim()) {
@@ -13,9 +14,12 @@ function displayName(name: string | null | undefined, email: string | null | und
   return null;
 }
 
-export function UserWelcomeBar() {
+export function UserWelcomeBar({ user }: { user?: SessionUserDisplay | null }) {
   const session = useSafeSession();
-  const name = displayName(session?.user?.name, session?.user?.email);
+  const name = displayName(
+    user?.name ?? session?.user?.name,
+    user?.email ?? session?.user?.email
+  );
 
   if (!name) return null;
 

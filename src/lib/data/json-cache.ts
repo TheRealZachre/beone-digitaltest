@@ -17,6 +17,8 @@ const bundledJsonLoaders: Record<string, () => Promise<unknown>> = {
   "users.json": () => import("../../../data/users.json").then((m) => m.default),
   "social-posts.json": () =>
     import("../../../data/social-posts.json").then((m) => m.default),
+  "founder-social-posts.json": () =>
+    import("../../../data/founder-social-posts.json").then((m) => m.default),
   "linkedin-posts.json": () =>
     import("../../../data/linkedin-posts.json").then((m) => m.default),
   "password-reset-tokens.json": () =>
