@@ -45,12 +45,20 @@ export default async function FounderChannelReportPage({ params }: ChannelPagePr
     await getFounderMultiChannelPosts();
   const posts = await getFounderPostsByPlatform(platform);
   const summary = buildFounderReportSummary(posts);
-  const channelSummary = buildChannelSummary(
-    platform,
-    posts,
-    channelSources[platform] ?? "seed",
-    channelFollowers[platform]
-  );
+  const FOUNDER_HANDLES: Partial<Record<Platform, string>> = {
+    linkedin: "@john-v-oyler",
+    x: "@johnvoyler",
+  };
+
+  const channelSummary = {
+    ...buildChannelSummary(
+      platform,
+      posts,
+      channelSources[platform] ?? "seed",
+      channelFollowers[platform]
+    ),
+    handle: FOUNDER_HANDLES[platform] ?? brand.handle,
+  };
   const beats = beatPerformance(posts);
   const analysis = whatWorkedAnalysis(posts, 90);
 

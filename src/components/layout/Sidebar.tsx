@@ -175,8 +175,8 @@ export function Sidebar({
             className={clsx(
               "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
               adminActive
-                ? "bg-brand-indigo/15 text-brand-indigo-bright"
-                : "text-brand-muted hover:bg-white/5 hover:text-brand-off-white"
+                ? "bg-white/15 text-white"
+                : "text-white/70 hover:bg-white/8 hover:text-white"
             )}
           >
             <Shield className="h-4 w-4 shrink-0" />
@@ -189,8 +189,8 @@ export function Sidebar({
           className={clsx(
             "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
             introActive
-              ? "bg-brand-indigo/15 text-brand-indigo-bright"
-              : "text-brand-muted hover:bg-white/5 hover:text-brand-off-white"
+              ? "bg-white/15 text-white"
+              : "text-white/70 hover:bg-white/8 hover:text-white"
           )}
         >
           <Info className="h-4 w-4 shrink-0" />
@@ -251,7 +251,7 @@ function CollapsibleSection({
       <button
         type="button"
         onClick={onToggle}
-        className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-brand-muted transition-colors hover:bg-white/5 hover:text-brand-off-white"
+        className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-white/70 transition-colors hover:bg-white/8 hover:text-white"
         aria-expanded={open}
       >
         <Icon className="h-4 w-4 shrink-0" />
@@ -275,8 +275,8 @@ function CollapsibleSection({
                 className={clsx(
                   "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                   active
-                    ? "bg-brand-indigo/15 text-brand-indigo-bright"
-                    : "text-brand-muted hover:bg-white/5 hover:text-brand-off-white"
+                    ? "bg-white/15 text-white"
+                    : "text-white/65 hover:bg-white/8 hover:text-white"
                 )}
               >
                 <LinkIcon className="h-3.5 w-3.5 shrink-0" />
