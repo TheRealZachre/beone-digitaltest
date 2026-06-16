@@ -1,5 +1,4 @@
 import type { PostInsights } from "@/lib/types";
-import clsx from "clsx";
 
 interface PostInsightsAnalysisProps {
   insights: PostInsights;
@@ -9,18 +8,12 @@ interface PostInsightsAnalysisProps {
 
 export function PostInsightsAnalysis({
   insights,
-  layout = "grid",
+  layout: _layout = "grid",
   className,
 }: PostInsightsAnalysisProps) {
   return (
     <div className={className}>
-      <div
-        className={clsx(
-          layout === "grid"
-            ? "mt-1.5 grid grid-cols-1 gap-[18px] md:grid-cols-3 md:gap-6"
-            : "mt-1.5 space-y-4"
-        )}
-      >
+      <div className="mt-1.5 space-y-4">
         <div>
           <h4 className="mb-2.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-700">
             What Worked
