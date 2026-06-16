@@ -7,7 +7,7 @@ interface OrganicPaidBreakdownProps {
   summary: ReportSummary;
 }
 
-const COLORS = ["#6366f1", "#f59e0b"];
+const COLORS = ["#D32E27", "#f59e0b"];
 
 export function OrganicPaidBreakdown({ summary }: OrganicPaidBreakdownProps) {
   const data = [
@@ -16,11 +16,11 @@ export function OrganicPaidBreakdown({ summary }: OrganicPaidBreakdownProps) {
   ];
 
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-      <h3 className="text-base font-semibold text-slate-900">
+    <div className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+      <h3 className="text-base font-semibold text-brand-ink">
         Organic vs. Paid
       </h3>
-      <p className="mt-1 text-sm text-slate-500">Post distribution by type</p>
+      <p className="mt-1 text-sm text-brand-muted">Post distribution by type</p>
 
       <div className="mt-4 flex items-center gap-6">
         <div className="h-40 w-40">
@@ -52,10 +52,10 @@ export function OrganicPaidBreakdown({ summary }: OrganicPaidBreakdownProps) {
                 style={{ backgroundColor: COLORS[i] }}
               />
               <div>
-                <p className="text-sm font-medium text-slate-700">
+                <p className="text-sm font-medium text-brand-ink/80">
                   {entry.name}
                 </p>
-                <p className="text-lg font-semibold text-slate-900">
+                <p className="text-lg font-semibold text-brand-ink">
                   {entry.value} posts
                 </p>
               </div>

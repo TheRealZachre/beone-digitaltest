@@ -8,7 +8,7 @@ interface HeaderProps {
 
 export function Header({ title, subtitle, actions }: HeaderProps) {
   return (
-    <header className="flex flex-col gap-4 border-b border-brand-ink/10 bg-[#FFFEFB] px-8 py-6 sm:flex-row sm:items-center sm:justify-between">
+    <header className="flex flex-col gap-4 border-b border-brand-ink/10 bg-white px-8 py-6 sm:flex-row sm:items-center sm:justify-between">
       <div>
         <h1 className="text-2xl font-semibold tracking-tight text-brand-ink">
           {title}

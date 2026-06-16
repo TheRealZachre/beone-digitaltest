@@ -16,10 +16,10 @@ export function WhatWorkedAnalysis({
   return (
     <div className="space-y-4">
       {timeframeLabel && (
-        <div className="flex items-center gap-2 text-xs text-slate-500">
+        <div className="flex items-center gap-2 text-xs text-brand-muted">
           <Clock className="h-3.5 w-3.5" />
           <span>
-            Analysis based on <strong className="text-slate-700">{timeframeLabel}</strong>
+            Analysis based on <strong className="text-brand-ink/80">{timeframeLabel}</strong>
           </span>
         </div>
       )}

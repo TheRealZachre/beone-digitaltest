@@ -15,7 +15,7 @@ interface StatCardProps {
 }
 
 const accents = {
-  indigo: "bg-indigo-50 text-indigo-600",
+  indigo: "bg-brand-indigo/8 text-brand-indigo",
   emerald: "bg-emerald-50 text-emerald-600",
   amber: "bg-amber-50 text-amber-600",
   rose: "bg-rose-50 text-rose-600",
@@ -24,7 +24,7 @@ const accents = {
 const changeTones = {
   positive: "text-emerald-600",
   negative: "text-rose-600",
-  neutral: "text-slate-500",
+  neutral: "text-brand-muted",
 };
 
 export function StatCard({
@@ -43,17 +43,17 @@ export function StatCard({
     (positive === undefined ? undefined : positive ? "positive" : "negative");
 
   return (
-    <div className="overflow-visible rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="overflow-visible rounded-xl border border-brand-ink/10 bg-white p-5 shadow-sm">
       <div className="flex items-start justify-between">
         <div>
-          <p className="text-sm font-medium text-slate-500">
+          <p className="text-sm font-medium text-brand-muted">
             <MetricLabel definition={definition}>{label}</MetricLabel>
           </p>
-          <p className="mt-2 text-2xl font-semibold tracking-tight text-slate-900">
+          <p className="mt-2 text-2xl font-semibold tracking-tight text-brand-ink">
             {value}
           </p>
           {periodHint && (
-            <p className="mt-1 text-xs text-slate-500">{periodHint}</p>
+            <p className="mt-1 text-xs text-brand-muted">{periodHint}</p>
           )}
           {change && resolvedTone && (
             <p className={clsx("mt-1 text-xs font-medium", changeTones[resolvedTone])}>

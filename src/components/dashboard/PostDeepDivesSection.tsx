@@ -44,7 +44,7 @@ export function PostDeepDivesSection({
         <p className="text-sm leading-relaxed text-[#4a5568]">
           {subtitle ?? defaultSubtitle}
         </p>
-        <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-0.5 text-xs font-medium text-slate-500">
+        <span className="inline-flex items-center gap-1 rounded-full border border-brand-ink/10 bg-brand-off-white px-2.5 py-0.5 text-xs font-medium text-brand-muted">
           {timeframeText}
         </span>
       </div>

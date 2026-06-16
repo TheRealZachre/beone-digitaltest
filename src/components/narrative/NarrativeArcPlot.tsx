@@ -87,21 +87,21 @@ export function NarrativeArcPlot({
 
   if (posts.length === 0) {
     return (
-      <p className="text-sm text-slate-500">No posts in this period to plot.</p>
+      <p className="text-sm text-brand-muted">No posts in this period to plot.</p>
     );
   }
 
   return (
     <div>
       {title && (
-        <h3 className="mb-4 text-base font-semibold text-slate-900">{title}</h3>
+        <h3 className="mb-4 text-base font-semibold text-brand-ink">{title}</h3>
       )}
-      <div className="relative rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div className="relative rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
         <div className="mb-4 flex flex-wrap gap-3 text-xs">
           {Object.entries(BEATS).map(([name, conf]) => (
             <span
               key={name}
-              className="flex items-center gap-1.5 text-slate-600"
+              className="flex items-center gap-1.5 text-brand-muted"
             >
               <span
                 className="h-2.5 w-2.5 rounded-full"
@@ -143,7 +143,7 @@ export function NarrativeArcPlot({
                 y1={y}
                 x2={W - PAD_R}
                 y2={y}
-                stroke="#f1f5f9"
+                stroke="#e8edf5"
                 strokeDasharray="2 4"
               />
             );
@@ -157,7 +157,7 @@ export function NarrativeArcPlot({
                 x={x}
                 y={H - PAD_B + 22}
                 textAnchor="middle"
-                fill="#94a3b8"
+                fill="#5a6a82"
                 fontSize={10}
                 fontWeight={500}
               >
@@ -171,7 +171,7 @@ export function NarrativeArcPlot({
             y={PAD_T + PLOT_H / 2}
             transform={`rotate(-90, ${PAD_L - 46}, ${PAD_T + PLOT_H / 2})`}
             textAnchor="middle"
-            fill="#94a3b8"
+            fill="#5a6a82"
             fontSize={10}
             fontWeight={500}
           >
@@ -181,7 +181,7 @@ export function NarrativeArcPlot({
             x={(W - PAD_R + PAD_L) / 2}
             y={H - 8}
             textAnchor="middle"
-            fill="#94a3b8"
+            fill="#5a6a82"
             fontSize={10}
             fontWeight={500}
           >
@@ -214,7 +214,7 @@ export function NarrativeArcPlot({
             <p className="mt-1 text-slate-300 line-clamp-2">
               {tooltip.post.caption}
             </p>
-            <p className="mt-1 text-slate-400">
+            <p className="mt-1 text-brand-muted/60">
               {tooltip.post.daysAgo === 0
                 ? "Today"
                 : `${tooltip.post.daysAgo}d ago`}{" "}

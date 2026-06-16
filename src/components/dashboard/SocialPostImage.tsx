@@ -51,7 +51,7 @@ export function SocialPostImage({
     return (
       <div
         className={clsx(
-          "flex w-full items-center justify-center bg-slate-100",
+          "flex w-full items-center justify-center bg-brand-off-white",
           containerClassName
         )}
       >
@@ -71,7 +71,7 @@ export function SocialPostImage({
             onError={handleImageError}
           />
         ) : (
-          <div className="flex min-h-48 w-full flex-col items-center justify-center gap-2 py-10 text-slate-400">
+          <div className="flex min-h-48 w-full flex-col items-center justify-center gap-2 py-10 text-brand-muted/60">
             <ImageIcon className="h-10 w-10" />
             <span className="text-xs">Preview unavailable</span>
           </div>
@@ -81,7 +81,7 @@ export function SocialPostImage({
   }
 
   return (
-    <div className={clsx("relative bg-slate-100", containerClassName)}>
+    <div className={clsx("relative bg-brand-off-white", containerClassName)}>
       {showImage ? (
         <Image
           src={imageSrc}
@@ -93,7 +93,7 @@ export function SocialPostImage({
           onError={handleImageError}
         />
       ) : (
-        <div className="flex h-full flex-col items-center justify-center gap-2 text-slate-400">
+        <div className="flex h-full flex-col items-center justify-center gap-2 text-brand-muted/60">
           <ImageIcon className="h-10 w-10" />
           <span className="text-xs">Preview unavailable</span>
         </div>

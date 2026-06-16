@@ -26,11 +26,11 @@ export function MonthComparisonPanel({
 
   return (
     <section className="space-y-6">
-      <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h3 className="text-base font-semibold text-slate-900">
+      <div className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+        <h3 className="text-base font-semibold text-brand-ink">
           Current month vs prior month
         </h3>
-        <p className="mt-1 text-sm text-slate-500">
+        <p className="mt-1 text-sm text-brand-muted">
           Side-by-side engagement rate by month with date ranges
         </p>
 

@@ -23,16 +23,16 @@ export function NarrativeSection({
   return (
     <section className="space-y-6">
       <div>
-        <h2 className="text-xl font-semibold text-slate-900">{arcTitle}</h2>
+        <h2 className="text-xl font-semibold text-brand-ink">{arcTitle}</h2>
         {subtitle && (
-          <p className="mt-1 max-w-3xl text-sm text-slate-500">{subtitle}</p>
+          <p className="mt-1 max-w-3xl text-sm text-brand-muted">{subtitle}</p>
         )}
       </div>
 
       <NarrativeArcPlot posts={narrativePosts} maxDays={maxDays} />
 
       <div>
-        <h3 className="mb-4 text-base font-semibold text-slate-900">
+        <h3 className="mb-4 text-base font-semibold text-brand-ink">
           Story beat performance
         </h3>
         <BeatPerformanceGrid stats={beatStats} />

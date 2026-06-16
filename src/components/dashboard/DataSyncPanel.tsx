@@ -121,17 +121,17 @@ export function DataSyncPanel({
       : `Pull ${selectedChannels.length} Channel${selectedChannels.length === 1 ? "" : "s"}`;
 
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="rounded-xl border border-brand-ink/10 bg-white p-5 shadow-sm">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <h3 className="text-sm font-semibold text-slate-900">
+          <h3 className="text-sm font-semibold text-brand-ink">
             Social Data Source
           </h3>
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 text-sm text-brand-muted">
             {meta ? (
               <>
                 {meta.postCount} posts from{" "}
-                <span className="font-medium text-slate-700">
+                <span className="font-medium text-brand-ink/80">
                   {meta.companySlug}
                 </span>{" "}
                 · last synced {new Date(meta.syncedAt).toLocaleString()}
@@ -170,7 +170,7 @@ export function DataSyncPanel({
                     key={platform}
                     className={`rounded-full px-2.5 py-1 text-xs font-medium ${
                       !isIncluded
-                        ? "bg-slate-100 text-slate-400 line-through"
+                        ? "bg-brand-off-white text-brand-muted/60 line-through"
                         : isLive
                           ? "bg-emerald-100 text-emerald-800"
                           : failed
@@ -186,7 +186,7 @@ export function DataSyncPanel({
             </ul>
           )}
           {note && (
-            <p className="mt-2 text-xs text-slate-400">{note}</p>
+            <p className="mt-2 text-xs text-brand-muted/60">{note}</p>
           )}
           {error && (
             <p className="mt-2 text-sm text-rose-600">

@@ -30,9 +30,9 @@ export function ScoringMethodology() {
     <div className="space-y-8 px-8 py-8">
 
       {/* Plain-English overview */}
-      <section className="rounded-xl border border-indigo-200 bg-indigo-50/60 p-6">
+      <section className="rounded-xl border border-indigo-200 bg-brand-indigo/8/60 p-6">
         <div className="flex items-center gap-2">
-          <HelpCircle className="h-5 w-5 text-indigo-600" />
+          <HelpCircle className="h-5 w-5 text-brand-indigo" />
           <h2 className="text-base font-bold text-indigo-900">
             Why does scoring work this way?
           </h2>
@@ -61,7 +61,7 @@ export function ScoringMethodology() {
             },
           ].map(({ title, body }) => (
             <li key={title} className="flex items-start gap-3">
-              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" />
+              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-indigo" />
               <div className="text-sm text-indigo-900">
                 <strong className="font-semibold">{title}</strong>{" "}
                 <span className="text-indigo-800/80">{body}</span>
@@ -71,28 +71,28 @@ export function ScoringMethodology() {
         </ul>
       </section>
 
-      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-lg font-semibold text-slate-900">
+      <section className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+        <h2 className="text-lg font-semibold text-brand-ink">
           Narrative engagement score
         </h2>
-        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-brand-muted">
           The narrative arc uses a weighted engagement index to rank posts by
           impact. It favors higher-effort interactions (comments and shares)
           over passive reactions. This score powers the Y-axis on narrative arc
           charts and the averages shown in beat and weekly performance panels.
         </p>
 
-        <div className="mt-6 rounded-lg border border-indigo-100 bg-indigo-50/50 p-5">
-          <p className="font-mono text-sm text-slate-800">
+        <div className="mt-6 rounded-lg border border-indigo-100 bg-brand-indigo/8/50 p-5">
+          <p className="font-mono text-sm text-brand-ink">
             score = (likes × {ENGAGEMENT_SCORE_WEIGHTS.likes}) + (comments ×{" "}
             {ENGAGEMENT_SCORE_WEIGHTS.comments}) + (shares ×{" "}
             {ENGAGEMENT_SCORE_WEIGHTS.shares})
           </p>
         </div>
 
-        <div className="mt-6 overflow-hidden rounded-lg border border-slate-200">
+        <div className="mt-6 overflow-hidden rounded-lg border border-brand-ink/10">
           <table className="w-full text-left text-sm">
-            <thead className="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
+            <thead className="bg-brand-off-white text-xs uppercase tracking-wide text-brand-muted">
               <tr>
                 <th className="px-4 py-3 font-medium">Metric</th>
                 <th className="px-4 py-3 font-medium">Source field</th>
@@ -100,30 +100,30 @@ export function ScoringMethodology() {
                 <th className="px-4 py-3 font-medium">Rationale</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 text-slate-700">
+            <tbody className="divide-y divide-slate-100 text-brand-ink/80">
               <tr>
                 <td className="px-4 py-3 font-medium">Likes</td>
-                <td className="px-4 py-3 text-slate-500">metrics.likes</td>
+                <td className="px-4 py-3 text-brand-muted">metrics.likes</td>
                 <td className="px-4 py-3">×{ENGAGEMENT_SCORE_WEIGHTS.likes}</td>
-                <td className="px-4 py-3 text-slate-500">
+                <td className="px-4 py-3 text-brand-muted">
                   Baseline reaction signal
                 </td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-medium">Comments</td>
-                <td className="px-4 py-3 text-slate-500">metrics.comments</td>
+                <td className="px-4 py-3 text-brand-muted">metrics.comments</td>
                 <td className="px-4 py-3">
                   ×{ENGAGEMENT_SCORE_WEIGHTS.comments}
                 </td>
-                <td className="px-4 py-3 text-slate-500">
+                <td className="px-4 py-3 text-brand-muted">
                   Conversation and depth of engagement
                 </td>
               </tr>
               <tr>
                 <td className="px-4 py-3 font-medium">Shares</td>
-                <td className="px-4 py-3 text-slate-500">metrics.shares</td>
+                <td className="px-4 py-3 text-brand-muted">metrics.shares</td>
                 <td className="px-4 py-3">×{ENGAGEMENT_SCORE_WEIGHTS.shares}</td>
-                <td className="px-4 py-3 text-slate-500">
+                <td className="px-4 py-3 text-brand-muted">
                   Amplification — highest weight
                 </td>
               </tr>
@@ -131,50 +131,50 @@ export function ScoringMethodology() {
           </table>
         </div>
 
-        <div className="mt-6 rounded-lg border border-slate-200 bg-slate-50 p-5">
-          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+        <div className="mt-6 rounded-lg border border-brand-ink/10 bg-brand-off-white p-5">
+          <p className="text-xs font-semibold uppercase tracking-wide text-brand-muted">
             Worked example
           </p>
-          <p className="mt-2 font-mono text-sm text-slate-800">
+          <p className="mt-2 font-mono text-sm text-brand-ink">
             ({EXAMPLE.likes} × {ENGAGEMENT_SCORE_WEIGHTS.likes}) + (
             {EXAMPLE.comments} × {ENGAGEMENT_SCORE_WEIGHTS.comments}) + (
             {EXAMPLE.shares} × {ENGAGEMENT_SCORE_WEIGHTS.shares}) ={" "}
-            <span className="font-semibold text-indigo-700">{exampleScore}</span>
+            <span className="font-semibold text-brand-indigo">{exampleScore}</span>
           </p>
         </div>
 
-        <p className="mt-4 text-xs text-slate-500">
+        <p className="mt-4 text-xs text-brand-muted">
           Not included in this score: impressions, reach, clicks, saves, or
           spend. Posts with zero weighted interactions receive score 0 and appear
           lower on the arc plot.
         </p>
       </section>
 
-      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-lg font-semibold text-slate-900">
+      <section className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+        <h2 className="text-lg font-semibold text-brand-ink">
           How this differs from Eng. Rate on post cards
         </h2>
-        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-brand-muted">
           Post cards show <strong>Eng. Rate</strong>, a reach-normalized
           percentage used for cross-post comparison in reports.
         </p>
 
-        <div className="mt-4 rounded-lg border border-slate-200 bg-slate-50 p-5">
-          <p className="font-mono text-sm text-slate-800">
+        <div className="mt-4 rounded-lg border border-brand-ink/10 bg-brand-off-white p-5">
+          <p className="font-mono text-sm text-brand-ink">
             eng. rate = ((likes + comments + shares + saves) / reach) × 100
           </p>
         </div>
 
-        <div className="mt-6 overflow-hidden rounded-lg border border-slate-200">
+        <div className="mt-6 overflow-hidden rounded-lg border border-brand-ink/10">
           <table className="w-full text-left text-sm">
-            <thead className="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
+            <thead className="bg-brand-off-white text-xs uppercase tracking-wide text-brand-muted">
               <tr>
                 <th className="px-4 py-3 font-medium">Aspect</th>
                 <th className="px-4 py-3 font-medium">Narrative score</th>
                 <th className="px-4 py-3 font-medium">Eng. rate</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 text-slate-700">
+            <tbody className="divide-y divide-slate-100 text-brand-ink/80">
               <tr>
                 <td className="px-4 py-3 font-medium">Output</td>
                 <td className="px-4 py-3">Absolute weighted count</td>
@@ -200,38 +200,38 @@ export function ScoringMethodology() {
         </div>
       </section>
 
-      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-lg font-semibold text-slate-900">
+      <section className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+        <h2 className="text-lg font-semibold text-brand-ink">
           Narrative arc plot positioning
         </h2>
-        <ul className="mt-4 space-y-3 text-sm text-slate-600">
+        <ul className="mt-4 space-y-3 text-sm text-brand-muted">
           <li>
-            <span className="font-medium text-slate-800">X-axis (time):</span>{" "}
+            <span className="font-medium text-brand-ink">X-axis (time):</span>{" "}
             Days since publish, relative to the report window (7, 14, 60, or 90
             days).
           </li>
           <li>
-            <span className="font-medium text-slate-800">Y-axis (score):</span>{" "}
+            <span className="font-medium text-brand-ink">Y-axis (score):</span>{" "}
             Each post&apos;s engagement score normalized against the highest
             score in that window. Higher score = higher on the chart.
           </li>
           <li>
-            <span className="font-medium text-slate-800">Color:</span> Story
+            <span className="font-medium text-brand-ink">Color:</span> Story
             beat category (see below).
           </li>
           <li>
-            <span className="font-medium text-slate-800">Aggregates:</span> Beat
+            <span className="font-medium text-brand-ink">Aggregates:</span> Beat
             and weekly panels show the average narrative score across posts in
             each group.
           </li>
         </ul>
       </section>
 
-      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-lg font-semibold text-slate-900">
+      <section className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+        <h2 className="text-lg font-semibold text-brand-ink">
           Story beat classification
         </h2>
-        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
+        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-brand-muted">
           Each post is assigned one of seven narrative beats by scanning its
           caption for keyword patterns. The first matching rule wins. If nothing
           matches, the default is Scientific Innovation.
@@ -241,15 +241,15 @@ export function ScoringMethodology() {
           {BEAT_ORDER.map((beat) => (
             <div
               key={beat}
-              className="flex items-start gap-3 rounded-lg border border-slate-200 p-4"
+              className="flex items-start gap-3 rounded-lg border border-brand-ink/10 p-4"
             >
               <span
                 className="mt-0.5 h-3 w-3 shrink-0 rounded-full"
                 style={{ backgroundColor: BEATS[beat].color }}
               />
               <div>
-                <p className="text-sm font-semibold text-slate-800">{beat}</p>
-                <p className="mt-1 text-xs text-slate-500">
+                <p className="text-sm font-semibold text-brand-ink">{beat}</p>
+                <p className="mt-1 text-xs text-brand-muted">
                   {beatExamples[beat]}
                 </p>
               </div>
@@ -258,19 +258,19 @@ export function ScoringMethodology() {
         </div>
       </section>
 
-      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-lg font-semibold text-slate-900">Source code</h2>
-        <p className="mt-2 text-sm text-slate-600">
+      <section className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+        <h2 className="text-lg font-semibold text-brand-ink">Source code</h2>
+        <p className="mt-2 text-sm text-brand-muted">
           Weights and score logic live in{" "}
-          <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs">
+          <code className="rounded bg-brand-off-white px-1.5 py-0.5 text-xs">
             src/lib/narrative/scoring.ts
           </code>
           . Beat rules live in{" "}
-          <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs">
+          <code className="rounded bg-brand-off-white px-1.5 py-0.5 text-xs">
             src/lib/narrative/beats.ts
           </code>
           . Engagement rate for report cards is in{" "}
-          <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs">
+          <code className="rounded bg-brand-off-white px-1.5 py-0.5 text-xs">
             src/lib/metrics.ts
           </code>
           .

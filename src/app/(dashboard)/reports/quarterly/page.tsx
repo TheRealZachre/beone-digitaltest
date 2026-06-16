@@ -129,7 +129,7 @@ export default async function QuarterlyReportPage() {
         />
 
         <div className="rounded-xl border-2 border-slate-900 bg-slate-900 p-8 text-white">
-          <p className="text-sm font-medium uppercase tracking-widest text-slate-400">
+          <p className="text-sm font-medium uppercase tracking-widest text-brand-muted/60">
             Executive Summary
           </p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight">
@@ -179,17 +179,17 @@ export default async function QuarterlyReportPage() {
 
         <WhatWorkedAnalysis worked={analysis.worked} didNot={analysis.didNot} timeframeLabel={analysis.timeframeLabel} sunsetCandidates={analysis.sunsetCandidates} />
 
-        <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h3 className="text-base font-semibold text-slate-900">
+        <section className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+          <h3 className="text-base font-semibold text-brand-ink">
             Strategic Recommendations
           </h3>
           <ol className="mt-4 space-y-3">
             {recommendations.map((rec, i) => (
               <li
                 key={rec}
-                className="flex items-start gap-3 text-sm text-slate-700"
+                className="flex items-start gap-3 text-sm text-brand-ink/80"
               >
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-indigo-100 text-xs font-bold text-indigo-700">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-indigo/12 text-xs font-bold text-brand-indigo">
                   {i + 1}
                 </span>
                 {rec}
@@ -225,11 +225,11 @@ function ExecutiveMetric({
   return (
     <div className="rounded-lg bg-white/10 p-4">
       <Icon className="h-5 w-5 text-indigo-300" />
-      <p className="mt-2 text-xs uppercase tracking-wide text-slate-400">
+      <p className="mt-2 text-xs uppercase tracking-wide text-brand-muted/60">
         {label}
       </p>
       <p className="mt-1 text-xl font-bold capitalize">{value}</p>
-      <p className="mt-1 text-xs text-slate-400">{detail}</p>
+      <p className="mt-1 text-xs text-brand-muted/60">{detail}</p>
     </div>
   );
 }

@@ -68,13 +68,13 @@ export function ChannelSelector({
     selected.length === ANALYTICS_CHANNEL_PLATFORMS.length;
 
   return (
-    <div className="mt-4 border-t border-slate-100 pt-4">
+    <div className="mt-4 border-t border-brand-ink/8 pt-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div>
-          <h4 className="text-sm font-semibold text-slate-900">
+          <h4 className="text-sm font-semibold text-brand-ink">
             Channels for analytics
           </h4>
-          <p className="mt-0.5 text-xs text-slate-500">
+          <p className="mt-0.5 text-xs text-brand-muted">
             Select which channels to include in reports and sync. At least one
             channel must stay enabled.
           </p>
@@ -83,7 +83,7 @@ export function ChannelSelector({
           <button
             type="button"
             onClick={selectAll}
-            className="text-xs font-medium text-indigo-600 hover:text-indigo-800"
+            className="text-xs font-medium text-brand-indigo hover:text-indigo-800"
           >
             Select all
           </button>
@@ -104,15 +104,15 @@ export function ChannelSelector({
                 className={clsx(
                   "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-medium transition",
                   isSelected
-                    ? "border-indigo-300 bg-indigo-50 text-indigo-900"
-                    : "border-slate-200 bg-white text-slate-500 hover:border-slate-300"
+                    ? "border-indigo-300 bg-brand-indigo/8 text-indigo-900"
+                    : "border-brand-ink/10 bg-white text-brand-muted hover:border-slate-300"
                 )}
               >
                 <span
                   className={clsx(
                     "flex h-4 w-4 items-center justify-center rounded border text-[10px]",
                     isSelected
-                      ? "border-indigo-500 bg-indigo-500 text-white"
+                      ? "border-brand-indigo bg-brand-indigo/80 text-white"
                       : "border-slate-300 bg-white text-transparent"
                   )}
                 >
@@ -130,14 +130,14 @@ export function ChannelSelector({
         })}
       </ul>
 
-      <p className="mt-2 text-xs text-slate-400">
+      <p className="mt-2 text-xs text-brand-muted/60">
         {selected.length} of {ANALYTICS_CHANNEL_PLATFORMS.length} channels
         selected for analytics
         {!allSelected && (
           <>
             {" "}
             ·{" "}
-            <span className="text-slate-500">
+            <span className="text-brand-muted">
               Reports exclude deselected channels until you re-enable them.
             </span>
           </>

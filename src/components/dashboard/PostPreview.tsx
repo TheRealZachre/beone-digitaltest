@@ -39,7 +39,7 @@ export function PostPreview({
   return (
     <article
       className={clsx(
-        "relative overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm",
+        "relative overflow-hidden rounded-xl border border-brand-ink/10 bg-white shadow-sm",
         compact ? "" : "flex flex-col"
       )}
     >
@@ -59,7 +59,7 @@ export function PostPreview({
           >
             {post.platform}
           </span>
-          <span className="rounded-full bg-white/90 px-2.5 py-1 text-xs font-medium capitalize text-slate-700">
+          <span className="rounded-full bg-white/90 px-2.5 py-1 text-xs font-medium capitalize text-brand-ink/80">
             {post.type}
           </span>
         </div>
@@ -68,11 +68,11 @@ export function PostPreview({
         <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
           <div className="flex flex-wrap items-center gap-2">
             <StoryBeatBadge beat={post.storyBeat} />
-            <span className="rounded-md bg-slate-100 px-2 py-0.5 text-xs font-medium capitalize text-slate-600">
+            <span className="rounded-md bg-brand-off-white px-2 py-0.5 text-xs font-medium capitalize text-brand-muted">
               {post.category}
             </span>
           </div>
-          <time className="text-xs text-slate-400">
+          <time className="text-xs text-brand-muted/60">
             {new Date(post.publishedAt).toLocaleDateString("en-US", {
               month: "short",
               day: "numeric",
@@ -80,8 +80,8 @@ export function PostPreview({
           </time>
         </div>
 
-        <div className="mb-3 rounded-lg border border-slate-100 bg-slate-50 p-3">
-          <p className="line-clamp-3 text-sm leading-relaxed text-slate-700">
+        <div className="mb-3 rounded-lg border border-brand-ink/8 bg-brand-off-white p-3">
+          <p className="line-clamp-3 text-sm leading-relaxed text-brand-ink/80">
             {post.caption}
           </p>
         </div>
@@ -111,7 +111,7 @@ export function PostPreview({
         )}
 
         {showBudget && post.metrics.spend && (
-          <p className="mt-3 text-xs text-slate-500">
+          <p className="mt-3 text-xs text-brand-muted">
             Spend: ${post.metrics.spend.toLocaleString()}
           </p>
         )}
@@ -130,10 +130,10 @@ function Metric({
   value: string;
 }) {
   return (
-    <div className="flex items-center gap-1.5 text-slate-600">
-      <Icon className="h-3.5 w-3.5 text-slate-400" />
-      <span className="text-slate-400">{label}</span>
-      <span className="ml-auto font-semibold text-slate-800">{value}</span>
+    <div className="flex items-center gap-1.5 text-brand-muted">
+      <Icon className="h-3.5 w-3.5 text-brand-muted/60" />
+      <span className="text-brand-muted/60">{label}</span>
+      <span className="ml-auto font-semibold text-brand-ink">{value}</span>
     </div>
   );
 }

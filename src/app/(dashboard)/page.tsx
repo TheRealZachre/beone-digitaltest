@@ -47,10 +47,10 @@ export default function IntroductionPage() {
 
         {/* Hero intro */}
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+          <h1 className="text-2xl font-bold tracking-tight text-brand-ink md:text-3xl">
             One dashboard. Every channel. All the insight you need.
           </h1>
-          <p className="mt-3 text-base leading-relaxed text-slate-600">
+          <p className="mt-3 text-base leading-relaxed text-brand-muted">
             This tool pulls live social data from BeOne Medicines' corporate channels
             and the CEO's personal profiles, then turns it into clear, actionable reports —
             weekly, monthly, and quarterly. No spreadsheets. No manual pulls.
@@ -60,20 +60,20 @@ export default function IntroductionPage() {
         {/* Key capabilities */}
         <div className="grid gap-4 sm:grid-cols-3">
           {KEY_CAPABILITIES.map(({ icon: Icon, title, body }) => (
-            <div key={title} className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-100">
-                <Icon className="h-4.5 w-4.5 text-indigo-600" />
+            <div key={title} className="rounded-xl border border-brand-ink/10 bg-white p-5 shadow-sm">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-indigo/12">
+                <Icon className="h-4.5 w-4.5 text-brand-indigo" />
               </div>
-              <h3 className="mt-3 text-sm font-bold text-slate-900">{title}</h3>
-              <p className="mt-1.5 text-xs leading-relaxed text-slate-500">{body}</p>
+              <h3 className="mt-3 text-sm font-bold text-brand-ink">{title}</h3>
+              <p className="mt-1.5 text-xs leading-relaxed text-brand-muted">{body}</p>
             </div>
           ))}
         </div>
 
         {/* Limitations */}
         <div>
-          <h2 className="text-base font-bold text-slate-900">Important limitations</h2>
-          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-slate-600">
+          <h2 className="text-base font-bold text-brand-ink">Important limitations</h2>
+          <ul className="mt-3 space-y-2 text-sm leading-relaxed text-brand-muted">
             <li className="flex items-start gap-2">
               <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" />
               Paid social is not included — only organic and owned-channel content.
@@ -96,12 +96,12 @@ export default function IntroductionPage() {
               <Building2 className="h-5 w-5 text-white" />
             </div>
             <div>
-              <h2 className="text-base font-bold text-slate-900">Corporate Social Analytics</h2>
-              <p className="text-xs text-slate-500">LinkedIn · X · Instagram · Facebook · YouTube</p>
+              <h2 className="text-base font-bold text-brand-ink">Corporate Social Analytics</h2>
+              <p className="text-xs text-brand-muted">LinkedIn · X · Instagram · Facebook · YouTube</p>
             </div>
           </div>
-          <p className="mt-3 text-sm leading-relaxed text-slate-600">
-            Full performance view across all <strong className="text-slate-800">BeOne Medicines</strong> corporate
+          <p className="mt-3 text-sm leading-relaxed text-brand-muted">
+            Full performance view across all <strong className="text-brand-ink">BeOne Medicines</strong> corporate
             social channels. See what content themes are driving engagement, which platforms are growing,
             and where to focus next quarter.
           </p>
@@ -117,10 +117,10 @@ export default function IntroductionPage() {
         </div>
 
         {/* Founder / CEO section */}
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div className="rounded-2xl border border-brand-ink/10 bg-white p-6 shadow-sm">
           <div className="flex items-center gap-4">
             {/* JVO avatar */}
-            <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-indigo-100 bg-indigo-50">
+            <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-indigo-100 bg-brand-indigo/8">
               <Image
                 src="https://media.licdn.com/dms/image/v2/C5603AQGi1HJ5xFRiqQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1614704036756?e=1753920000&v=beta&t=qVA2-pL-pKvjLTi7wfMVBfR-K9xbMWF0tN4W1RL9oGo"
                 alt="John V. Oyler"
@@ -130,13 +130,13 @@ export default function IntroductionPage() {
               />
             </div>
             <div>
-              <h2 className="text-base font-bold text-slate-900">Founder / CEO Social Analytics</h2>
-              <p className="text-xs text-slate-500">John V. Oyler · LinkedIn · X</p>
+              <h2 className="text-base font-bold text-brand-ink">Founder / CEO Social Analytics</h2>
+              <p className="text-xs text-brand-muted">John V. Oyler · LinkedIn · X</p>
             </div>
           </div>
-          <p className="mt-4 text-sm leading-relaxed text-slate-600">
+          <p className="mt-4 text-sm leading-relaxed text-brand-muted">
             Tracks the personal social media presence of{" "}
-            <strong className="text-slate-800">John V. Oyler</strong>, Co-Founder,
+            <strong className="text-brand-ink">John V. Oyler</strong>, Co-Founder,
             Chairman &amp; CEO of BeOne Medicines. Uses the same scoring engine as the
             corporate section — engagement rates, story beats, narrative arc, and weekly /
             monthly / quarterly reports — but sourced entirely from John's personal{" "}
@@ -144,7 +144,7 @@ export default function IntroductionPage() {
               href="https://www.linkedin.com/in/john-v-oyler/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-indigo-600 hover:underline"
+              className="font-medium text-brand-indigo hover:underline"
             >
               LinkedIn
             </a>{" "}
@@ -153,7 +153,7 @@ export default function IntroductionPage() {
               href="https://x.com/johnvoyler"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-indigo-600 hover:underline"
+              className="font-medium text-brand-indigo hover:underline"
             >
               X (@johnvoyler)
             </a>{" "}
@@ -162,7 +162,7 @@ export default function IntroductionPage() {
           <div className="mt-5">
             <Link
               href="/founder/reports/channels"
-              className="inline-flex items-center gap-2 rounded-lg border border-indigo-200 bg-indigo-50 px-5 py-2.5 text-sm font-semibold text-indigo-700 transition-colors hover:bg-indigo-100"
+              className="inline-flex items-center gap-2 rounded-lg border border-indigo-200 bg-brand-indigo/8 px-5 py-2.5 text-sm font-semibold text-brand-indigo transition-colors hover:bg-brand-indigo/12"
             >
               View Founder / CEO
               <ArrowRight className="h-4 w-4" />

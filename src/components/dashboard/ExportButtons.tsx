@@ -81,7 +81,7 @@ export function ExportButtons({
               pptxData
             )
           }
-          className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:bg-slate-50"
+          className="inline-flex items-center gap-2 rounded-lg border border-brand-ink/10 bg-white px-4 py-2 text-sm font-medium text-brand-ink/80 shadow-sm transition hover:bg-brand-off-white"
         >
           <Download className="h-4 w-4" />
           Export PDF
@@ -91,7 +91,7 @@ export function ExportButtons({
           onClick={() =>
             exportToExcel(posts, `${filenameBase}.xlsx`, reportTitle)
           }
-          className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition hover:bg-slate-50"
+          className="inline-flex items-center gap-2 rounded-lg border border-brand-ink/10 bg-white px-4 py-2 text-sm font-medium text-brand-ink/80 shadow-sm transition hover:bg-brand-off-white"
         >
           <FileSpreadsheet className="h-4 w-4" />
           Export Excel
@@ -113,7 +113,7 @@ export function ExportButtons({
         )}
       </div>
       {pptxStatus && (
-        <p className="text-xs text-slate-500">{pptxStatus}</p>
+        <p className="text-xs text-brand-muted">{pptxStatus}</p>
       )}
     </div>
   );

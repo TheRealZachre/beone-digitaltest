@@ -99,12 +99,12 @@ export default async function AllChannelsPage() {
           channelSources={channelSources}
         />
 
-        <section className="overflow-visible rounded-xl border border-indigo-200 bg-indigo-50/50 p-6">
+        <section className="overflow-visible rounded-xl border border-indigo-200 bg-brand-indigo/8/50 p-6">
           <div>
-            <h2 className="text-lg font-semibold text-slate-900">
+            <h2 className="text-lg font-semibold text-brand-ink">
               Social picture
             </h2>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-brand-muted">
               Unified view across {formatChannelList(selectedChannels)} for{" "}
               {alignedMeta.currentDateRange} ({alignedMeta.dayCount} days).
               Posts, reach, and impressions are summed from posts published in
@@ -117,7 +117,7 @@ export default async function AllChannelsPage() {
           </div>
 
           {channels.length === 0 ? (
-            <p className="mt-6 text-sm text-slate-600">
+            <p className="mt-6 text-sm text-brand-muted">
               No channels selected. Enable at least one channel in the sync
               panel above to see cross-platform totals.
             </p>
@@ -141,10 +141,10 @@ export default async function AllChannelsPage() {
 
         <section>
           <div className="mb-4">
-            <h2 className="text-lg font-semibold text-slate-900">
+            <h2 className="text-lg font-semibold text-brand-ink">
               Channel breakdown
             </h2>
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-brand-muted">
               Same period as Social picture · {alignedMeta.currentDateRange}
             </p>
           </div>

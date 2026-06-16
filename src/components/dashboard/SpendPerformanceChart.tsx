@@ -30,11 +30,11 @@ export function SpendPerformanceChart({ posts }: SpendPerformanceChartProps) {
 
   if (paidPosts.length === 0) {
     return (
-      <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h3 className="text-base font-semibold text-slate-900">
+      <div className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+        <h3 className="text-base font-semibold text-brand-ink">
           Spend vs. Performance
         </h3>
-        <p className="mt-2 text-sm text-slate-500">
+        <p className="mt-2 text-sm text-brand-muted">
           No paid posts in this period.
         </p>
       </div>
@@ -42,27 +42,27 @@ export function SpendPerformanceChart({ posts }: SpendPerformanceChartProps) {
   }
 
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-      <h3 className="text-base font-semibold text-slate-900">
+    <div className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+      <h3 className="text-base font-semibold text-brand-ink">
         Spend vs. Performance
       </h3>
-      <p className="mt-1 text-sm text-slate-500">
+      <p className="mt-1 text-sm text-brand-muted">
         Paid spend correlation with engagement rate
       </p>
 
       <div className="mt-6 h-64">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={paidPosts}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+            <CartesianGrid strokeDasharray="3 3" stroke="#e8edf5" />
             <XAxis
               dataKey="name"
-              tick={{ fontSize: 11, fill: "#94a3b8" }}
+              tick={{ fontSize: 11, fill: "#5a6a82" }}
               axisLine={false}
               tickLine={false}
             />
             <YAxis
               yAxisId="spend"
-              tick={{ fontSize: 11, fill: "#94a3b8" }}
+              tick={{ fontSize: 11, fill: "#5a6a82" }}
               axisLine={false}
               tickLine={false}
               tickFormatter={(v) => `$${v}`}
@@ -70,7 +70,7 @@ export function SpendPerformanceChart({ posts }: SpendPerformanceChartProps) {
             <YAxis
               yAxisId="engagement"
               orientation="right"
-              tick={{ fontSize: 11, fill: "#94a3b8" }}
+              tick={{ fontSize: 11, fill: "#5a6a82" }}
               axisLine={false}
               tickLine={false}
               tickFormatter={(v) => `${v}%`}

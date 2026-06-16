@@ -80,7 +80,7 @@ export default async function FounderAllChannelsPage() {
       <FounderChannelSubnav />
 
       {/* JVO Profile Banner */}
-      <div className="mx-8 mt-6 flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+      <div className="mx-8 mt-6 flex items-center gap-4 rounded-xl border border-brand-ink/10 bg-white p-4 shadow-sm">
         <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-indigo-100">
           <Image
             src="https://media.licdn.com/dms/image/v2/C5603AQGi1HJ5xFRiqQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1614704036756?e=1753920000&v=beta&t=qVA2-pL-pKvjLTi7wfMVBfR-K9xbMWF0tN4W1RL9oGo"
@@ -91,9 +91,9 @@ export default async function FounderAllChannelsPage() {
           />
         </div>
         <div>
-          <p className="text-sm font-bold text-slate-900">John V. Oyler</p>
-          <p className="text-xs text-slate-500">Co-Founder, Chairman &amp; CEO · BeOne Medicines</p>
-          <div className="mt-1 flex gap-3 text-xs text-indigo-600">
+          <p className="text-sm font-bold text-brand-ink">John V. Oyler</p>
+          <p className="text-xs text-brand-muted">Co-Founder, Chairman &amp; CEO · BeOne Medicines</p>
+          <div className="mt-1 flex gap-3 text-xs text-brand-indigo">
             <a href="https://www.linkedin.com/in/john-v-oyler/" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
             <a href="https://x.com/johnvoyler" target="_blank" rel="noopener noreferrer" className="hover:underline">@johnvoyler</a>
           </div>
@@ -110,10 +110,10 @@ export default async function FounderAllChannelsPage() {
           note="Data is based on the latest 50 posts per channel."
         />
 
-        <section className="overflow-visible rounded-xl border border-indigo-200 bg-indigo-50/50 p-6">
+        <section className="overflow-visible rounded-xl border border-indigo-200 bg-brand-indigo/8/50 p-6">
           <div>
-            <h2 className="text-lg font-semibold text-slate-900">Social picture</h2>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
+            <h2 className="text-lg font-semibold text-brand-ink">Social picture</h2>
+            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-brand-muted">
               Unified view across LinkedIn &amp; X for{" "}
               {alignedMeta.currentDateRange} ({alignedMeta.dayCount} days).
               Posts, reach, and impressions are summed from posts published in
@@ -125,7 +125,7 @@ export default async function FounderAllChannelsPage() {
           </div>
 
           {channels.length === 0 ? (
-            <p className="mt-6 text-sm text-slate-600">
+            <p className="mt-6 text-sm text-brand-muted">
               No data yet. Click &ldquo;Pull Latest Data&rdquo; above to sync
               John&rsquo;s LinkedIn and X profiles.
             </p>
@@ -149,8 +149,8 @@ export default async function FounderAllChannelsPage() {
 
         <section>
           <div className="mb-4">
-            <h2 className="text-lg font-semibold text-slate-900">Channel breakdown</h2>
-            <p className="mt-1 text-sm text-slate-500">
+            <h2 className="text-lg font-semibold text-brand-ink">Channel breakdown</h2>
+            <p className="mt-1 text-sm text-brand-muted">
               Same period as Social picture · {alignedMeta.currentDateRange}
             </p>
           </div>

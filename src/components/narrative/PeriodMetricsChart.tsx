@@ -41,11 +41,11 @@ export function PeriodMetricsChart({
 }: PeriodMetricsChartProps) {
   const shellClass =
     variant === "current"
-      ? "border-indigo-200 bg-indigo-50/40"
-      : "border-slate-200 bg-slate-50/60";
+      ? "border-indigo-200 bg-brand-indigo/8/40"
+      : "border-brand-ink/10 bg-brand-off-white/60";
   const titleClass =
-    variant === "current" ? "text-indigo-600" : "text-slate-500";
-  const barColor = variant === "current" ? "#6366f1" : "#64748b";
+    variant === "current" ? "text-brand-indigo" : "text-brand-muted";
+  const barColor = variant === "current" ? "#D32E27" : "#64748b";
 
   const hasPosts = postCount > 0;
   const weekRows = weeks?.filter((w) => w.postCount > 0) ?? [];
@@ -71,18 +71,18 @@ export function PeriodMetricsChart({
       <p className={`text-xs font-semibold uppercase tracking-wide ${titleClass}`}>
         {title}
       </p>
-      <p className="mt-1 text-sm font-medium text-slate-700">{dateRange}</p>
+      <p className="mt-1 text-sm font-medium text-brand-ink/80">{dateRange}</p>
 
       {hasPosts ? (
         <>
-          <p className="mt-3 text-sm text-slate-600">
+          <p className="mt-3 text-sm text-brand-muted">
             {postCount} posts
             {avgReactions !== undefined && ` · avg ${avgReactions} reactions`}
             {" · "}
             {formatPercent(avgEngagementRate)} avg ER · score {avgEngagementScore}
           </p>
 
-          <p className="mt-3 text-xs font-medium uppercase tracking-wide text-slate-500">
+          <p className="mt-3 text-xs font-medium uppercase tracking-wide text-brand-muted">
             Engagement rate (%)
           </p>
 
@@ -143,7 +143,7 @@ export function PeriodMetricsChart({
           </div>
         </>
       ) : (
-        <p className="mt-4 text-sm text-slate-500">{emptyMessage}</p>
+        <p className="mt-4 text-sm text-brand-muted">{emptyMessage}</p>
       )}
     </div>
   );

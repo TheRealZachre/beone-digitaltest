@@ -56,11 +56,11 @@ export function ReportPostsGrid({
     <section>
       <div className="mb-4 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <h2 className="text-lg font-semibold text-slate-900">
+          <h2 className="text-lg font-semibold text-brand-ink">
             {title} ({posts.length})
           </h2>
           {posts.length > 0 && (
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-sm text-brand-muted">
               Sorted by {reportPostSortLabel(sort)}.
             </p>
           )}
@@ -80,7 +80,7 @@ export function ReportPostsGrid({
                     "inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium transition-colors",
                     active
                       ? "border-brand-indigo bg-brand-indigo/10 text-brand-indigo"
-                      : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:text-slate-900"
+                      : "border-brand-ink/10 bg-white text-brand-muted hover:border-slate-300 hover:text-brand-ink"
                   )}
                   aria-pressed={active}
                 >
@@ -94,7 +94,7 @@ export function ReportPostsGrid({
       </div>
 
       {posts.length === 0 ? (
-        <p className="text-sm text-slate-500">{emptyMessage}</p>
+        <p className="text-sm text-brand-muted">{emptyMessage}</p>
       ) : (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {sortedPosts.map((post, index) => (

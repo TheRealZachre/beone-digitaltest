@@ -5,7 +5,7 @@ import { Shield, Trash2, UserPlus, Users } from "lucide-react";
 import type { PublicUser, UserRole } from "@/lib/auth/types";
 
 const inputClassName =
-  "mt-1.5 w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm text-brand-ink outline-none focus:border-brand-indigo focus:ring-2 focus:ring-brand-indigo/20";
+  "mt-1.5 w-full rounded-lg border border-brand-ink/10 bg-white px-4 py-2.5 text-sm text-brand-ink outline-none focus:border-brand-indigo focus:ring-2 focus:ring-brand-indigo/20";
 
 export function AdminUserConsole({
   initialUsers,
@@ -130,21 +130,21 @@ export function AdminUserConsole({
 
   return (
     <div className="space-y-8">
-      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+      <section className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
         <div className="flex items-start gap-4">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-indigo/10 text-brand-indigo">
             <UserPlus className="h-5 w-5" />
           </div>
           <div>
-            <h2 className="text-lg font-semibold text-slate-900">
+            <h2 className="text-lg font-semibold text-brand-ink">
               {createTitle}
             </h2>
-            <p className="mt-1 text-sm text-slate-500">{createDescription}</p>
+            <p className="mt-1 text-sm text-brand-muted">{createDescription}</p>
           </div>
         </div>
 
         <form onSubmit={handleSubmit} className="mt-6 grid gap-4 md:grid-cols-2">
-          <label className="block text-sm font-medium text-slate-700">
+          <label className="block text-sm font-medium text-brand-ink/80">
             Full name
             <input
               value={name}
@@ -154,7 +154,7 @@ export function AdminUserConsole({
             />
           </label>
 
-          <label className="block text-sm font-medium text-slate-700">
+          <label className="block text-sm font-medium text-brand-ink/80">
             Username
             <input
               value={username}
@@ -166,7 +166,7 @@ export function AdminUserConsole({
             />
           </label>
 
-          <label className="block text-sm font-medium text-slate-700">
+          <label className="block text-sm font-medium text-brand-ink/80">
             Email
             <input
               type="email"
@@ -177,7 +177,7 @@ export function AdminUserConsole({
             />
           </label>
 
-          <label className="block text-sm font-medium text-slate-700">
+          <label className="block text-sm font-medium text-brand-ink/80">
             Temporary password
             <input
               type="password"
@@ -190,7 +190,7 @@ export function AdminUserConsole({
             />
           </label>
 
-          <label className="block text-sm font-medium text-slate-700 md:col-span-2">
+          <label className="block text-sm font-medium text-brand-ink/80 md:col-span-2">
             Role
             <select
               value={role}
@@ -222,23 +222,23 @@ export function AdminUserConsole({
         </form>
       </section>
 
-      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+      <section className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
         <div className="flex items-start gap-4">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-700">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-off-white text-brand-ink/80">
             <Users className="h-5 w-5" />
           </div>
           <div>
-            <h2 className="text-lg font-semibold text-slate-900">
+            <h2 className="text-lg font-semibold text-brand-ink">
               {usersTitle}
             </h2>
-            <p className="mt-1 text-sm text-slate-500">{usersDescription}</p>
+            <p className="mt-1 text-sm text-brand-muted">{usersDescription}</p>
           </div>
         </div>
 
         <div className="mt-6 overflow-x-auto">
           <table className="min-w-full text-left text-sm">
             <thead>
-              <tr className="border-b border-slate-200 text-slate-500">
+              <tr className="border-b border-brand-ink/10 text-brand-muted">
                 <th className="px-3 py-2 font-medium">Name</th>
                 <th className="px-3 py-2 font-medium">Username</th>
                 <th className="px-3 py-2 font-medium">Email</th>
@@ -249,27 +249,27 @@ export function AdminUserConsole({
             </thead>
             <tbody>
               {users.map((user) => (
-                <tr key={user.id} className="border-b border-slate-100">
-                  <td className="px-3 py-3 font-medium text-slate-900">
+                <tr key={user.id} className="border-b border-brand-ink/8">
+                  <td className="px-3 py-3 font-medium text-brand-ink">
                     {user.name}
                   </td>
-                  <td className="px-3 py-3 text-slate-700">
+                  <td className="px-3 py-3 text-brand-ink/80">
                     {user.username ? `@${user.username}` : "—"}
                   </td>
-                  <td className="px-3 py-3 text-slate-700">{user.email}</td>
+                  <td className="px-3 py-3 text-brand-ink/80">{user.email}</td>
                   <td className="px-3 py-3">
                     <span
                       className={
                         user.role === "admin"
                           ? "inline-flex items-center gap-1 rounded-full bg-brand-indigo/10 px-2.5 py-1 text-xs font-medium text-brand-indigo"
-                          : "rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600"
+                          : "rounded-full bg-brand-off-white px-2.5 py-1 text-xs font-medium text-brand-muted"
                       }
                     >
                       {user.role === "admin" && <Shield className="h-3 w-3" />}
                       {user.role}
                     </span>
                   </td>
-                  <td className="px-3 py-3 text-slate-600">
+                  <td className="px-3 py-3 text-brand-muted">
                     {user.hasPassword ? "Password" : "Google only"}
                   </td>
                   <td className="px-3 py-3">

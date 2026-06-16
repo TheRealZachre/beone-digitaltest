@@ -23,7 +23,7 @@ export function ReportDataBanner({
   const providerLabel = formatDisplayProvider(provider);
 
   return (
-    <p className="rounded-lg border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm text-indigo-800">
+    <p className="rounded-lg border border-indigo-100 bg-brand-indigo/8 px-4 py-3 text-sm text-indigo-800">
       {timeframe} report for <strong>{companyName}</strong> — {postCount}{" "}
       {postCount === 1 ? "post" : "posts"} from {channelScope}
       {providerLabel ? ` (${providerLabel})` : ""}. Metrics include reactions, comments,

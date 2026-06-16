@@ -21,13 +21,13 @@ export function CompetitorBenchmark({
   const brandRank = all.findIndex((e) => e.isBrand) + 1;
 
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
       <div className="flex items-start justify-between">
         <div>
-          <h3 className="text-base font-semibold text-slate-900">
+          <h3 className="text-base font-semibold text-brand-ink">
             Competitor Benchmarking
           </h3>
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 text-sm text-brand-muted">
             {brandName} ranks #{brandRank} of {all.length} on engagement rate
           </p>
         </div>
@@ -37,7 +37,7 @@ export function CompetitorBenchmark({
       <div className="mt-6 overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
-            <tr className="border-b border-slate-100 text-left text-xs uppercase tracking-wide text-slate-400">
+            <tr className="border-b border-brand-ink/8 text-left text-xs uppercase tracking-wide text-brand-muted/60">
               <th className="pb-3 pr-4 font-medium">Brand</th>
               <th className="pb-3 pr-4 font-medium">Followers</th>
               <th className="pb-3 pr-4 font-medium">Eng. Rate</th>
@@ -51,19 +51,19 @@ export function CompetitorBenchmark({
                 key={entry.name}
                 className={
                   entry.isBrand
-                    ? "border-b border-indigo-100 bg-indigo-50/50"
+                    ? "border-b border-indigo-100 bg-brand-indigo/8/50"
                     : "border-b border-slate-50"
                 }
               >
-                <td className="py-3 pr-4 font-medium text-slate-800">
+                <td className="py-3 pr-4 font-medium text-brand-ink">
                   {entry.name}
                   {entry.isBrand && (
-                    <span className="ml-2 rounded bg-indigo-100 px-1.5 py-0.5 text-xs text-indigo-700">
+                    <span className="ml-2 rounded bg-brand-indigo/12 px-1.5 py-0.5 text-xs text-brand-indigo">
                       You
                     </span>
                   )}
                 </td>
-                <td className="py-3 pr-4 text-slate-600">
+                <td className="py-3 pr-4 text-brand-muted">
                   {"followers" in entry ? (
                     <span className="inline-flex items-center gap-1">
                       <Users className="h-3.5 w-3.5" />
@@ -73,13 +73,13 @@ export function CompetitorBenchmark({
                     "—"
                   )}
                 </td>
-                <td className="py-3 pr-4 font-semibold text-slate-800">
+                <td className="py-3 pr-4 font-semibold text-brand-ink">
                   {formatPercent(entry.avgEngagementRate)}
                 </td>
-                <td className="py-3 pr-4 text-slate-600">
+                <td className="py-3 pr-4 text-brand-muted">
                   {"avgPostsPerWeek" in entry ? entry.avgPostsPerWeek : "—"}
                 </td>
-                <td className="py-3 capitalize text-slate-600">
+                <td className="py-3 capitalize text-brand-muted">
                   {"topCategory" in entry ? entry.topCategory : "—"}
                 </td>
               </tr>

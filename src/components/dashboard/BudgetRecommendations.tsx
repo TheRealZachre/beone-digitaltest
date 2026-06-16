@@ -16,11 +16,11 @@ export function BudgetRecommendations({
 
   if (eligible.length === 0) {
     return (
-      <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h3 className="text-base font-semibold text-slate-900">
+      <div className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+        <h3 className="text-base font-semibold text-brand-ink">
           Paid Amplification Recommendations
         </h3>
-        <p className="mt-2 text-sm text-slate-500">
+        <p className="mt-2 text-sm text-brand-muted">
           No posts currently meet the eligibility threshold for paid boost
           recommendations.
         </p>
@@ -31,14 +31,14 @@ export function BudgetRecommendations({
   const postMap = new Map(posts.map((p) => [p.id, p]));
 
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
       <div className="flex items-center gap-2">
         <Zap className="h-5 w-5 text-amber-500" />
-        <h3 className="text-base font-semibold text-slate-900">
+        <h3 className="text-base font-semibold text-brand-ink">
           Paid Amplification Recommendations
         </h3>
       </div>
-      <p className="mt-1 text-sm text-slate-500">
+      <p className="mt-1 text-sm text-brand-muted">
         {eligible.length} posts eligible for paid boost based on organic
         performance
       </p>
@@ -57,11 +57,11 @@ export function BudgetRecommendations({
                 <div>
                   <div className="flex flex-wrap items-center gap-2">
                     <StoryBeatBadge beat={post.storyBeat} size="md" />
-                    <span className="text-xs capitalize text-slate-500">
+                    <span className="text-xs capitalize text-brand-muted">
                       {post.platform}
                     </span>
                   </div>
-                  <p className="mt-1 line-clamp-1 text-xs text-slate-500">
+                  <p className="mt-1 line-clamp-1 text-xs text-brand-muted">
                     {post.caption}
                   </p>
                 </div>
@@ -73,21 +73,21 @@ export function BudgetRecommendations({
 
               <div className="mt-3 grid grid-cols-2 gap-3 text-xs sm:grid-cols-3">
                 <div>
-                  <p className="text-slate-400">Projected ER</p>
+                  <p className="text-brand-muted/60">Projected ER</p>
                   <p className="flex items-center gap-1 font-semibold text-emerald-700">
                     <TrendingUp className="h-3.5 w-3.5" />
                     {formatPercent(rec.projectedEngagementRate)}
                   </p>
                 </div>
                 <div>
-                  <p className="text-slate-400">Projected Reach</p>
-                  <p className="font-semibold text-slate-800">
+                  <p className="text-brand-muted/60">Projected Reach</p>
+                  <p className="font-semibold text-brand-ink">
                     {rec.projectedReach.toLocaleString()}
                   </p>
                 </div>
                 <div className="col-span-2 sm:col-span-1">
-                  <p className="text-slate-400">Rationale</p>
-                  <p className="text-slate-600">{rec.rationale}</p>
+                  <p className="text-brand-muted/60">Rationale</p>
+                  <p className="text-brand-muted">{rec.rationale}</p>
                 </div>
               </div>
             </div>

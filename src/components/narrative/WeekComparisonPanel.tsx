@@ -38,11 +38,11 @@ export function WeekComparisonPanel({ current, prior }: WeekComparisonPanelProps
   const positive = rateDelta !== null && rateDelta >= 0;
 
   return (
-    <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-      <h3 className="text-base font-semibold text-slate-900">
+    <section className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+      <h3 className="text-base font-semibold text-brand-ink">
         Current week vs prior week
       </h3>
-      <p className="mt-1 text-sm text-slate-500">
+      <p className="mt-1 text-sm text-brand-muted">
         Side-by-side engagement rate by period with date ranges
       </p>
 

@@ -87,14 +87,14 @@ export default async function FounderChannelReportPage({ params }: ChannelPagePr
           note="Data is based on the latest 50 posts per channel."
         />
 
-        <section className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <section className="rounded-xl border border-brand-ink/10 bg-white p-5 shadow-sm">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
-              <h2 className="font-semibold text-slate-900">
+              <h2 className="font-semibold text-brand-ink">
                 {channelSummary.label} performance
               </h2>
               {channelSummary.dataSource !== "live" && (
-                <p className="mt-1 text-sm text-slate-500">
+                <p className="mt-1 text-sm text-brand-muted">
                   No data yet — click Pull Latest Data to sync{" "}
                   {platform === "linkedin" ? "LinkedIn" : "X"} posts.
                 </p>

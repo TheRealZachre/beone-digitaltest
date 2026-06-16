@@ -158,14 +158,14 @@ export function AccountSettingsForm() {
 
   return (
     <div className="space-y-8">
-      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-lg font-semibold text-slate-900">Profile</h2>
-        <p className="mt-1 text-sm text-slate-500">
+      <section className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+        <h2 className="text-lg font-semibold text-brand-ink">Profile</h2>
+        <p className="mt-1 text-sm text-brand-muted">
           Update your name, email, and username.
         </p>
 
         <form onSubmit={handleProfileSubmit} className="mt-6 space-y-4">
-          <label className="block text-sm font-medium text-slate-700">
+          <label className="block text-sm font-medium text-brand-ink/80">
             Full name
             <input
               value={profile.name}
@@ -177,7 +177,7 @@ export function AccountSettingsForm() {
             />
           </label>
 
-          <label className="block text-sm font-medium text-slate-700">
+          <label className="block text-sm font-medium text-brand-ink/80">
             Email
             <input
               type="email"
@@ -190,7 +190,7 @@ export function AccountSettingsForm() {
             />
           </label>
 
-          <label className="block text-sm font-medium text-slate-700">
+          <label className="block text-sm font-medium text-brand-ink/80">
             Username
             <input
               value={profile.username}
@@ -201,7 +201,7 @@ export function AccountSettingsForm() {
               placeholder="jane.doe"
               className={inputClassName}
             />
-            <span className="mt-1 block text-xs text-slate-500">
+            <span className="mt-1 block text-xs text-brand-muted">
               Used to sign in instead of your email address.
             </span>
           </label>
@@ -221,9 +221,9 @@ export function AccountSettingsForm() {
         </form>
       </section>
 
-      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h2 className="text-lg font-semibold text-slate-900">Password</h2>
-        <p className="mt-1 text-sm text-slate-500">
+      <section className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+        <h2 className="text-lg font-semibold text-brand-ink">Password</h2>
+        <p className="mt-1 text-sm text-brand-muted">
           {profile.hasPassword
             ? "Change your password."
             : "Set a password to sign in with email or username in addition to Google."}
@@ -231,7 +231,7 @@ export function AccountSettingsForm() {
 
         <form onSubmit={handlePasswordSubmit} className="mt-6 space-y-4">
           {profile.hasPassword && (
-            <label className="block text-sm font-medium text-slate-700">
+            <label className="block text-sm font-medium text-brand-ink/80">
               Current password
               <input
                 type="password"
@@ -244,7 +244,7 @@ export function AccountSettingsForm() {
             </label>
           )}
 
-          <label className="block text-sm font-medium text-slate-700">
+          <label className="block text-sm font-medium text-brand-ink/80">
             New password
             <input
               type="password"
@@ -257,7 +257,7 @@ export function AccountSettingsForm() {
             />
           </label>
 
-          <label className="block text-sm font-medium text-slate-700">
+          <label className="block text-sm font-medium text-brand-ink/80">
             Confirm new password
             <input
               type="password"

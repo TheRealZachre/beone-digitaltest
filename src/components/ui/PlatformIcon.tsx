@@ -61,7 +61,7 @@ export function PlatformIcon({ platform, className = "", size = 20 }: PlatformIc
 }
 
 export const PLATFORM_COLORS: Record<Platform | "all", string> = {
-  all: "#6366f1",
+  all: "#D32E27",
   linkedin: "#0A66C2",
   instagram: "#E1306C",
   facebook: "#1877F2",

@@ -1,14 +1,14 @@
 import type { StoryBeat } from "@/lib/types";
 
-/** High-contrast categorical palette — hues spread for arc plot legibility. */
+/** BeOne brand-adjacent categorical palette — hues spread for arc plot legibility. */
 export const BEATS: Record<StoryBeat, { color: string }> = {
-  "Brand Vision": { color: "#DC2626" },
-  "Scientific Innovation": { color: "#1D4ED8" },
-  "Patient-Centered": { color: "#EA580C" },
-  "Disease Awareness": { color: "#16A34A" },
-  "Corporate Citizenship": { color: "#9333EA" },
-  "People & Culture": { color: "#0891B2" },
-  "Policy Advocacy": { color: "#DB2777" },
+  "Brand Vision": { color: "#D32E27" },       // Punch red
+  "Scientific Innovation": { color: "#0F2344" }, // Blue Zodiac navy
+  "Patient-Centered": { color: "#c4571a" },    // Warm amber-red
+  "Disease Awareness": { color: "#1a6b3c" },   // Deep green
+  "Corporate Citizenship": { color: "#5a2b8a" }, // Deep violet
+  "People & Culture": { color: "#0e6b8a" },    // Ocean blue
+  "Policy Advocacy": { color: "#8a1a5a" },     // Deep rose
 };
 
 export const BEAT_ORDER: StoryBeat[] = [

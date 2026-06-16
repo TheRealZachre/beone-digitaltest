@@ -16,7 +16,7 @@ export const ANALYTICS_CHANNELS: ChannelConfig[] = [
     platform: null,
     label: "All Channels",
     href: "/reports/channels",
-    color: "#6366f1",
+    color: "#D32E27",
     handle: "@beonemedicines",
     followers: 0,
   },

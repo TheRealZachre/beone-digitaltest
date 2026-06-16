@@ -106,18 +106,18 @@ export function AudienceGrowthChart({
   const yoyPositive = (yearOverYear?.absolute ?? 0) >= 0;
 
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="rounded-xl border border-brand-ink/10 bg-white p-6 shadow-sm">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h3 className="text-base font-semibold text-slate-900">
+          <h3 className="text-base font-semibold text-brand-ink">
             <MetricLabel definition={metricDefinition("audienceGrowth")}>
               Audience Growth
             </MetricLabel>
           </h3>
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 text-sm text-brand-muted">
             Combined followers across all social channels
           </p>
-          <p className="mt-0.5 text-sm font-medium text-slate-700">
+          <p className="mt-0.5 text-sm font-medium text-brand-ink/80">
             {dateRangeLabel}
           </p>
           {yearOverYear && (
@@ -131,7 +131,7 @@ export function AudienceGrowthChart({
               {yearOverYear.absolute.toLocaleString()} followers (
               {yoyPositive ? "+" : ""}
               {yearOverYear.percent}% YoY)
-              <span className="ml-1 font-normal text-slate-500">
+              <span className="ml-1 font-normal text-brand-muted">
                 · {yearOverYear.priorLabel} vs {yearOverYear.currentLabel}
               </span>
             </p>
@@ -153,7 +153,7 @@ export function AudienceGrowthChart({
                 "rounded-lg border px-3 py-1.5 text-sm font-medium transition",
                 preset === id
                   ? "border-brand-indigo bg-brand-indigo/10 text-brand-indigo"
-                  : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
+                  : "border-brand-ink/10 bg-white text-brand-muted hover:border-slate-300"
               )}
             >
               {label}
@@ -165,25 +165,25 @@ export function AudienceGrowthChart({
       {preset === "custom" && (
         <div className="mt-4 flex flex-wrap items-end gap-3">
           <label className="flex flex-col gap-1">
-            <span className="text-xs font-medium text-slate-500">Start</span>
+            <span className="text-xs font-medium text-brand-muted">Start</span>
             <input
               type="date"
               value={customStart}
               min={minDate}
               max={customEnd || maxDate}
               onChange={(event) => setCustomStart(event.target.value)}
-              className="rounded-lg border border-slate-200 px-3 py-1.5 text-sm text-slate-900"
+              className="rounded-lg border border-brand-ink/10 px-3 py-1.5 text-sm text-brand-ink"
             />
           </label>
           <label className="flex flex-col gap-1">
-            <span className="text-xs font-medium text-slate-500">End</span>
+            <span className="text-xs font-medium text-brand-muted">End</span>
             <input
               type="date"
               value={customEnd}
               min={customStart || minDate}
               max={maxDate}
               onChange={(event) => setCustomEnd(event.target.value)}
-              className="rounded-lg border border-slate-200 px-3 py-1.5 text-sm text-slate-900"
+              className="rounded-lg border border-brand-ink/10 px-3 py-1.5 text-sm text-brand-ink"
             />
           </label>
         </div>
@@ -191,7 +191,7 @@ export function AudienceGrowthChart({
 
       <div className={clsx("mt-6", expanded ? "h-96" : "h-64")}>
         {chartData.length === 0 ? (
-          <div className="flex h-full items-center justify-center text-sm text-slate-500">
+          <div className="flex h-full items-center justify-center text-sm text-brand-muted">
             No audience data for this date range.
           </div>
         ) : (
@@ -199,19 +199,19 @@ export function AudienceGrowthChart({
             <AreaChart data={chartData}>
               <defs>
                 <linearGradient id="followerGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#6366f1" stopOpacity={0.3} />
-                  <stop offset="100%" stopColor="#6366f1" stopOpacity={0} />
+                  <stop offset="0%" stopColor="#D32E27" stopOpacity={0.3} />
+                  <stop offset="100%" stopColor="#D32E27" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+              <CartesianGrid strokeDasharray="3 3" stroke="#e8edf5" />
               <XAxis
                 dataKey="label"
-                tick={{ fontSize: 12, fill: "#94a3b8" }}
+                tick={{ fontSize: 12, fill: "#5a6a82" }}
                 axisLine={false}
                 tickLine={false}
               />
               <YAxis
-                tick={{ fontSize: 12, fill: "#94a3b8" }}
+                tick={{ fontSize: 12, fill: "#5a6a82" }}
                 axisLine={false}
                 tickLine={false}
                 tickFormatter={(value) => `${(Number(value) / 1000).toFixed(0)}K`}
@@ -246,7 +246,7 @@ export function AudienceGrowthChart({
                 type="monotone"
                 dataKey="followers"
                 name="followers"
-                stroke="#6366f1"
+                stroke="#D32E27"
                 strokeWidth={2}
                 fill="url(#followerGrad)"
               />
@@ -255,7 +255,7 @@ export function AudienceGrowthChart({
                   type="monotone"
                   dataKey="priorYearFollowers"
                   name="priorYearFollowers"
-                  stroke="#94a3b8"
+                  stroke="#5a6a82"
                   strokeWidth={2}
                   strokeDasharray="6 4"
                   dot={false}

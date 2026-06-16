@@ -40,7 +40,7 @@ export function PostInsightsAnalysis({
       </div>
 
       <div className="mt-[22px] border-t border-[#e6e6e6] pt-[22px] text-[13.5px] leading-[1.65] text-[#0d1421]">
-        <strong className="font-semibold text-indigo-700">Narrative role:</strong>{" "}
+        <strong className="font-semibold text-brand-indigo">Narrative role:</strong>{" "}
         {insights.narrativeRole}
       </div>
     </div>
