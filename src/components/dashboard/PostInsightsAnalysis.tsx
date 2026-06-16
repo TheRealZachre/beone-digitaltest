@@ -17,7 +17,7 @@ export function PostInsightsAnalysis({
       <div
         className={clsx(
           layout === "grid"
-            ? "mt-1.5 grid grid-cols-1 gap-[18px] md:grid-cols-2 md:gap-7"
+            ? "mt-1.5 grid grid-cols-1 gap-[18px] md:grid-cols-3 md:gap-6"
             : "mt-1.5 space-y-4"
         )}
       >
@@ -37,11 +37,14 @@ export function PostInsightsAnalysis({
             {insights.whatDiluted}
           </p>
         </div>
-      </div>
-
-      <div className="mt-[22px] border-t border-[#e6e6e6] pt-[22px] text-[13.5px] leading-[1.65] text-[#0d1421]">
-        <strong className="font-semibold text-brand-indigo">Narrative role:</strong>{" "}
-        {insights.narrativeRole}
+        <div>
+          <h4 className="mb-2.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-indigo">
+            Narrative Role
+          </h4>
+          <p className="text-[13.5px] leading-[1.6] text-[#0d1421]">
+            {insights.narrativeRole}
+          </p>
+        </div>
       </div>
     </div>
   );

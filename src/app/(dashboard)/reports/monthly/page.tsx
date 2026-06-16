@@ -3,7 +3,6 @@ import { DataSyncPanel } from "@/components/dashboard/DataSyncPanel";
 import { ReportDataBanner } from "@/components/dashboard/ReportDataBanner";
 import { ExportButtons } from "@/components/dashboard/ExportButtons";
 import { ReportStats } from "@/components/dashboard/ReportStats";
-import { ReportPostsGrid } from "@/components/dashboard/ReportPostsGrid";
 import { BeatRanking } from "@/components/narrative/BeatRanking";
 import { CompetitorBenchmark } from "@/components/dashboard/CompetitorBenchmark";
 import { BudgetRecommendations } from "@/components/dashboard/BudgetRecommendations";
@@ -156,12 +155,6 @@ export default async function MonthlyReportPage() {
           <SpendPerformanceChart posts={posts} />
         </div>
 
-        <ReportPostsGrid
-          posts={posts}
-          title={`Current month posts (${currentMonth.label})`}
-          emptyMessage="No posts this month yet. Pull latest data to refresh."
-          showBudget
-        />
       </div>
     </>
   );

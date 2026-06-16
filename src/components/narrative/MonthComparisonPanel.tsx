@@ -67,6 +67,14 @@ export function MonthComparisonPanel({
         </div>
       </div>
 
+      {current.posts.length > 0 && (
+        <ReportPostsGrid
+          posts={current.posts}
+          title={`Current month posts (${current.label})`}
+          emptyMessage="No posts in the current month."
+        />
+      )}
+
       {prior.posts.length > 0 && (
         <ReportPostsGrid
           posts={prior.posts}
