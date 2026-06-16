@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { ANALYTICS_CHANNELS } from "@/lib/analytics/channels";
+import { PlatformIcon, PLATFORM_COLORS } from "@/components/ui/PlatformIcon";
+import type { Platform } from "@/lib/types";
 
 export function ChannelSubnav() {
   const pathname = usePathname();
@@ -16,18 +18,27 @@ export function ChannelSubnav() {
             channel.id === "all"
               ? pathname === "/reports/channels"
               : pathname === channel.href;
+          const iconColor = active
+            ? PLATFORM_COLORS[channel.platform ?? "all"]
+            : "#94a3b8";
 
           return (
             <Link
               key={channel.id}
               href={channel.href}
               className={clsx(
-                "shrink-0 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                "flex shrink-0 items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                 active
                   ? "bg-indigo-50 text-indigo-700"
                   : "text-slate-500 hover:bg-slate-50 hover:text-slate-800"
               )}
             >
+              <span style={{ color: iconColor }}>
+                <PlatformIcon
+                  platform={(channel.platform as Platform) ?? "all"}
+                  size={14}
+                />
+              </span>
               {channel.label}
             </Link>
           );

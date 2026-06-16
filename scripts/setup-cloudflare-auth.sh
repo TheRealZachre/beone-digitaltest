@@ -49,6 +49,8 @@ put_secret() {
 put_secret AUTH_SECRET "${AUTH_SECRET:-}"
 put_secret RESEND_API_KEY "${RESEND_API_KEY:-}"
 put_secret AUTH_EMAIL_FROM "${AUTH_EMAIL_FROM:-}"
+put_secret APIFY_TOKEN "${APIFY_TOKEN:-}"
+put_secret LINKEDIN_FOUNDER_FOLLOWERS "${LINKEDIN_FOUNDER_FOLLOWERS:-}"
 
 echo ""
 echo "Done. Worker secrets are on beone-digitaltest."

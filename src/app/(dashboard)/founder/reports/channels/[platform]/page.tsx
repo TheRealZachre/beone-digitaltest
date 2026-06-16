@@ -123,7 +123,7 @@ export default async function FounderChannelReportPage({ params }: ChannelPagePr
           />
         )}
 
-        <WhatWorkedAnalysis worked={analysis.worked} didNot={analysis.didNot} />
+        <WhatWorkedAnalysis worked={analysis.worked} didNot={analysis.didNot} timeframeLabel={analysis.timeframeLabel} sunsetCandidates={analysis.sunsetCandidates} />
 
         {posts.length >= 3 && <PostDeepDivesSection posts={posts} />}
 

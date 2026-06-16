@@ -5,17 +5,19 @@ import { formatNumber, formatPercent } from "@/lib/metrics";
 import { metricDefinition } from "@/lib/metric-definitions";
 import { MetricLabel } from "@/components/dashboard/MetricLabel";
 import { getChannelConfigByPlatform } from "@/lib/analytics/channels";
+import { PlatformIcon } from "@/components/ui/PlatformIcon";
 
 interface ChannelOverviewGridProps {
   channels: ChannelSummary[];
+  hrefPrefix?: string;
 }
 
-export function ChannelOverviewGrid({ channels }: ChannelOverviewGridProps) {
+export function ChannelOverviewGrid({ channels, hrefPrefix = "/reports/channels" }: ChannelOverviewGridProps) {
   return (
     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
       {channels.map((channel) => {
         const config = getChannelConfigByPlatform(channel.platform);
-        const href = `/reports/channels/${channel.platform}`;
+        const href = `${hrefPrefix}/${channel.platform}`;
 
         return (
           <Link
@@ -26,10 +28,10 @@ export function ChannelOverviewGrid({ channels }: ChannelOverviewGridProps) {
             <div className="flex items-start justify-between gap-3">
               <div className="flex items-center gap-3">
                 <span
-                  className="flex h-10 w-10 items-center justify-center rounded-lg text-sm font-bold text-white"
+                  className="flex h-10 w-10 items-center justify-center rounded-lg text-white"
                   style={{ backgroundColor: config?.color ?? "#6366f1" }}
                 >
-                  {channel.label.slice(0, 2).toUpperCase()}
+                  <PlatformIcon platform={channel.platform} size={20} />
                 </span>
                 <div>
                   <h3 className="font-semibold text-slate-900 group-hover:text-indigo-700">
@@ -76,8 +78,8 @@ export function ChannelOverviewGrid({ channels }: ChannelOverviewGridProps) {
                     Avg. ER
                   </MetricLabel>
                 </dt>
-                <dd className="font-semibold text-slate-900">
-                  {formatPercent(channel.avgEngagementRate)}
+                <dd className={`font-semibold ${channel.postCount === 0 ? "text-slate-400" : channel.avgEngagementRate > 0 ? "text-emerald-700" : "text-slate-400"}`}>
+                  {channel.postCount === 0 ? "—" : formatPercent(channel.avgEngagementRate)}
                 </dd>
               </div>
               <div>

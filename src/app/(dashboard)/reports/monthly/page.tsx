@@ -149,7 +149,7 @@ export default async function MonthlyReportPage() {
 
         <BudgetRecommendations posts={posts} recommendations={recommendations} />
 
-        <WhatWorkedAnalysis worked={analysis.worked} didNot={analysis.didNot} />
+        <WhatWorkedAnalysis worked={analysis.worked} didNot={analysis.didNot} timeframeLabel={analysis.timeframeLabel} sunsetCandidates={analysis.sunsetCandidates} />
 
         <div className="grid gap-6 lg:grid-cols-2">
           <AudienceGrowthChart data={audienceGrowth} />

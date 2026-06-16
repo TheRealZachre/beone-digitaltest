@@ -114,7 +114,12 @@ export default async function ChannelReportPage({ params }: ChannelPageProps) {
           />
         )}
 
-        <WhatWorkedAnalysis worked={analysis.worked} didNot={analysis.didNot} />
+        <WhatWorkedAnalysis
+          worked={analysis.worked}
+          didNot={analysis.didNot}
+          timeframeLabel={analysis.timeframeLabel}
+          sunsetCandidates={analysis.sunsetCandidates}
+        />
 
         {posts.length >= 3 && <PostDeepDivesSection posts={posts} />}
 

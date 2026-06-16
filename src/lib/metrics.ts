@@ -195,6 +195,8 @@ export function whatWorkedAnalysis(
 ): {
   worked: string[];
   didNot: string[];
+  sunsetCandidates: string[];
+  timeframeLabel: string;
 } {
   const pool =
     recentDays == null || recentDays <= 0
@@ -204,6 +206,11 @@ export function whatWorkedAnalysis(
   const top = ranked.slice(0, 3);
   const bottom = ranked.slice(-3).reverse();
   const beats = beatPerformance(pool);
+
+  const timeframeLabel =
+    recentDays == null || recentDays <= 0
+      ? `all ${pool.length} posts`
+      : `last ${recentDays} days · ${pool.length} post${pool.length !== 1 ? "s" : ""}`;
 
   const worked = uniqueInsights([
     ...top.map(
@@ -225,7 +232,28 @@ export function whatWorkedAnalysis(
       : "",
   ].filter(Boolean));
 
-  return { worked, didNot };
+  // Sunset candidates: story beats with consistently low ER across ≥2 posts
+  const beatCounts: Record<string, { count: number; totalER: number }> = {};
+  for (const p of pool) {
+    const key = p.storyBeat;
+    if (!beatCounts[key]) beatCounts[key] = { count: 0, totalER: 0 };
+    beatCounts[key].count += 1;
+    beatCounts[key].totalER += engagementRate(p.metrics);
+  }
+  const avgEROverall =
+    pool.reduce((s, p) => s + engagementRate(p.metrics), 0) / (pool.length || 1);
+
+  const sunsetCandidates = Object.entries(beatCounts)
+    .filter(([, { count, totalER }]) => {
+      const beatAvg = totalER / count;
+      return count >= 2 && beatAvg < avgEROverall * 0.5;
+    })
+    .map(([beat, { count, totalER }]) => {
+      const beatAvg = totalER / count;
+      return `${beat} — avg ${beatAvg.toFixed(1)}% ER across ${count} posts (half the overall average). Consider reducing this content type.`;
+    });
+
+  return { worked, didNot, sunsetCandidates, timeframeLabel };
 }
 
 export function formatNumber(n: number): string {

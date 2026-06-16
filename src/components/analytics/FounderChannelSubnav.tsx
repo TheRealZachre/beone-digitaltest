@@ -3,24 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import { PlatformIcon, PLATFORM_COLORS } from "@/components/ui/PlatformIcon";
+import type { Platform } from "@/lib/types";
 
 const FOUNDER_CHANNELS = [
-  {
-    id: "all",
-    label: "All Channels",
-    href: "/founder/reports/channels",
-  },
-  {
-    id: "linkedin",
-    label: "LinkedIn",
-    href: "/founder/reports/channels/linkedin",
-  },
-  {
-    id: "x",
-    label: "X",
-    href: "/founder/reports/channels/x",
-  },
-] as const;
+  { id: "all" as const, label: "All Channels", href: "/founder/reports/channels", platform: null },
+  { id: "linkedin" as const, label: "LinkedIn", href: "/founder/reports/channels/linkedin", platform: "linkedin" as Platform },
+  { id: "x" as const, label: "X", href: "/founder/reports/channels/x", platform: "x" as Platform },
+];
 
 export function FounderChannelSubnav() {
   const pathname = usePathname();
@@ -33,18 +23,24 @@ export function FounderChannelSubnav() {
             channel.id === "all"
               ? pathname === "/founder/reports/channels"
               : pathname === channel.href;
+          const iconColor = active
+            ? PLATFORM_COLORS[channel.platform ?? "all"]
+            : "#94a3b8";
 
           return (
             <Link
               key={channel.id}
               href={channel.href}
               className={clsx(
-                "shrink-0 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                "flex shrink-0 items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                 active
                   ? "bg-indigo-50 text-indigo-700"
                   : "text-slate-500 hover:bg-slate-50 hover:text-slate-800"
               )}
             >
+              <span style={{ color: iconColor }}>
+                <PlatformIcon platform={channel.platform ?? "all"} size={14} />
+              </span>
               {channel.label}
             </Link>
           );

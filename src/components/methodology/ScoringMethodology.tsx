@@ -1,3 +1,4 @@
+import { CheckCircle2, HelpCircle } from "lucide-react";
 import { BEAT_ORDER, BEATS } from "@/lib/narrative/beats";
 import { ENGAGEMENT_SCORE_WEIGHTS } from "@/lib/narrative/scoring";
 import type { StoryBeat } from "@/lib/types";
@@ -27,6 +28,49 @@ const beatExamples: Record<StoryBeat, string> = {
 export function ScoringMethodology() {
   return (
     <div className="space-y-8 px-8 py-8">
+
+      {/* Plain-English overview */}
+      <section className="rounded-xl border border-indigo-200 bg-indigo-50/60 p-6">
+        <div className="flex items-center gap-2">
+          <HelpCircle className="h-5 w-5 text-indigo-600" />
+          <h2 className="text-base font-bold text-indigo-900">
+            Why does scoring work this way?
+          </h2>
+        </div>
+        <ul className="mt-4 space-y-3">
+          {[
+            {
+              title: "Not all engagement is equal.",
+              body: "A share takes more effort than a like. A comment takes more effort than a share. The scoring system rewards the actions that signal genuine audience connection — so a post with 10 comments outranks a post with 100 likes.",
+            },
+            {
+              title: "Reach-normalized rates let you compare across channels.",
+              body: "LinkedIn has 249K followers. X has 5K. Raw like counts would make LinkedIn look dominant by default. Dividing by reach (people who actually saw the post) levels the playing field so you can fairly compare performance.",
+            },
+            {
+              title: "Story beats show you what topics your audience cares about.",
+              body: "Every post gets classified into one of seven narrative categories based on its caption. Over time, the beat rankings reveal which topics consistently earn engagement — and which ones you should retire.",
+            },
+            {
+              title: "The arc plot shows momentum over time.",
+              body: "Placing posts on a time × score chart reveals whether you're building an audience narrative or publishing in isolation. A healthy arc has peaks that cluster around key moments (approvals, conferences, awareness days).",
+            },
+            {
+              title: "'What Worked' is based on the top and bottom performers in the window.",
+              body: "The analysis looks at the top 3 and bottom 3 posts by engagement rate within the selected timeframe. The story beats, platforms, and dates of those posts become the 'What Worked' and 'Improvements' bullets.",
+            },
+          ].map(({ title, body }) => (
+            <li key={title} className="flex items-start gap-3">
+              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" />
+              <div className="text-sm text-indigo-900">
+                <strong className="font-semibold">{title}</strong>{" "}
+                <span className="text-indigo-800/80">{body}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
         <h2 className="text-lg font-semibold text-slate-900">
           Narrative engagement score

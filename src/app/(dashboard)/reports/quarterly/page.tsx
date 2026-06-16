@@ -177,7 +177,7 @@ export default async function QuarterlyReportPage() {
           />
         </div>
 
-        <WhatWorkedAnalysis worked={analysis.worked} didNot={analysis.didNot} />
+        <WhatWorkedAnalysis worked={analysis.worked} didNot={analysis.didNot} timeframeLabel={analysis.timeframeLabel} sunsetCandidates={analysis.sunsetCandidates} />
 
         <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
           <h3 className="text-base font-semibold text-slate-900">

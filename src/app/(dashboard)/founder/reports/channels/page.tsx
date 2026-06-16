@@ -1,4 +1,5 @@
 import { format } from "date-fns";
+import Image from "next/image";
 import { Header } from "@/components/layout/Header";
 import { FounderChannelSubnav } from "@/components/analytics/FounderChannelSubnav";
 import { ChannelComparisonChart } from "@/components/analytics/ChannelComparisonChart";
@@ -78,6 +79,27 @@ export default async function FounderAllChannelsPage() {
       />
       <FounderChannelSubnav />
 
+      {/* JVO Profile Banner */}
+      <div className="mx-8 mt-6 flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-indigo-100">
+          <Image
+            src="https://media.licdn.com/dms/image/v2/C5603AQGi1HJ5xFRiqQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1614704036756?e=1753920000&v=beta&t=qVA2-pL-pKvjLTi7wfMVBfR-K9xbMWF0tN4W1RL9oGo"
+            alt="John V. Oyler"
+            fill
+            className="object-cover"
+            unoptimized
+          />
+        </div>
+        <div>
+          <p className="text-sm font-bold text-slate-900">John V. Oyler</p>
+          <p className="text-xs text-slate-500">Co-Founder, Chairman &amp; CEO · BeOne Medicines</p>
+          <div className="mt-1 flex gap-3 text-xs text-indigo-600">
+            <a href="https://www.linkedin.com/in/john-v-oyler/" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
+            <a href="https://x.com/johnvoyler" target="_blank" rel="noopener noreferrer" className="hover:underline">@johnvoyler</a>
+          </div>
+        </div>
+      </div>
+
       <div className="space-y-8 p-8">
         <DataSyncPanel
           initialMeta={meta ?? null}
@@ -132,7 +154,7 @@ export default async function FounderAllChannelsPage() {
               Same period as Social picture · {alignedMeta.currentDateRange}
             </p>
           </div>
-          <ChannelOverviewGrid channels={currentPeriodChannels} />
+          <ChannelOverviewGrid channels={currentPeriodChannels} hrefPrefix="/founder/reports/channels" />
         </section>
 
         <ReportPostsGrid

@@ -22,7 +22,7 @@ export function PostInsightsAnalysis({
         )}
       >
         <div>
-          <h4 className="mb-2.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#c8102e]">
+          <h4 className="mb-2.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-700">
             What Worked
           </h4>
           <p className="text-[13.5px] leading-[1.6] text-[#0d1421]">
@@ -30,8 +30,8 @@ export function PostInsightsAnalysis({
           </p>
         </div>
         <div>
-          <h4 className="mb-2.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#b8731a]">
-            What Diluted
+          <h4 className="mb-2.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-red-600">
+            Improvements
           </h4>
           <p className="text-[13.5px] leading-[1.6] text-[#0d1421]">
             {insights.whatDiluted}
@@ -40,7 +40,7 @@ export function PostInsightsAnalysis({
       </div>
 
       <div className="mt-[22px] border-t border-[#e6e6e6] pt-[22px] text-[13.5px] leading-[1.65] text-[#0d1421]">
-        <strong className="font-semibold text-[#c8102e]">Narrative role:</strong>{" "}
+        <strong className="font-semibold text-indigo-700">Narrative role:</strong>{" "}
         {insights.narrativeRole}
       </div>
     </div>
