@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { AlertTriangle, ArrowRight, Building2, BarChart2, Users, Zap } from "lucide-react";
+import { AlertTriangle, ArrowRight, Building2, BarChart2, Users, Zap, Globe } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 
 const KEY_CAPABILITIES = [
@@ -75,24 +75,27 @@ export default function IntroductionPage() {
           <h2 className="text-base font-bold text-brand-ink">Important limitations</h2>
           <ul className="mt-3 space-y-2 text-sm leading-relaxed text-brand-muted">
             <li className="flex items-start gap-2">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" />
-              Paid social is not included — only organic and owned-channel content.
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-muted/40" />
+              <span>
+                <strong className="text-brand-ink">Paid social is not included</strong> in this dashboard.
+                Paid performance data will be added once a contract is signed and API access is provided by BeOne Medicines.
+              </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" />
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-muted/40" />
               Figures are for illustration only and may not reflect live accuracy.
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-slate-400" />
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-muted/40" />
               This is a demo site. A production license is required for day-to-day use.
             </li>
           </ul>
         </div>
 
         {/* Corporate section */}
-        <div className="rounded-2xl border border-indigo-200 bg-white p-6 shadow-sm">
+        <div className="rounded-2xl border border-brand-ink/10 bg-white p-6 shadow-sm">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-ink">
               <Building2 className="h-5 w-5 text-white" />
             </div>
             <div>
@@ -108,7 +111,7 @@ export default function IntroductionPage() {
           <div className="mt-5">
             <Link
               href="/reports/channels"
-              className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-indigo-700"
+              className="inline-flex items-center gap-2 rounded-lg bg-brand-indigo px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-indigo-bright"
             >
               View Corporate
               <ArrowRight className="h-4 w-4" />
@@ -119,8 +122,7 @@ export default function IntroductionPage() {
         {/* Founder / CEO section */}
         <div className="rounded-2xl border border-brand-ink/10 bg-white p-6 shadow-sm">
           <div className="flex items-center gap-4">
-            {/* JVO avatar */}
-            <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-indigo-100 bg-brand-indigo/8">
+            <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-brand-ink/10 bg-brand-off-white">
               <Image
                 src="https://media.licdn.com/dms/image/v2/C5603AQGi1HJ5xFRiqQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1614704036756?e=1753920000&v=beta&t=qVA2-pL-pKvjLTi7wfMVBfR-K9xbMWF0tN4W1RL9oGo"
                 alt="John V. Oyler"
@@ -162,9 +164,60 @@ export default function IntroductionPage() {
           <div className="mt-5">
             <Link
               href="/founder/reports/channels"
-              className="inline-flex items-center gap-2 rounded-lg border border-indigo-200 bg-brand-indigo/8 px-5 py-2.5 text-sm font-semibold text-brand-indigo transition-colors hover:bg-brand-indigo/12"
+              className="inline-flex items-center gap-2 rounded-lg border border-brand-indigo/20 bg-brand-indigo/8 px-5 py-2.5 text-sm font-semibold text-brand-indigo transition-colors hover:bg-brand-indigo/12"
             >
               View Founder / CEO
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+
+        {/* Wikipedia Analytics section */}
+        <div className="rounded-2xl border border-brand-ink/10 bg-white p-6 shadow-sm">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-off-white border border-brand-ink/10">
+              <Globe className="h-5 w-5 text-brand-ink" />
+            </div>
+            <div>
+              <h2 className="text-base font-bold text-brand-ink">Wikipedia Analytics</h2>
+              <p className="text-xs text-brand-muted">Corporate page · Founder / CEO page</p>
+            </div>
+          </div>
+          <p className="mt-3 text-sm leading-relaxed text-brand-muted">
+            Monitors the health and visibility of <strong className="text-brand-ink">BeOne Medicines</strong>' Wikipedia
+            presence — including article quality grades, open maintenance flags, pageview trends, and an
+            AI-powered editorial review with specific recommendations for improvement. Covers both the{" "}
+            <a
+              href="https://en.wikipedia.org/wiki/BeOne_Medicines"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-brand-indigo hover:underline"
+            >
+              corporate article
+            </a>{" "}
+            and the{" "}
+            <a
+              href="https://en.wikipedia.org/wiki/John_V._Oyler"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-brand-indigo hover:underline"
+            >
+              Founder / CEO article
+            </a>.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Link
+              href="/wikipedia/corporate"
+              className="inline-flex items-center gap-2 rounded-lg bg-brand-indigo px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-indigo-bright"
+            >
+              Corporate Wikipedia
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/wikipedia/founder-ceo"
+              className="inline-flex items-center gap-2 rounded-lg border border-brand-indigo/20 bg-brand-indigo/8 px-5 py-2.5 text-sm font-semibold text-brand-indigo transition-colors hover:bg-brand-indigo/12"
+            >
+              Founder / CEO Wikipedia
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
