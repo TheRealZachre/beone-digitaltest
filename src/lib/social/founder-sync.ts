@@ -5,6 +5,8 @@
 
 import { resolveFollowerCount } from "./followers";
 import { fetchXPosts } from "./providers/x";
+import { inferCategory } from "./normalize";
+import { inferStoryBeat } from "@/lib/narrative/beats";
 import type {
   ChannelSyncMeta,
   SocialChannel,
@@ -51,15 +53,13 @@ function normalizeHarvestApiPost(record: HarvestApiPost): SocialPost | null {
     record.document?.coverPages?.[0]?.imageUrls?.[0] ??
     `https://picsum.photos/seed/${encodeURIComponent(id)}/600/600`;
 
-  const { inferCategory } = require("./normalize") as typeof import("./normalize");
-  const { inferStoryBeat } = require("../narrative/beats") as typeof import("../narrative/beats");
   const category = inferCategory(caption);
 
   return {
     id,
     platform: "linkedin",
     category,
-    storyBeat: inferStoryBeat(caption, category),
+    storyBeat: inferStoryBeat(caption),
     type: "organic",
     publishedAt,
     caption,
