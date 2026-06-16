@@ -11,6 +11,7 @@ import {
   CalendarRange,
   ChevronDown,
   FileBarChart,
+  Globe,
   Image as ImageIcon,
   Info,
   Layers,
@@ -41,6 +42,26 @@ interface NavSection {
   icon: LucideIcon;
   links: NavLink[];
 }
+
+const wikipediaSection: NavSection = {
+  id: "wikipedia",
+  label: "Wikipedia Analytics",
+  icon: Globe,
+  links: [
+    {
+      href: "/wikipedia/corporate",
+      label: "Corporate",
+      icon: FileBarChart,
+      exact: true,
+    },
+    {
+      href: "/wikipedia/founder-ceo",
+      label: "Founder & CEO",
+      icon: User,
+      exact: true,
+    },
+  ],
+};
 
 const founderSection: NavSection = {
   id: "founder",
@@ -123,6 +144,7 @@ export function Sidebar({
   const pathname = usePathname();
   const [analyticsOpen, setAnalyticsOpen] = useState(true);
   const [founderOpen, setFounderOpen] = useState(false);
+  const [wikipediaOpen, setWikipediaOpen] = useState(false);
   const adminActive = pathname.startsWith("/admin");
   const introActive = pathname === "/";
 
@@ -130,9 +152,13 @@ export function Sidebar({
     if (adminActive) {
       setAnalyticsOpen(false);
       setFounderOpen(false);
+      setWikipediaOpen(false);
     }
     if (pathname.startsWith("/founder")) {
       setFounderOpen(true);
+    }
+    if (pathname.startsWith("/wikipedia")) {
+      setWikipediaOpen(true);
     }
   }, [adminActive, pathname]);
 
@@ -182,6 +208,13 @@ export function Sidebar({
           section={founderSection}
           open={founderOpen}
           onToggle={() => setFounderOpen((o) => !o)}
+          pathname={pathname}
+        />
+
+        <CollapsibleSection
+          section={wikipediaSection}
+          open={wikipediaOpen}
+          onToggle={() => setWikipediaOpen((o) => !o)}
           pathname={pathname}
         />
       </nav>
